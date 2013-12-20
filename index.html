@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChromaWallet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+ <div class="chromabank">
+      
+      <!-- header -->
+      <div class="header  container">
+      	<ul class="nav nav-pills pull-right">
+		          <li class="active"><a href="#about">About</a></li>
+		          <li><a href="#resources">Resources</a></li>
+		          <li><a href="#contact-us">Contact us</a></li>
+        	</ul>
+      </div>
+      
+      <!-- Offer -->
+    <div class="container white-container">
+      <div class="offer">      		
+	      		<div class="row">
+	      		  <div class="col-md-2">
+		      	    <div class="logo"></div>
+		      	  </div>
+		      	  <div class="col-md-6">
+                            <h1 class="logo-text">ChromaWallet</h1>
+                            <h4>The colored coins wallet</h4>
+                            <div>The next-generation <a href="http://coloredcoins.org/">colored coins</a> wallet software (formely known as NGCCC):
+                              <ul>
+                                <li><a href="https://github.com/bitcoinx/ngccc/">100% open source</a></li>
+                                <li>runs on a wide range of desktop and server platforms (Windows, Linux Max OS X, ...)</li>
+                                <li>flexible, suitable as a platform for custom solutions</li>
+                                <li>(relatively) fast and reliable</li>
+                                <li>includes p2ptrade: the protocol for decentralized exchange</li>
+                              </ul>
+                            </div>
+                            <div><strong>Note:</strong> Software is still under development, only a preview (alpha) version for hardcore enthusiats is available.</div>
+		      	    <div class="button-container">
+	      		      <ul class="platform-images"></ul>
+	      		      <a href="#download" class="btn download-button">Download ChromaWallet</a>
+                            </div>
+		      	  </div>
+                          <div class="col-md-4">
+                            <iframe src="http://www.youtube.com/embed/fmFjmvwPGKU?rel=0" height="315" width="420" allowfullscreen="" frameborder="0"></iframe>
+                          </div>
+                        </div>
+      </div>
+      <!-- page blocks -->
+      <div class="page-blocks">
+	  		
+	  		<!-- About the program -->
+	  		<div class="page-block"  id="about">
+                          <h1>About</h1>
+		      	  <div class="row">
+		      	    <div class="col-md-6">		 
+			      <div>ChromaWallet functions just like a normal Bitcoin wallet, but additionally it allows one to work with assets which are represented with colored coins, particularly to:
+                              <ul>
+                                <li>issue securities/tokens of any kind: shares, bonds, tickets, private currencies, <a href="https://en.bitcoin.it/wiki/Smart_Property">smart property</a>, etc.</li>
+                                <li>send and receive them</li>
+                                <li>trade on the build-in decentralized exchange</li>
+                              </ul>
+                              Information about ownership of colored coins is recorded directly in the Bitcoin blockchain, which means it is unforgeable and doesn't rely on any third-party server to keep valid records of ownership.</div>
+
+                              <div>Additionally, we plan to implement Bitcoin's <a href="https://en.bitcoin.it/wiki/Contracts">advanced features</a>, such as escrow, dispute mediation, trustless mixing and so on. Stay tuned!</div>
+
+                              <h4>Current status</h4>
+                              ChromaWallet have been in development since October, and it isn't complete yet. However, a preview version for the entusiasts is available. The preview version works on the testnet (we do not recommend to work with real bitcoins), and requires a locally running Bitcoin-Qt (or bitcoind) which is configured in a special way.
+	                    </div>			 
+	      		    <div class="col-md-6">
+                              <img src="images/ngccc-gui1.png"></img>
+	      		    </div>
+	      		  </div>	      		
+	  		</div>
+	  		
+	  		<!-- Download -->
+	  		<div class="page-block"  id="download">
+	  		  <h1>Download ChromaWallet</h1>
+                          <div>
+                            <strong>Warning:</strong> the current version is only a preview which runs on the testnet, it is <strong>not</strong> easy to use and set up. To run it you will need to install Bitcoin-Qt (or bitcoind) in addition to ChromaWallet, and to configure it to run on testnet with enabled API server.
+                           </div>
+                          <ul>
+                            <li><a href="https://github.com/bitcoinx/ngcccbase">source code</a></li>
+                            <li><a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-linux-x86_64.tbz">Linux 64-bit</a> (<a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-linux-x86_64.tbz.sig">sig</a>)</li>
+                            <li><a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-win32.zip">Windows</a> (<a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-win32.zip.sig">sig</a>)</li>
+                            <li>Mac OS X version is under development</li>
+                          </ul>
+                          Binary releases are signed with <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x3F2516C505CF2312">Alex Mizrahi's PGP key</a>
+                          <h2>Installation</h2>
+                          You need to download and install <a href="http://bitcoin.org/en/download">Bitcoin-Qt</a> (or bitcoind) before you can run ChromaWallet on your machine. Note that you should run Bitcoin-Qt right away, as it will start downloading 15 GB Bitcoin blockchain. Instead you should configure it to use testnet. To do that:
+                          <ul>
+                            <li>Edit bitcoin.conf (%appdata%\bitcoin\bitcoin.conf on Windows, ~/.bitcoin/bitcoin.conf on UNIX-like systems, <a href="https://en.bitcoin.it/wiki/Running_Bitcoin#Bitcoin.conf_Configuration_File">more info</a>), adding rpcuser and rpcpassword parameters (they should be chosen at random)</li>
+                            <li>In a command-line terminal (e.g. cmd, xterm) find the directory where Bitcoin-Qt is installed and run it with parameters:
+                              <code>bitcoin-qt -server -testnet -txindex</code></li>
+                            <li>(Note that if you previously run bitcoind/bitcoin-qt without -txindex parameter it will complain, in that case you need to run it with an additional -reindex parameter just once.)</li>
+                            <li>Wait until it downloads the testnet blockchain, it takes 30 minutes or more</li>
+                          </ul>
+                          Now you can run ChromaWallet: run ngccc-gui from the directory you unpacked it to.
+                          <h2>Usage</h2>
+                          <div>User's manual is currently under development, but the general idea is that you need some testnet bitcoins (which can be obtained from a testnet faucet) to issue your own colored coins asset and play around.</div>
+                          <div>You need two wallet instances to test sending and p2ptrade. The easiest way to do it is to copy the whole directory (ngccc) and delete wallet.db from the copy so that it will be re-created. You'll need to share asset definition with other wallets (and, potentially, with other people), to do that go to Assets tab, right-click the asset you want to share and choose "Copy As JSON". In the other wallet, you should use <i>Import asset from JSON</i> button and paste obtained JSON asset definition there.</div>
+	  		<!-- Resources -->
+	  		<div class="page-block"  id="resources">
+	  		  <h1>Resources</h1>
+                          <div>You can find more information about colored coins protocol <a href="http://coloredcoins.org/about/">here</a>. Note that the current version of ChromaWallet doesn't implement "White paper v2.0", as it is still under development. Instead it implements a model described in the <a href="https://github.com/bitcoinx/colored-coin-tools/wiki/colored_coins_intro">theory of colored coins</a> document.</div>
+                          <div>
+	  		</div>
+	  		<!-- Contact us -->
+	  		<div class="page-block"  id="contact-us">
+	  		  <h1>About us</h1>
+                          ChromaWallet is brought to by a team of open source developers led by <a href="http://ua.linkedin.com/pub/alex-mizrahi/4/2b4/a1b/">Alex Mizrahi</a>. The best way to contact is through <a href="https://groups.google.com/group/bitcoinX/">the mailing list</a>.	  		 
+	  		</div>
+	  </div> 
+	  </div>
+	  
+	  <!-- Footer -->
+	  <div class="footer">
+	  	
+	  </div>
+	  
+           
+      
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
