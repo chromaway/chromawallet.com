@@ -1,0 +1,114 @@
+<html>	
+<head>
+<title>ChromaWallet Documentation</title>
+<link rel="stylesheet" type="text/css" href="guides.css">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+</head>	
+
+<body> 
+<div id="center">
+	
+<h1>ChromaWallet Documentation</h1>
+	
+<h2>Installation Guides</h2>
+
+<h3>Windows</h3>
+<ol>
+	<li>Download and install the latest bitcoin-qt client from <a href="http://bitcoin.org/en/download" target="_blank">here</a>.</li><br>
+	<li>Navigate to your <em>%APPDATA%\Bitcoin</em> directory.</li><br>
+	<li>Create a text file entitled <em>bitcoin.conf</em>. In this file, place the following text, substituting a password of your choosing in the <em>rpcpassword</em> field.
+		<blockquote>
+		<p><code>server=1<br>rpcuser=rpcuser<br>rpcpassword=yourpassword</code></p>
+		</blockquote></li>
+	<li>Open a command window and navigate to your Bitcoin installation directory.</li><br>
+	<li>Setup bitcoin-qt to run on the testnet with txindex enabled with the following command:
+		<blockquote>
+		<p><code>bitcoin-qt.exe -testnet -txindex</code></p>
+		</blockquote>
+                (Alternatively, run bitcoind.exe with same options.)
+		Note: If you previously ran either bitcoin-qt of bitcoind without the txindex flag, you need to use the reindex option one time only.</li><br>		
+	<li>Download the latest Windows version of ChromaWallet from <a href="http://ChromaWallet.com/#download" target="_blank">here</a>, extract it to a location of your
+		choosing, and navigate a command window to the ngccc directory.</li><br>
+	<li>You can now use either the command-line version of ngccc with this command:
+		<blockquote>
+		<p><code>ngccc-cli--help</code></p>
+		</blockquote>
+		<b>OR</b> the GUI version with this command:
+		<blockquote>
+		<p><code>ngccc-gui</code></p>
+		</blockquote></li>
+</ol>
+
+<h3>Linux</h3>
+<ol>
+	<li>Download and install the latest bitcoin-qt executable file from <a href="http://bitcoin.org/en/download" target="_blank">here</a>, or via your package manager</li><br>
+	<li>Navigate to your <em>~/.bitcoin/</em> directory, and create a text file entitled <em>bitcoin.conf</em>. In this file, place the following text, substituting a password of your choosing, in the <em>rpcpassword</em> field.
+		<blockquote>
+		<code><p>server=1<br>rpcuser=rpcuser<br>rpcpassword=yourpassword</code></p>
+		</blockquote></li>
+	<li>Setup bitcoin-qt to run on the testnet with the following command and wait for it to reindex the blocks. 
+		<blockquote>
+		<p><code>bitcoin-qt.exe -testnet -txindex -reindex</code></p>
+		</blockquote>
+		<b>OR </b>setup bitcoind to run on the testnet with the following command and wait for it to reindex the blocks. 
+		<blockquote>
+		<p><code>bitcoind.exe -testnet -txindex -reindex -daemon</code></p>
+		</blockquote>
+		Note: If you previously ran either bitcoin-qt of bitcoind without the txindex flag, you need to use the reindex option one time only.</li><br>		
+	<li>Download the latest Linux version of ChromaWallet from <a href="http://ChromaWallet.com/#download" target="_blank">here</a>, extract it to a location of your
+		choosing, and open a terminal window in that location. </li><br>
+	<li>You can now use either the command-line version of ngccc with this command:
+		<blockquote>
+		<p><code>./ngccc-cli--help</code></p>
+		</blockquote>
+		<b>OR</b> the GUI version with this command:
+		<blockquote>
+		<p><code>./ngccc-gui</code></p>
+		</blockquote></li>
+</ol>
+
+<h3>Running Multiple Clients on One Machine</h3>
+<ol>
+	<li>If you have already ran ChromaWallet, you will simply need to copy the ngccc directory, delete the wallet.db in the copied directory, and then run ngccc-cli or ngccc-gui from the new directory. A new wallet will be created at runtime</li></br>
+	<li>Otherwise, download and extract the latest version of ChromaWallet as described in the previous sections.</li></br>
+	<li>Copy the ngccc directory.</li></br>
+	<li>Run ngccc-cli or ngccc-gui from the original directory and also from the copied directory.</li></br>
+	<li>New wallets will be created at runtime. You can now send bitcoins and assets between the two wallets</li></br>
+</ol>
+	
+<h2>Asset Management</h2>
+<h3>Issuing an Asset</h3>
+<ol>
+	<li>Click on the asset tab, and then click on the <em>issue new asset</em> button.</li><br>
+	<li>Enter a moniker of your choosing, select a color scheme, quantity, and number of units (satoshis) and then click okay. </li><br>
+	<li>The asset should appear in your asset tab. If you go to the overview tab, your asset should be listed along with its balance and address. Note, you may have to restart the client
+		for the balance to update. This is a known bug.</li>
+</ol>
+
+<h3>Adding an Existing Asset</h3>
+<h4>Method One: Import Asset via JSON (Recommended)</h4>
+<ol>
+	<li>Click on the asset tab in a client that already contains the asset you wish to copy.</li><br>
+	<li>Right click on the asset you wish to copy, and select <em>copy as JSON</em>.</li><br>
+	<li>In the client that you wish to contain the new asset, click on the asset tab, and then click on the <em>Import asset from JSON</em> button.</li><br>
+	<li>Right click in the box, paste the JSON that you previously copied, and then click OK. Your asset should now be listed.</li>
+</ol>
+<h4>Method Two: Manual Addition</h4>
+<ol>
+	<li>Click on the asset tab, and then click on the <em>add existing asset</em> button.</li><br>
+	<li>Enter the moniker, color description, and unit of the asset you want add.</li><br>
+	<li>The asset should appear in your asset tab and in your overview tab. You can now send coins via the send tab just as you would send regular bitcoins. Note that there is a dropdown box 
+		on the send coins tab to select bitcoins or an asset that your wallet contains. Please ensure that you select the proper one to send.</li>
+</ol>
+
+<h2>P2P Trade</h2>
+<ol>
+	<li>Click on the P2P Trade Tab.</li><br>
+	<li>Select the asset you wish to buy or sell.</li><br>
+	<li>Enter the quantity and price of the asset you wish to buy or sell, and then click the buy or sell button. Delete a buy or sell listing by double clicking on the listing.</li><br>
+	<li>When a buyer or seller is found to match your listing, a trade will occur. Note, advanced matchmaking has not been implemented yet, but it will be implemented in future releases.</li><br>
+</ol>
+
+</div>
+</body>
+</html>
