@@ -1,0 +1,130 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    background: #E0E0E0;
+}
+.fullpage {
+	background: #E0E0E0;
+}
+.body {
+    width: 1200px;
+    margin: 0 auto;
+	line-height: 1.5;
+	font-family: "Helvetica Neue", sans-serif;
+}
+.body a {
+	text-decoration: none;
+	color: #2a6496;
+}
+.body a:hover {
+	text-decoration: underline;
+}
+code {
+	padding: 2px 4px;
+	font-size: 90%;
+	color: #c7254e;
+	white-space: nowrap;
+	background-color: #f9f2f4;
+	border-radius: 4px;
+	font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+/*-------------------HEADER--------------------------------------------------------*/
+.header  {                                                                         
+	padding: 10px;
+    background: #E0E0E0;
+	text-align: right;
+	margin-right: 50px;
+}
+.header li{
+	list-style: none;
+    display: inline;
+}
+.header a{
+    display: inline-block;
+    padding: 10px;
+	text-decoration: none;
+}
+.header a:hover{
+	text-decoration: none;
+}
+
+.header a:hover {
+	background: #17c8b3;
+	color: #ffffff;
+}
+/*-------------------ROW 1 LOGO, CHROMAWALLET, AND VIDEO---------------------------*/
+.leftcolumn {
+	float: left;
+	width: 120px;
+	height: 350px;
+	padding: 20px;
+    background: white;
+}
+.middleandrightcolumns {
+	float: right;
+	width: 1040px;
+    background: white;
+}
+.middlecolumn {
+	float: left;
+	width: 500px;
+	height: 400px;
+	padding: 10px;
+    background: white;
+}
+.rightcolumn {
+	float: right;
+	width: 500px;
+	height: 400px;
+	padding: 10px;
+    background: white;
+}
+/*-------------------ROW 2 ABOUT---------------------------------------------------*/
+.leftcolumnrow2 {
+	float: left;
+	width: 1180px;
+	height: 400px;
+	background: white;
+	padding: 10px;
+}
+/*------------------ROW 3 PICTURES-------------------------------------------------*/
+.leftcolumnrow3 {
+	float: left;
+	width: 500px;
+	height: 350px;
+	padding-left: 50px;
+	padding-right: 50px;
+    background: white;
+
+}
+.rightcolumnrow3 {
+	float: right;
+	width: 500px;
+	height: 350px;
+	padding-left: 50px;
+	padding-right: 50px;
+    background: white;
+}
+/*------------------ROW 4 DOWNLOAD LINKS-------------------------------------------*/
+.row4 {
+	background: white;
+	padding: 10px;
+}
+/*------------------ROW 5 RESOURCES, CONTACTS--------------------------------------*/
+.row5 {
+	background: white;
+	padding: 10px;
+}
+/*---------------------FOOTER------------------------------------------------------*/
+.footer {
+	clear: both;
+    background: #E0E0E0;
+	text-align: center;
+	margin-bottom: 40px;
+}
+/*---------------------GUIDES PAGE-------------------------------------------------*/
+.guides {
+	background: white;
+	padding: 10px;
+}
