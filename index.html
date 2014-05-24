@@ -24,7 +24,6 @@
 		</div>
 <!------------------------------------------------------ROW 1 LOGO, CHROMAWALLET, AND VIDEO------------------------------------------------------------------------------------------------------->
 		<div class="row1">
-
 			<div class="leftcolumn">
 				<img src="images/index/logo.png">
 			</div>
@@ -34,23 +33,24 @@
 				<div class="middlecolumn" id="About">
 					<h1>ChromaWallet</h1>
 					<h4>The colored coins wallet</h4>
-					<p>The next-generation <a href="http://coloredcoins.org/">colored coins</a> wallet software (formerly known as NGCCC):</p>
+					<p>The next-generaiton <a href="http://coloredcoins.org/">colored coins</a> wallet software (formerly known as NGCCC):</p>
 					<ul>
-						<li><a href="https://github.com/bitcoinx/ngcccbase/">100% open source</a></li>
-						<li>runs on a wide range of desktop and server platforms (Windows, Linux Max OS X, ...)</li>
-						<li>flexible, suitable as a platform for custom solutions</li>
-						<li>(relatively) fast and reliable</li>
-						<li>includes p2ptrade: the protocol for decentralized exchange</li>
+					  <li><a href="https://github.com/bitcoinx/ngcccbase/">100% open source</a></li>
+					  <li>runs on a wide range of desktop and server platforms (Windows, Linux Max OS X, ...)</li>
+                                          <li>can run in thin client (SPV) mode</li>
+					  <li>flexible, suitable as a platform for custom solutions</li>
+					  <li>includes p2ptrade: a built-in peer-to-peer exchange</li>
 					</ul>
-					<p><strong>Note:</strong> Software is still under development, only a preview (alpha) version for hardcore enthusiasts is available.</p>
+					<p><strong>Note:</strong> Software is still under development, beta version is available for testing.</p>
+                                        <a class='downloadbutton' href="#download">Download</a>
 				</div>
 
 				<div class="rightcolumn">
 					<iframe src="http://www.youtube.com/embed/fmFjmvwPGKU?rel=0" height="375" width="500" allowfullscreen="" frameborder="0"></iframe>
 				</div>
-
+                                
 			</div>
-
+                        <div class='clearboss'></div>
 		</div>
 <!--------------------------------------------------------ROW 2 - ABOUT-------------------------------------------------------------------------------------------------------------------------->
 		<div class="leftcolumnrow2" id="about">
@@ -67,9 +67,6 @@
 
 			Additionally, we plan to implement Bitcoin's <a href="https://en.bitcoin.it/wiki/Contracts">advanced features</a>, such as escrow, dispute mediation, trustless mixing and so on. Stay tuned!
 
-			<h4>Current status</h4>
-			ChromaWallet have been in development since October, and it isn't complete yet. However, a preview version for the enthusiasts is available. The preview version works on the testnet (we do not recommend to work with real bitcoins), and requires a locally running Bitcoin-Qt (or bitcoind) which is configured in a special way.
-
 		</div>
 <!--------------------------------------------------------ROW 3 - PICTURES----------------------------------------------------------------------------------------------------------------------->
 		<div class="leftcolumnrow3">
@@ -82,18 +79,18 @@
 
 			<img src="images/index/p2ptrade.png">
 		</div>
-<!--------------------------------------------------------ROW 4 DOWNLOAD LINKS------------------------------------------------------------------------------------------------------------------->
-		<div class="row4" id="download">
+                <!--------------------------------------------------------ROW 4 DOWNLOAD LINKS------------------------------------------------------------------------------------------------------------------->
+                <div class='row4' id='download'>
 
 			<h1>Download ChromaWallet</h1>
 
-			<strong style='color: red'>Warning:</strong> the current version is only a preview which runs on the testnet, it is <strong>not</strong> easy to use and set up. To run it you will need to install Bitcoin-Qt (or bitcoind) in addition to ChromaWallet, and to configure it to run on testnet with enabled API server.
+			<strong style='color: red'>Warning:</strong> This is an early beta release, use at your own risk.
 
 			<ul>
-				<li><a href="https://github.com/bitcoinx/ngcccbase">source code</a></li>
-				<li><a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-linux-x86_64.tbz">Linux 64-bit</a> (<a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-linux-x86_64.tbz.sig">sig</a>)</li>
-				<li><a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-win32.zip">Windows</a> (<a href="http://killerstorm.xen.prgmr.com/alex/ngccc-0.0.2-win32.zip.sig">sig</a>)</li>
-				<li>Mac OS X version is under development</li>
+                          <li><a href="http://killerstorm.xen.prgmr.com/alex/chromawallet-win32-0.0.6.zip">Windows</a> (<a href="http://killerstorm.xen.prgmr.com/alex/chromawallet-0.0.6-win32.zip.sig">sig</a>)</li>
+			  <li><a href="http://killerstorm.xen.prgmr.com/alex/chromawallet-linux-x86_64-0.0.6.tbz">Linux 64-bit</a> (<a href="http://killerstorm.xen.prgmr.com/alex/chromawallet-linux-x86_64-0.0.6.tbz.sig">sig</a>)</li>
+			  <li><a href="https://github.com/bitcoinx/ngcccbase">source code</a></li>
+			  <li>Mac OS X version is under development</li>
 			</ul>
 
 			Binary releases are signed with <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x3F2516C505CF2312">Alex Mizrahi's PGP key</a>
@@ -108,11 +105,11 @@
 			<a href="guides.html"><h3>User's guide</h3></a>
 
 			<h1 id="contact">Contact</h1>
-				ChromaWallet is brought to you by a team of open source developers led by <a href="http://ua.linkedin.com/pub/alex-mizrahi/4/2b4/a1b/">Alex Mizrahi</a>. The best way to contact is through <a href="https://groups.google.com/group/bitcoinX/">the mailing list</a>.	  		 
-	
+                        <p>If you have a problem with ChromaWallet or you want to provide any kind of a feedback, please use  <a href="http://chromawallet.freshdesk.com/support/home">our support site</a>.</p>
+                        
+			ChromaWallet is brought to you by a team of open source developers led by <a href="http://ua.linkedin.com/pub/alex-mizrahi/4/2b4/a1b/">Alex Mizrahi</a>. The best way to contact is through <a href="https://groups.google.com/group/bitcoinX/">the mailing list</a>.	  		 
 		</div>
-
-	</div>
+        </div>
 <!--------------------------------------------------------FOOTER--------------------------------------------------------------------------------------------------------------------------------->
 
 	<div class="footer">

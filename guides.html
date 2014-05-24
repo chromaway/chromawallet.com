@@ -17,11 +17,11 @@
 
 		<div class="header">
 			<ul>
-				<li><a href="http://www.chromawallet.com/">About</a></li>
-				<li><a href="http://www.chromawallet.com//#resources">Resources</a></li>
-				<li><a href="http://www.chromawallet.com//#contact">Contact</a></li>
-				<li><a href="http://www.chromawallet.com/guides.html">Guides</a></li>
-				<li><a href="http://www.chromawallet.com/#download">Download</a></li>
+				<li><a href="/">About</a></li>
+				<li><a href="/#resources">Resources</a></li>
+				<li><a href="/#contact">Contact</a></li>
+				<li><a href="/guides.html">Guides</a></li>
+				<li><a href="/#download">Download</a></li>
 			</ul>
 		</div>
 
@@ -41,60 +41,33 @@
 
 			<a id='installation'><h2>Installation</h2></a>
 
-			<h3>Windows</h3>
-
-				<ol>
-					<li>Download and install the latest bitcoin-qt client from <a href="http://bitcoin.org/en/download" target="_blank">here</a>.</li>
-					<li>Navigate to your <em>%APPDATA%\Bitcoin</em> directory.</li>
-					<li>Create a text file entitled <em>bitcoin.conf</em>. In this file, place the following text, substituting a password of your choosing in the <em>rpcpassword</em> field.
-						<blockquote>
-						<p><code>server=1rpcuser=rpcuserrpcpassword=yourpassword</code></p>
-						</blockquote></li>
-					<li>Open a command window and navigate to your Bitcoin installation directory.</li>
-					<li>Setup bitcoin-qt to run on the testnet with txindex enabled with the following command and wait while it downloads blocks:
-						<blockquote>
-						<p><code>bitcoin-qt.exe -testnet -txindex</code></p>
-						</blockquote>
-							(Alternatively, run bitcoind.exe with same options.)
-						<em>Note:</em> If you previously ran either bitcoin-qt of bitcoind without the txindex flag, you need to use the -reindex option (one time only).</li>
-					<li>Download the latest Windows version of ChromaWallet from <a href="http://ChromaWallet.com/#download" target="_blank">here</a>, extract it to a location of your
-					  choosing. Run <code>ngccc-gui</code> if you want graphical user interface.
-						  Alternatively, you can use the command-line version: ngccc-cli. Run <code>ngccc-cli --help</code> to get a list of commands it supports.</li>
-				</ol>
-
-			<h3>Linux</h3>
-			<ol>
-				<li>Download and install the latest bitcoin-qt executable file from <a href="http://bitcoin.org/en/download" target="_blank">here</a>, or via your package manager.</li>
-				<li>Navigate to your <em>~/.bitcoin/</em> directory, and create a text file entitled <em>bitcoin.conf</em>. In this file, place the following text, substituting a password of your choosing, in the <em>rpcpassword</em> field.
-					<blockquote>
-					<p><code>server=1rpcuser=rpcuserrpcpassword=yourpassword</code></p>
-					</blockquote></li>
-				<li>Setup bitcoin-qt to run on the testnet with the following command and wait for it to download blocks:
-					<blockquote>
-					<p><code>bitcoin-qt -testnet -txindex</code></p>
-					</blockquote>
-							(Alternatively, run bitcoind with same options.)
-					<em>Note:</em> If you previously ran either bitcoin-qt of bitcoind without the txindex flag, you need to use the -reindex option (one time only).</li>
-				<li>Download the latest Linux version of ChromaWallet from <a href="http://ChromaWallet.com/#download" target="_blank">here</a>, extract it to a location of your
-					choice. You can use either GUI version: <code>ngccc-gui</code>, or command-line: <code>ngccc-cli</code>. Run <code>ngccc-cli --help</code> to get a list of commands.
-			</ol>
-
-
-
+                        <p>Download the latest version of ChromaWallet from <a href="http://ChromaWallet.com/#download" target="_blank">here</a>, extract it to a location of your choosing. In the unpacked directory you can find two programs:
+                          <ul>
+                            <li><code>chromawallet</code> is graphical user interface</li>
+                            <li> <code>cw-cli</code> provides command-line interface</li>
+                          </ul>
+                          Most actions can be performed through either of interfaces, but command-line application also provides low-level functions. You can find a list of commands which are accepted by cw-cli by running <code>cw-cli --help</code></p>
+                        <p>You can use <code>--testnet</code> command-line switch to run client in testnet mode, in that case a separate testnet wallet will be used. E.g.:
+                          <ul>
+                            <li><code>chromawallet</code> will use <code>mainnet.wallet</code>  (in the current directory) </li>
+                            <li><code>chromawallet --testnet</code> will use <code>testnet.wallet</code></li>
+                          </ul></p>
+                       
 			<h3>Running Multiple Clients on One Machine</h3>
 			<ol>
-				<li>You can run as many clients as you want, to do this you will simply need to copy the ngccc directory, delete the wallet.db in the copied directory, and then run ngccc-cli or ngccc-gui from the new directory. A new wallet will be created.</li></br>
+				<li>You can run as many clients as you want, to do this you will simply need to copy the chromawallet directory, delete the *.wallet in the copied directory, and then run chromawallet from the new directory. A new wallet will be created.</li>
 				<li>You can now send bitcoins and assets between the two wallets.</li></br>
 			</ol>
 
 			<a id='asset'><h2>Asset Management</h2></a>
 			<h3>Issuing an Asset</h3>
-			<p><em>Note:</em> you need testnet bitcoins in your wallet to be able to issue an asset. You can obtain some from a faucet.</p>
-			<ol>
+			<p><em>Note:</em> you need bitcoins in your wallet to be able to issue an asset.
+                          If you just want to try it out, you can run wallet in testnet mode and obtain testnet bitcoins from a faucet.</p>
+                        <ol>
 				<li>Click on the <em>Assets</em> tab, and then click on the <em>issue new asset</em> button.</li>
 				<img src="images/guides/assetissuing.png" alt="issuing an asset">
-				<li>Enter a moniker (name of the asset) of your choosing, select a color scheme (currently only OBC is available), quantity, and number of satoshis in one unit (10000 is recommended for OBC) and then click OK. </li>
-				<li>The asset should appear in your asset tab. If you go to the overview tab, your asset should be listed along with its balance and address. Note, you may have to restart the client for the balance to update.</li>
+				<li>Enter a moniker (name of the asset) of your choosing, select a color scheme (epobc is the recommened one), quantity, and number of atoms in one unit (1 if unit is undivisible, 100 if unit is divisible down to 0.01, etc.) and then click OK. </li>
+				<li>The asset should appear in your asset tab. If you go to the overview tab, your asset should be listed along with its balance and address.</li>
 				<img src="images/guides/listedasset.png" alt="asset listed on overview tab">
 			</ol>
 			<h3>Publishing the Asset you Created</h3>
@@ -133,7 +106,7 @@
 				<li>The process is very similar to sending and receiving bitcoins, but special <em>color addresses</em> are used for that. <em>Color address</em> for each asset wallet is aware of is available on <em>Overview</em> tab. <em>Receive</em> tab provides a list of all addresses for each asset and gives you an ability to create new ones</li>
 				<li>You can send a specific asset by choosing it in a drop-down list on the <em>Send</em> tab.<br/>
 				<em>Note:</em> that you need to obtain address for this specific asset, wallet will report an error if color of an address doesn't match the asset name you have chosen in the drop-down menu.<br />
-				<em>Note:</em> You need testnet bitcoins to pay a transaction fee. You can obtain some from a faucet.</li>
+				<em>Note:</em> You need bitcoins to pay a transaction fee. (In case with testnet mode, You can obtain some from a faucet.)</li>
 			</ul>
 
 			<a id='p2ptrade'><h2>P2P Trade</h2></a>
@@ -141,22 +114,12 @@
 				<li>Click on the P2P Trade Tab.</li>
 				<li>Select the asset you wish to buy or sell.</li>
 				<li>Enter the quantity and price of the asset you wish to buy or sell, and then click the buy or sell button.</li>
-					<li>When matching offer will be found, a trade will occur. Note that offers need to match price and quantity <em>exactly</em>. (More advanced matchmaking engine is currently under development.)</li>
-					<li>To fill a specific offer, double-click it.</li>
-					<li>To delete your order (distinguished by dark grey in the list), double-click it.</li>
+				<li>When matching offer will be found, a trade will occur. Note that offers need to match price and quantity <em>exactly</em>. (More advanced matchmaking engine is currently under development.)</li>
+				<li>To fill a specific offer, double-click it.</li>
+				<li>To delete your order (distinguished by dark grey in the list), double-click it.</li>
 			</ol>
-
-
-		</div>
-
-
-
-
-
-
-
+                </div>
 	</div>
-
 </div>
 
 </html>

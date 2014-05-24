@@ -32,18 +32,18 @@ code {
 /*-------------------HEADER--------------------------------------------------------*/
 .header  {                                                                         
 	padding: 10px;
-    background: #E0E0E0;
+        background: #E0E0E0;
 	text-align: right;
 	margin-right: 50px;
 }
 .header li{
 	list-style: none;
-    display: inline;
+        display: inline;
 }
 .header a{
     display: inline-block;
     padding: 10px;
-	text-decoration: none;
+    text-decoration: none;
 }
 .header a:hover{
 	text-decoration: none;
@@ -54,10 +54,14 @@ code {
 	color: #ffffff;
 }
 /*-------------------ROW 1 LOGO, CHROMAWALLET, AND VIDEO---------------------------*/
+
+.row1 {
+    background: white;
+}
+
 .leftcolumn {
 	float: left;
 	width: 120px;
-	height: 350px;
 	padding: 20px;
     background: white;
 }
@@ -69,7 +73,6 @@ code {
 .middlecolumn {
 	float: left;
 	width: 500px;
-	height: 400px;
 	padding: 10px;
     background: white;
 }
@@ -80,13 +83,24 @@ code {
 	padding: 10px;
     background: white;
 }
+
+a.downloadbutton {
+    margin: 20px;
+    padding: 15px;
+    text-decoration: none;
+    background: #17c8b3;
+    color: #ffffff;
+}
+
+.clearboss {
+    clear: both;
+}
+
 /*-------------------ROW 2 ABOUT---------------------------------------------------*/
-.leftcolumnrow2 {
-	float: left;
-	width: 1180px;
-	height: 400px;
-	background: white;
-	padding: 10px;
+.leftcolumnrow2 {   
+    clear: both;
+    background: white;
+    padding: 10px;
 }
 /*------------------ROW 3 PICTURES-------------------------------------------------*/
 .leftcolumnrow3 {
@@ -108,6 +122,7 @@ code {
 }
 /*------------------ROW 4 DOWNLOAD LINKS-------------------------------------------*/
 .row4 {
+    clear: both;
 	background: white;
 	padding: 10px;
 }
