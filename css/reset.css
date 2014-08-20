@@ -68,7 +68,7 @@ ol {
     list-style:none;
 }
 html {
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: auto;
 }
 html,
