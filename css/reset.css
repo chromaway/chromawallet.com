@@ -125,9 +125,6 @@ input:invalid {
     -moz-box-shadow: none;
     border: none;
 }
-a:visited {
-    color: #8EA177;
-}
 ::-webkit-input-placeholder {
     color: #000;
 }

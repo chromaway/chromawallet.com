@@ -1,5 +1,5 @@
 $(function(){
-    var loader = new Loader();
+
     var page = new Page();
 } );
 var Page = function(){
@@ -117,67 +117,3 @@ var Page = function(){
         }
     };
 
-var Loader = function(){
-    this.obj = $( '.loader' );
-    this.window = $( window );
-    this.minDesktopWidth = 1000;
-    this.percent = { curValue:0 };
-    this.loaded = false;
-    this.firstStep = false;
-    this.desktop = false;
-    this.items = $( '.mobile-desktop' );
-
-    this.init();
-};
-    Loader.prototype = {
-        init: function(){
-            var self = this;
-
-            self.core = self.core();
-            self.core.build();
-        },
-        core: function(){
-            var self = this;
-
-            return {
-                build: function(){
-                    self.core.checkForDesktop();
-                    self.core.checkFirstStep();
-                },
-                checkForDesktop: function(){
-                    console.log( self.window.width(), self.minDesktopWidth );
-                    if( self.window.width() >= self.minDesktopWidth ) {
-
-                        self.items.each( function(){
-                            var curItem = $( this );
-
-                            if( curItem.is( 'img' ) ){
-                                curItem[0].src = curItem[0].src.replace( 'mobile', 'desktop' )
-                            } else {
-
-                            }
-
-                        } );
-                    } else {
-
-                    }
-                },
-                checkFirstStep: function(){
-                    if( self.firstStep && self.loaded  && self.desktop ){
-
-                    } else {
-                        setTimeout( function(){
-                            self.core.checkFirstStep();
-                        }, 1000 );
-                    }
-                },
-                controls: function(){
-                    self.window.on( {
-                        'load': function(){
-
-                        }
-                    } );
-                }
-            };
-        }
-    };

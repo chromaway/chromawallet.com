@@ -48,12 +48,61 @@ a:hover {
 
 /* --------------- fonts --------------- */
 @font-face {
-    font-family: "Font Name";
-    src: url("../fonts/font.woff") format("woff");
+    font-family: "sourcesanspro-extralight";
+    src: url("../fonts/sourcesanspro-extralight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "sourcesanspro-bold";
+    src: url("../fonts/sourcesanspro-bold.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 /* --------------- /fonts --------------- */
+
+/* --------------- logo --------------- */
+.logo{
+
+    background: url("../img/desktop/logo.png") no-repeat;
+    width: 473px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -114px 0 0 -236px;
+    height: 228px;
+    text-indent: -5000px;
+    
+}
+/* --------------- /logo --------------- */
+
+/* --------------- down-btn --------------- */
+.down-btn{
+    font-family: "sourcesanspro-extralight";
+    font-size: 21px;
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    margin-left: -36px;
+    color: #929497;
+
+}
+.down-btn:before{
+    background: url("../img/desktop/arrow-down.png") no-repeat;
+    width: 49px;
+    height: 37px;
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    margin-left: -25px;
+
+    -webkit-animation: jump 3s infinite linear;
+    -moz-animation: jump 3s infinite linear;
+    -ms-animation: jump 3s infinite linear;
+    -o-animation: jump 3s infinite linear;
+    animation: jump 3s infinite linear;
+}
 
 /* --------------- site --------------- */
 .site {
@@ -91,4 +140,136 @@ a:hover {
     overflow: auto;
 }
 /* --------------- /site --------------- */
+
+
+/* --------------- site__menu --------------- */
+.site__menu{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 115px;
+    background: #fff;
+    z-index: 5;
+}
+.site__menu__logo{
+    position: absolute;
+    top: 14px;
+    left: 2%;
+}
+.main-menu{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -270px;
+}
+.main-menu a{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 30px;
+    color: #353c4c;
+    font-size: 16px;
+    height: 115px;
+    font-family: "sourcesanspro-bold";
+    text-transform: uppercase;
+    line-height: 115px;
+}
+.main-menu a span{
+    line-height: 115px;
+    position: relative;
+}
+
+.main-menu a span:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: #353c4c;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    -webkit-transition: width 300ms ease-in-out 100ms;
+    transition: width 300ms ease-in-out 100ms;
+}
+.main-menu a:hover span:after {
+    width: 100%;
+}
+.user-guide-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 115px;
+    width: 250px;
+    background: #353c4c url("../img/desktop/guide-btn.png") no-repeat bottom right;
+    color: #fff;
+    font-family: "sourcesanspro-bold";
+    text-align: center;
+    line-height: 115px;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+/* --------------- /site__menu --------------- */
+
+/* --------------- site__page-crhromaWallet01 --------------- */
+.site__page-crhromaWallet01{
+    background: #18a2a2;
+}
+/* --------------- /site__page-crhromaWallet01 --------------- */
+
+@-webkit-keyframes jump {
+    0%   {bottom: -50px;}
+    25%  {bottom: -35px;}
+    50%  {bottom: -50px;}
+    75%  {bottom: -40px;}
+    100% {bottom: -50px;}
+}
+@-moz-keyframes jump {
+    0%   {bottom: -50px;}
+    25%  {bottom: -35px;}
+    50%  {bottom: -50px;}
+    75%  {bottom: -40px;}
+    100% {bottom: -50px;}
+}
+@-ms-keyframes jump {
+    0%   {bottom: -50px;}
+    25%  {bottom: -35px;}
+    50%  {bottom: -50px;}
+    75%  {bottom: -40px;}
+    100% {bottom: -50px;}
+}
+@-o-keyframes jump {
+    0%   {bottom: -50px;}
+    25%  {bottom: -35px;}
+    50%  {bottom: -50px;}
+    75%  {bottom: -40px;}
+    100% {bottom: -50px;}
+}
+@keyframes jump {
+    0%   {bottom: -50px;}
+    25%  {bottom: -35px;}
+    50%  {bottom: -50px;}
+    75%  {bottom: -40px;}
+    100% {bottom: -50px;}
+}
+
+
+@media (max-width: 600px) {
+    .logo{
+        background: url("../img/mobile/logo.png");
+        width: 233px;
+        height: 112px;
+        margin: -56px 0 0 -117px;
+    }
+    .down-btn{
+        font-size: 11px;
+
+    }
+    .down-btn:before{
+        background: url("../img/mobile/arrow-down.png") no-repeat;
+        width: 25px;
+        height: 19px;
+        content: "";
+        margin-left: -12px;
+        bottom: -25px;
+    }
+}
 
