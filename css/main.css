@@ -59,6 +59,18 @@ a:hover {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "sourcesanspro-lightitalic";
+    src: url("../fonts/sourcesanspro-lightitalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "sourcesanspro-regular";
+    src: url("../fonts/sourcesanspro-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 /* --------------- /fonts --------------- */
 
 /* --------------- logo --------------- */
@@ -72,6 +84,7 @@ a:hover {
     margin: -114px 0 0 -236px;
     height: 228px;
     text-indent: -5000px;
+
     
 }
 /* --------------- /logo --------------- */
@@ -85,6 +98,7 @@ a:hover {
     left: 50%;
     margin-left: -36px;
     color: #929497;
+    display: none;
 
 }
 .down-btn:before{
@@ -107,19 +121,20 @@ a:hover {
 /* --------------- site --------------- */
 .site {
     min-height: 100%;
-    min-width: 1000px;
+
     overflow: hidden;
     position: relative;
     z-index: 1;
 }
-.site:after {
-    content: '';
-    display: block;
-    clear: both;
-    width: 100%;
+/*.site:after {*/
+    /*content: '';*/
+    /*display: block;*/
+    /*clear: both;*/
+    /*width: 100%;*/
 
-    height: 100px;
-}
+    /*height: 100px;*/
+/*}*/
+
 .site__center {
     height: 100%;
     width: 100%;
@@ -138,7 +153,9 @@ a:hover {
     right: 0;
     bottom: 0;
     overflow: auto;
+    display: none;
 }
+
 /* --------------- /site --------------- */
 
 
@@ -147,10 +164,10 @@ a:hover {
     position: fixed;
     top:0;
     left: 0;
-    right: 0;
     height: 115px;
     background: #fff;
     z-index: 5;
+    width: 100%;
 }
 .site__menu__logo{
     position: absolute;
@@ -207,13 +224,207 @@ a:hover {
     letter-spacing: 2px;
     font-size: 24px;
 }
+.show-mobile-menu{
+    position: fixed;
+    z-index: 20;
+    background: url("../img/mobile/show-menu.png") no-repeat;
+    width: 21px;
+    height: 18px;
+    top: 19px;
+    left: 22px;
+    text-indent: -5000px;
+    cursor: pointer;
+    display: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.show-mobile-menu.active{
+
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+}
+.hide-menu{
+    display: none;
+}
 /* --------------- /site__menu --------------- */
+
+.videoBlock{
+    position: fixed;
+    top: 115px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    display: none;
+}
+.videoBlock__close{
+    position: absolute;
+    top: 27px;
+    right: 27px;
+    background: url("../img/desktop/close.png");
+    width: 26px;
+    height: 25px;
+    text-indent: -5000px;
+    z-index: 10;
+    cursor: pointer;
+}
 
 /* --------------- site__page-crhromaWallet01 --------------- */
 .site__page-crhromaWallet01{
-    background: #18a2a2;
+    display: none;
 }
+.colored-text{
+    color: #fff;
+    width: 50%;
+    position: absolute;
+    top: 115px;
+    font-size: 18px;
+    left: 0;
+    font-family: "sourcesanspro-regular";
+    bottom: 0;
+    padding: 59px 20px 20px 2%;
+    background: #18a2a2;
+
+}
+.colored-text__show{
+    display: none;
+}
+.colored-video{
+    width: 50%;
+    position: absolute;
+    top: 115px;
+    right: 0;
+    bottom: 0;
+
+}
+.colored-video img{
+    display: block;
+}
+.colored-text h2{
+    font-weight: normal;
+    font-size: 46px;
+    font-family: "sourcesanspro-bold";
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 58px;
+}
+.colored-download{
+    color: #fff;
+    text-transform: uppercase;
+    background: #ef4e23;
+    width: 222px;
+    height: 63px;
+    line-height: 63px;
+    text-align: center;
+    display: block;
+    font-family: "sourcesanspro-bold";
+    font-size: 21px;
+    margin: 0 0 33px 30px;
+}
+.colored-text span{
+    font-family: "sourcesanspro-lightitalic";
+    font-size: 15px;
+    padding-left: 30px;
+    display: block;
+
+}
+.colored-text dl{
+    margin-bottom: 29px;
+}
+.colored-text dt{
+    margin-bottom: 29px;
+    line-height: 23px;
+}
+
+.colored-text dd{
+    background: url("../img/desktop/colored-point.png") no-repeat 0 4px;
+    padding-left: 29px;
+    line-height: 22px;
+    margin: 0 0 11px 30px;
+}
+.site__page-crhromaWallet02 .down-btn,
+.site__page-crhromaWallet01 .down-btn{
+    text-indent: -5000px;
+    width: 48px;
+    height: 37px;
+    margin-left: -24px;
+}
+.site__page-crhromaWallet02 .down-btn:before,
+.site__page-crhromaWallet01 .down-btn:before{
+    background: url("../img/desktop/arrow-down2.png") no-repeat;
+
+}
+
 /* --------------- /site__page-crhromaWallet01 --------------- */
+
+/* --------------- /site__page-crhromaWallet02 --------------- */
+
+/*.site__page-crhromaWallet02{*/
+    /*display: block;*/
+/*}*/
+
+.instruction-back{
+    position: absolute;
+    top: 115px;
+    left: 0;
+    width: 50%;
+    bottom: 0;
+    padding-top: 53px;
+    background: #2d333d url("../img/desktop/instruction-back.png") no-repeat center;
+}
+.instruction-back__video{
+    display: block;
+    margin: 0 auto;
+    width: 375px;
+    margin-bottom: 36px;
+
+}
+.about-text{
+    position: absolute;
+    top: 115px;
+    right: 0;
+    width: 50%;
+    bottom: 0;
+    background: #18a2a2;
+    font-family: "sourcesanspro-regular";
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    padding: 76px 86px 0 86px;
+}
+.about-text a{
+    text-decoration: underline;
+    color: #eec84c;
+}
+.about-text a:hover{
+    text-decoration: none;
+}
+.about-text dl{
+    margin-bottom: 26px;
+}
+.about-text dt{
+    margin-bottom: 30px;
+}
+.about-text dd {
+    background: url("../img/desktop/colored-point.png") no-repeat 0 6px;
+    padding-left: 27px;
+    margin-left: 28px;
+    margin-bottom: 6px;
+}
+
+.about-text h2{
+    font-size: 46px;
+    font-weight: normal;
+    font-family: "sourcesanspro-bold";
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+/* --------------- /site__page-crhromaWallet02 --------------- */
 
 @-webkit-keyframes jump {
     0%   {bottom: -50px;}
@@ -251,6 +462,95 @@ a:hover {
     100% {bottom: -50px;}
 }
 
+@media (max-width: 1000px) {
+
+    .colored-video{
+        position: relative;
+        top: auto;
+        width: 100%;
+    }
+
+    .colored-video img{
+        height: auto !important;
+    }
+
+    .colored-text{
+        position: relative;
+        top: auto;
+        width: 100%;
+    }
+    .show-mobile-menu{
+        display: block;
+    }
+    .site__menu__logo{
+
+        display: none;
+
+    }
+    .site__menu{
+        bottom: 0;
+        display: block !important;
+        height: auto;
+        width: 0;
+        overflow: hidden;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .site__menu.show{
+        width: 100%;
+    }
+    .main-menu{
+        left: 0;
+        right: 0;
+        top: 87px;
+        height: auto;
+        margin-left: 0;
+    }
+    .main-menu a{
+        text-align: center;
+        display: block;
+        font-size: 24px;
+        height: 62px;
+        letter-spacing: 2;
+    }
+    .user-guide-btn{
+        top: 415px;
+        left: 50%;
+        width: 208px;
+        height: 63px;
+        margin-left: -104px;
+        line-height: 63px;
+        font-size: 24px;
+        background: #353c4c url("../img/mobile/guid-btn.png") no-repeat bottom right;
+    }
+    .colored-text__show{
+        display: block;
+    }
+
+    header.site__page{
+        position: relative;
+        height: 568px;
+
+
+    }
+    .site__center{
+        min-height: 568px;
+    }
+    .site__page-crhromaWallet01{
+        display: block;
+        position: relative;
+
+    }
+    .site__page-crhromaWallet01 .down-btn:before{
+        display: none;
+    }
+    .site__center{
+        height: auto !important;
+    }
+
+}
+
 
 @media (max-width: 600px) {
     .logo{
@@ -263,6 +563,24 @@ a:hover {
         font-size: 11px;
 
     }
+    .colored-text{
+        font-size: 12px;
+        padding: 18px 30px 20px 30px;
+    }
+    .colored-text h2{
+        font-size: 24px;
+    }
+    .colored-text dl{
+        margin-bottom: 23px;
+    }
+    .colored-text dt{
+        line-height: 13px;
+        margin-bottom: 5px;
+    }
+    .colored-text dd{
+        margin-bottom: -2px;
+    }
+
     .down-btn:before{
         background: url("../img/mobile/arrow-down.png") no-repeat;
         width: 25px;
@@ -270,6 +588,22 @@ a:hover {
         content: "";
         margin-left: -12px;
         bottom: -25px;
+    }
+    .colored-text dd{
+        background: url("../img/mobile/colored-point.png") no-repeat 0 7px;
+        padding-left: 15px;
+    }
+    .colored-download{
+        width: 197px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0 auto;
+        margin-bottom: 18px;
+    }
+    .colored-text span{
+        font-size: 8px;
     }
 }
 
