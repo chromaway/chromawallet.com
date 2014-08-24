@@ -74,7 +74,7 @@ var Page = function(){
                         });
 
                     }
-                    else if(self.activePage.index() == 3){
+                    else if(self.activePage.index() == 3 ){
 
                         var textBlock = $('.colored-text'),
                             videoBlokc = $('.colored-video'),
@@ -291,7 +291,7 @@ var Page = function(){
 
                     console.log(self.activePage.index() )
 
-                    if(self.activePage.index() == 3){
+                    if(self.activePage.index() == 3 ) {
 
 
 
