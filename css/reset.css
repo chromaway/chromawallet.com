@@ -69,7 +69,7 @@ ol {
 }
 html {
     overflow-y: hidden;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 html,
 body {

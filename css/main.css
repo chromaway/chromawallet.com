@@ -153,6 +153,7 @@ a:hover {
     right: 0;
     bottom: 0;
     overflow: auto;
+    overflow-x: hidden;
     display: none;
 }
 
@@ -372,7 +373,7 @@ a:hover {
     top: 115px;
     left: 0;
     width: 50%;
-    bottom: 0;
+    height: 100%;
     padding-top: 53px;
     background: #2d333d url("../img/desktop/instruction-back.png") no-repeat center;
 }
@@ -388,7 +389,8 @@ a:hover {
     top: 115px;
     right: 0;
     width: 50%;
-    bottom: 0;
+    /*bottom: 0;*/
+    height: 100%;
     background: #18a2a2;
     font-family: "sourcesanspro-regular";
     font-size: 18px;
@@ -464,6 +466,28 @@ a:hover {
 
 @media (max-width: 1000px) {
 
+    .site__page-crhromaWallet02 .down-btn:before{
+        display: none;
+    }
+    html{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .site__page-crhromaWallet02{
+        display: block;
+        position: relative;
+    }
+    .instruction-back{
+        position: relative;
+        top: auto;
+        width: 100%;
+    }
+    .about-text{
+        position: relative;
+        top: auto;
+        width: 100%;
+    }
     .colored-video{
         position: relative;
         top: auto;

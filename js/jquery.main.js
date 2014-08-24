@@ -84,7 +84,6 @@ var Page = function(){
                         },{
                             complete: function(){
 
-
                                 self.activePage.prev().fadeOut(300, function(){
 
                                     self.menu.removeClass('hide-menu');
@@ -97,54 +96,80 @@ var Page = function(){
                                         top: 0
                                     },300);
 
-                                    textBlock.css({
-                                        left: -(textBlock.width())
-                                    });
+                                    setTimeout(function(){
 
-                                    videoBlokc.css({
-                                        left: videoBlokc.width() + self.windowWidth
-                                    });
 
-                                    self.activePage.css({
-                                        'display':'block'
-                                    });
+                                        textBlock.css({
+                                            left: -self.windowWidth/2
+                                        });
 
-                                    textBlock.animate({
+                                        videoBlokc.css({
+                                            left: self.windowWidth/2 + self.windowWidth
+                                        });
 
-                                        left: 0
+                                        self.activePage.css({
+                                            'display':'block'
+                                        });
 
-                                    },{
-                                        start: function(){
+                                        setTimeout(function(){
 
-                                            videoBlokc.animate({
+                                            textBlock.animate({
 
-                                                left: videoBlokc.width()
+                                                left: 0
 
-                                            },300)
+                                            },{
+                                                start: function(){
 
-                                       },
-                                       complete: function(){
-                                            textShow.fadeIn(500);
-                                       }
+                                                    videoBlokc.animate({
 
-                                    },500);
+                                                        left: self.windowWidth/2
 
+                                                    },300)
+
+                                                },
+                                                complete: function(){
+                                                    setTimeout( function(){
+                                                        textShow.fadeIn(500);
+
+                                                    },500)
+                                                }
+
+                                            },1500);
+
+
+                                        },300)
+
+                                    },500)
 
                                 });
-
 
                             }
                         },500)
 
+                    }
+                    else if(self.activePage.index() == 4){
+
+                        var textBlock = $('.colored-text');
 
 
+                        self.activePage.prev().css({
+                            'display':'block'
+                        })
+                        self.activePage.css({
+                            'display':'none'
+                        })
 
+                        textBlock.animate({
 
+                            left: self.windowWidth/2
 
+                        },300)
 
                     }
                     else{
+
                         self.menu.removeClass('hide-menu');
+
                     }
 
 
