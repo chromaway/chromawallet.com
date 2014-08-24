@@ -16,8 +16,9 @@ var Page = function(){
     this.scrollMouse = false;
     this.menu = $('.site__menu');
     this.windowWidth = $(window).width();
-    this.videoBtn =  $('.colored-video');
+    this.videoBtn =  $('.video-call');
     this.videoContainer =  $('.videoBlock');
+    this.nextPageBtn = $('.down-btn');
     this.videoCloseBtn =  $('.videoBlock__close');
 
     this.init();
@@ -36,7 +37,7 @@ var Page = function(){
                 build: function(){
                     self.core.setSize();
                     self.core.controls();
-                    self.core.menuShow();
+                    self.core.pageStepDown();
                 },
                 setSize: function (){
                     self.contents.each(function(){
@@ -53,13 +54,15 @@ var Page = function(){
                         curItem.height( newH );
                     })
                 },
-                menuShow: function(){
+                pageStepDown: function(){
 
 
                     self.activePage =  $('.site__page.active');
                     self.downBtn = $('.down-btn');
                     self.bigLogo = $('.logo');
 
+
+                    console.log(self.activePage.index())
 
                     if(self.activePage.index() == 2){
 
@@ -149,26 +152,42 @@ var Page = function(){
                     }
                     else if(self.activePage.index() == 4){
 
-                        var textBlock = $('.colored-text');
+                        var textBlock = $('.about-text'),
+                            unstructionBack = $('.instruction-back');
 
 
-                        self.activePage.prev().css({
+                        self.activePage.css({
                             'display':'block'
                         })
-                        self.activePage.css({
-                            'display':'none'
-                        })
 
-                        textBlock.animate({
 
-                            left: self.windowWidth/2
+                        setTimeout( function(){
 
-                        },300)
+                            textBlock.animate({
+
+                                left: self.windowWidth/2
+                            },{
+                                complete: function(){
+                                    setTimeout( function(){
+
+                                        unstructionBack.fadeIn(300, function(){
+                                            textBlock.children().fadeIn();
+                                        });
+
+                                    },1500)
+                                }
+                            },300)
+
+                        },1500)
+
+
+
+
+
 
                     }
                     else{
 
-                        self.menu.removeClass('hide-menu');
 
                     }
 
@@ -186,6 +205,14 @@ var Page = function(){
 
                     });
 
+                    self.nextPageBtn.on('click', function(){
+
+                        self.core.nextPage();
+
+                        return false;
+
+                    });
+
                     $('body').keydown(function(e){
 
                         self.core.videoHide(e)
@@ -194,7 +221,6 @@ var Page = function(){
 
                     self.videoCloseBtn.on('click', function(){
 
-                        console.log(1);
 
                         var curElem = $(this);
 
@@ -260,6 +286,87 @@ var Page = function(){
                         }
                     });
                 },
+                pageStepUp: function(){
+
+
+                    console.log(self.activePage.index() )
+
+                    if(self.activePage.index() == 3){
+
+
+
+                        var textBlock = $('.colored-text'),
+                            videoBlokc = $('.colored-video'),
+                            textShow = $('.colored-text__show');
+
+                        textShow.fadeOut(300, function(){
+
+                            textBlock.animate({
+
+                                left: -self.windowWidth/2
+
+                            },500)
+
+                            videoBlokc.animate({
+                                left: self.windowWidth
+                            },500)
+
+
+                            setTimeout( function(){
+
+                                self.menu.animate({
+                                    top:'-115px'
+                                },{
+                                    complete: function(){
+                                        self.core.hidePagePrev();
+
+                                        self.bigLogo.animate({
+
+                                            top: self.window.height()/2 - 114
+
+                                        },300)
+
+                                    }
+                                },300)
+
+                            },500)
+
+
+
+                        })
+
+                    }
+                    else if(self.activePage.index() == 4){
+
+
+                        var textBlock = $('.about-text'),
+                            unstructionBack = $('.instruction-back');
+
+                        textBlock.children().fadeOut(300, function(){
+
+                            setTimeout(function(){
+                                unstructionBack.fadeOut(300)
+                            },500)
+
+                            textBlock.animate({
+
+                                left: 0
+
+                            },{
+                                complete: function(){
+                                    self.core.hidePagePrev();
+
+                                }
+                            },300)
+
+                        })
+
+
+
+
+                    }
+
+                },
                 videOpen: function(curElem){
 
 
@@ -295,7 +402,7 @@ var Page = function(){
                         if(self.windowWidth > 1000){
 
                             self.core.hidePage();
-                            self.core.menuShow();
+                            self.core.pageStepDown();
 
                         }
 
@@ -307,7 +414,23 @@ var Page = function(){
                 prevPage:function(){
                     self.timer=setTimeout(function(){
 
+                        if(self.windowWidth > 1000){
+
+                            self.core.pageStepUp();
+
+                        }
+
+
                     },50)
+                },
+                hidePagePrev: function(){
+                    self.activePage.fadeOut();
+                    self.activePage.removeClass('active');
+                    self.activePage.prev().addClass('active');
+
+                    self.activePage.prev().css({
+                        display: 'block'
+                    });
                 },
                 hidePage: function(){
                     self.activePage.fadeOut();

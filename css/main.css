@@ -375,6 +375,7 @@ a:hover {
     width: 50%;
     height: 100%;
     padding-top: 53px;
+    display: none;
     background: #2d333d url("../img/desktop/instruction-back.png") no-repeat center;
 }
 .instruction-back__video{
@@ -387,7 +388,7 @@ a:hover {
 .about-text{
     position: absolute;
     top: 115px;
-    right: 0;
+    left: 0;
     width: 50%;
     /*bottom: 0;*/
     height: 100%;
@@ -397,6 +398,9 @@ a:hover {
     line-height: 25px;
     color: #fff;
     padding: 76px 86px 0 86px;
+}
+.about-text__wrap{
+    display: none;
 }
 .about-text a{
     text-decoration: underline;
@@ -482,11 +486,15 @@ a:hover {
         position: relative;
         top: auto;
         width: 100%;
+        display: block;
     }
     .about-text{
         position: relative;
         top: auto;
         width: 100%;
+    }
+    .about-text__wrap{
+        display: block;
     }
     .colored-video{
         position: relative;
@@ -577,6 +585,15 @@ a:hover {
 
 
 @media (max-width: 600px) {
+    .about-text h2{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .about-text{
+        font-size: 12px;
+        padding: 30px;
+        line-height: 14px;
+    }
     .logo{
         background: url("../img/mobile/logo.png");
         width: 233px;
@@ -613,6 +630,7 @@ a:hover {
         margin-left: -12px;
         bottom: -25px;
     }
+    .about-text dd,
     .colored-text dd{
         background: url("../img/mobile/colored-point.png") no-repeat 0 7px;
         padding-left: 15px;
