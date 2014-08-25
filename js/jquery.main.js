@@ -20,6 +20,9 @@ var Page = function(){
     this.videoContainer =  $('.videoBlock');
     this.nextPageBtn = $('.down-btn');
     this.videoCloseBtn =  $('.videoBlock__close');
+    this.activeIndex = 0;
+    this.action = false;
+    this.activePage = $('.site__page.active');
 
     this.init();
 };
@@ -37,7 +40,7 @@ var Page = function(){
                 build: function(){
                     self.core.setSize();
                     self.core.controls();
-                    self.core.pageStepDown();
+                    self.core.startPage();
                 },
                 setSize: function (){
                     self.contents.each(function(){
@@ -54,143 +57,211 @@ var Page = function(){
                         curItem.height( newH );
                     })
                 },
-                pageStepDown: function(){
+                startPage: function(){
 
-
-                    self.activePage =  $('.site__page.active');
                     self.downBtn = $('.down-btn');
                     self.bigLogo = $('.logo');
 
+                    self.menu.addClass('hide-menu');
 
-                    console.log(self.activePage.index())
+                    self.activePage.fadeIn(500, function(){
+                        self.downBtn.fadeIn(700);
 
-                    if(self.activePage.index() == 2){
+                    });
 
-                        self.menu.addClass('hide-menu');
+                },
+                downToPage1: function(){
 
-                        self.activePage.fadeIn(500, function(){
-                            self.downBtn.fadeIn(700);
 
-                        });
+                    var textBlock = $('.colored-text'),
+                        videoBlokc = $('.colored-video'),
+                        textShow = $('.colored-text__show');
 
-                    }
-                    else if(self.activePage.index() == 3 ){
+                    self.bigLogo.animate({
 
-                        var textBlock = $('.colored-text'),
-                            videoBlokc = $('.colored-video'),
-                            textShow = $('.colored-text__show');
+                        top: -self.bigLogo.height()
 
-                        self.bigLogo.animate({
+                    },{
+                        complete: function(){
 
-                            top: -self.bigLogo.height()
 
-                        },{
-                            complete: function(){
 
-                                self.activePage.prev().fadeOut(300, function(){
 
-                                    self.menu.removeClass('hide-menu');
+                            self.activePage.prev().fadeOut(300, function(){
 
-                                    self.menu.css({
-                                        'top': '-115px'
+                                self.menu.removeClass('hide-menu');
+
+                                self.menu.css({
+                                    'top': '-115px'
+                                });
+
+                                self.menu.animate({
+                                    top: 0
+                                },300);
+                                setTimeout(function(){
+
+                                    textBlock.css({
+                                        left: -self.windowWidth/2
                                     });
 
-                                    self.menu.animate({
-                                        top: 0
-                                    },300);
+                                    videoBlokc.css({
+                                        left: self.windowWidth/2 + self.windowWidth
+                                    });
+
+
+
+                                    self.activePage.css({
+                                        'display':'block'
+                                    });
 
                                     setTimeout(function(){
 
+                                        textBlock.animate({
 
-                                        textBlock.css({
-                                            left: -self.windowWidth/2
-                                        });
+                                            left: 0
 
-                                        videoBlokc.css({
-                                            left: self.windowWidth/2 + self.windowWidth
-                                        });
+                                        },{
+                                            start: function(){
 
-                                        self.activePage.css({
-                                            'display':'block'
-                                        });
+                                                videoBlokc.animate({
 
-                                        setTimeout(function(){
+                                                    left: self.windowWidth/2
 
-                                            textBlock.animate({
+                                                },300)
 
-                                                left: 0
+                                            },
+                                            complete: function(){
+                                                setTimeout( function(){
+                                                    textShow.fadeIn(500);
+                                                    self.action = false;
 
-                                            },{
-                                                start: function(){
+                                                },500)
+                                            }
 
-                                                    videoBlokc.animate({
-
-                                                        left: self.windowWidth/2
-
-                                                    },300)
-
-                                                },
-                                                complete: function(){
-                                                    setTimeout( function(){
-                                                        textShow.fadeIn(500);
-
-                                                    },500)
-                                                }
-
-                                            },1500);
+                                        },1500);
 
 
-                                        },300)
+                                    },300)
 
-                                    },500)
+                                },500)
 
-                                });
+                            });
+
+                        }
+                    },500)
+                },
+                downToPage2: function(){
+
+                    var textBlock = $('.about-text'),
+                        unstructionBack = $('.instruction-back');
+
+
+                    self.activePage.css({
+                        'display':'block'
+                    });
+
+
+                    setTimeout( function(){
+
+                        textBlock.animate({
+
+                            left: self.windowWidth/2
+                        },{
+                            complete: function(){
+                                setTimeout( function(){
+
+                                    unstructionBack.fadeIn(300, function(){
+                                        textBlock.children().fadeIn();
+                                    });
+
+                                },1500);
+                                self.action = false;
 
                             }
+                        },300)
+
+                    },1500)
+
+                },
+                upToPage0: function(){
+
+
+                    var textBlock = $('.colored-text'),
+                        videoBlokc = $('.colored-video'),
+                        textShow = $('.colored-text__show');
+
+                    textShow.fadeOut(300, function(){
+
+                        textBlock.animate({
+
+                            left: -self.windowWidth/2
+
                         },500)
 
-                    }
-                    else if(self.activePage.index() == 4){
-
-                        var textBlock = $('.about-text'),
-                            unstructionBack = $('.instruction-back');
-
-
-                        self.activePage.css({
-                            'display':'block'
-                        })
+                        videoBlokc.animate({
+                            left: self.windowWidth
+                        },500)
 
 
                         setTimeout( function(){
 
-                            textBlock.animate({
-
-                                left: self.windowWidth/2
+                            self.menu.animate({
+                                top:'-115px'
                             },{
                                 complete: function(){
-                                    setTimeout( function(){
+                                    self.core.hidePagePrev();
 
-                                        unstructionBack.fadeIn(300, function(){
-                                            textBlock.children().fadeIn();
-                                        });
+                                    self.activePage.fadeIn();
 
-                                    },1500)
+                                    self.bigLogo.animate({
+
+                                        top: self.window.height()/2 - 114
+
+                                    },300)
+                                    self.action = false;
+
                                 }
                             },300)
 
-                        },1500)
+                        },500)
 
 
 
+                    })
+
+                },
+                upToPage1: function(){
+
+                    var textBlock = $('.about-text'),
+                        unstructionBack = $('.instruction-back');
+
+                    textBlock.children().fadeOut(300, function(){
+
+                        setTimeout(function(){
+                            unstructionBack.fadeOut(300)
+                        },500)
+
+                        textBlock.animate({
+
+                            left: 0
+
+                        },{
+                            complete: function(){
+
+
+                                self.core.hidePagePrev();
+
+
+                                    self.activePage.fadeIn()
+
+                                    self.action = false;
 
 
 
-                    }
-                    else{
+                            }
+                        },300)
 
-
-                    }
-
+                    })
 
                 },
                 controls: function(){
@@ -286,87 +357,6 @@ var Page = function(){
                         }
                     });
                 },
-                pageStepUp: function(){
-
-
-                    console.log(self.activePage.index() )
-
-                    if(self.activePage.index() == 3 ) {
-
-
-
-                        var textBlock = $('.colored-text'),
-                            videoBlokc = $('.colored-video'),
-                            textShow = $('.colored-text__show');
-
-                        textShow.fadeOut(300, function(){
-
-                            textBlock.animate({
-
-                                left: -self.windowWidth/2
-
-                            },500)
-
-                            videoBlokc.animate({
-                                left: self.windowWidth
-                            },500)
-
-
-                            setTimeout( function(){
-
-                                self.menu.animate({
-                                    top:'-115px'
-                                },{
-                                    complete: function(){
-                                        self.core.hidePagePrev();
-
-                                        self.bigLogo.animate({
-
-                                            top: self.window.height()/2 - 114
-
-                                        },300)
-
-                                    }
-                                },300)
-
-                            },500)
-
-
-
-                        })
-
-                    }
-                    else if(self.activePage.index() == 4){
-
-
-                        var textBlock = $('.about-text'),
-                            unstructionBack = $('.instruction-back');
-
-                        textBlock.children().fadeOut(300, function(){
-
-                            setTimeout(function(){
-                                unstructionBack.fadeOut(300)
-                            },500)
-
-                            textBlock.animate({
-
-                                left: 0
-
-                            },{
-                                complete: function(){
-                                    self.core.hidePagePrev();
-
-                                }
-                            },300)
-
-                        })
-
-
-
-
-                    }
-
-                },
                 videOpen: function(curElem){
 
 
@@ -399,11 +389,33 @@ var Page = function(){
                     self.timer=setTimeout(function(){
 
 
+
                         if(self.windowWidth > 1000){
+                            if( !self.action){
 
-                            self.core.hidePage();
-                            self.core.pageStepDown();
+                                self.action = true;
 
+                                self.activeIndex++;
+
+
+
+                                if( self.activeIndex == 1 ){
+
+
+                                    self.core.hidePageNext();
+
+                                    self.core.downToPage1();
+                                } else if( self.activeIndex == 2){
+
+
+
+
+                                    self.core.hidePageNext();
+
+                                    self.core.downToPage2();
+
+                                }
+                            }
                         }
 
 
@@ -416,26 +428,52 @@ var Page = function(){
 
                         if(self.windowWidth > 1000){
 
-                            self.core.pageStepUp();
+                            if(!self.action){
+
+                                self.action = true;
+                                self.activeIndex--;
+
+                                if( self.activeIndex == 0 ){
+
+
+                                    self.core.upToPage0();
+
+                                } else if( self.activeIndex == 1){
+
+                                    self.core.upToPage1();
+
+                                } else if( self.activeIndex == 2){
+
+                                    self.core.upToPage2();
+
+                                }
+                            }
+
+
 
                         }
 
 
                     },50)
                 },
-                hidePagePrev: function(){
-                    self.activePage.fadeOut();
-                    self.activePage.removeClass('active');
-                    self.activePage.prev().addClass('active');
+                hidePageNext: function(){
 
-                    self.activePage.prev().css({
-                        display: 'block'
-                    });
-                },
-                hidePage: function(){
+
                     self.activePage.fadeOut();
                     self.activePage.removeClass('active');
-                    self.activePage.next().addClass('active');
+                    self.activePage = self.activePage.next().addClass('active');
+
+
+                },
+                hidePagePrev: function(){
+
+
+
+                    self.activePage.fadeOut();
+                    self.activePage.removeClass('active');
+                    self.activePage  = self.activePage.prev().addClass('active');
+
+
                 }
             };
         }
