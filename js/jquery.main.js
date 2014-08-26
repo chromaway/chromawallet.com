@@ -19,6 +19,7 @@ var Page = function(){
     this.videoBtn =  $('.video-call');
     this.videoContainer =  $('.videoBlock');
     this.nextPageBtn = $('.down-btn');
+    this.prevPageBtn = $('.up-btn');
     this.videoCloseBtn =  $('.videoBlock__close');
     this.activeIndex = 0;
     this.action = false;
@@ -62,7 +63,6 @@ var Page = function(){
                     self.downBtn = $('.down-btn');
                     self.bigLogo = $('.logo');
 
-                    self.menu.addClass('hide-menu');
 
                     self.activePage.fadeIn(500, function(){
                         self.downBtn.fadeIn(700);
@@ -84,66 +84,49 @@ var Page = function(){
                     },{
                         complete: function(){
 
-
-
-
                             self.activePage.prev().fadeOut(300, function(){
 
-                                self.menu.removeClass('hide-menu');
-
-                                self.menu.css({
-                                    'top': '-115px'
-                                });
 
                                 self.menu.animate({
                                     top: 0
-                                },300);
+                                })
+
+                                textBlock.css({
+                                    left: -self.windowWidth/2
+                                });
+
+                                videoBlokc.css({
+                                    left: self.windowWidth
+                                });
+
+
                                 setTimeout(function(){
-
-                                    textBlock.css({
-                                        left: -self.windowWidth/2
-                                    });
-
-                                    videoBlokc.css({
-                                        left: self.windowWidth/2 + self.windowWidth
-                                    });
-
-
 
                                     self.activePage.css({
                                         'display':'block'
                                     });
 
-                                    setTimeout(function(){
+                                        videoBlokc.animate({
+
+                                            left: self.windowWidth/2
+
+                                        },500)
 
                                         textBlock.animate({
 
                                             left: 0
 
                                         },{
-                                            start: function(){
-
-                                                videoBlokc.animate({
-
-                                                    left: self.windowWidth/2
-
-                                                },300)
-
-                                            },
                                             complete: function(){
-                                                setTimeout( function(){
                                                     textShow.fadeIn(500);
                                                     self.action = false;
+                                            },
+                                            duration: 500
 
-                                                },500)
-                                            }
-
-                                        },1500);
+                                        });
 
 
-                                    },300)
-
-                                },500)
+                                },300)
 
                             });
 
@@ -183,6 +166,185 @@ var Page = function(){
                     },1500)
 
                 },
+                downToPage3: function(){
+
+
+                    var textBlock = $('.about-text'),
+                        prevSlideBlock = $('.site__page-crhromaWallet02'),
+                        text = $('.download-page__text'),
+                        squeres = $('.squeres'),
+                        indexCount = 1,
+                        unstructionBack = $('.instruction-back');
+
+                    self.podlozhka = $('<div class="podlozhka"></div>');
+
+                    prevSlideBlock.children().append(self.podlozhka);
+
+                    textBlock.animate({
+                        top: -textBlock.height()
+                    });
+
+                    unstructionBack.animate({
+                        top: -textBlock.height()
+                    });
+
+                    $('body').mousemove(function(e){
+                        var x = e.pageX;
+
+                        squeres.find('>div').css({
+
+                            'transform': 'rotateY('+ (x-self.windowWidth/2)*0.03+'deg)'
+
+
+                    });
+
+
+                    });
+
+                    setTimeout( function(){
+
+                        self.core.hidePageNext();
+                        self.activePage.css({
+                            'display':'block'
+                        });
+
+                    },500);
+
+                    setTimeout(function(){
+                        squeres.fadeIn(function(){
+                            text.fadeIn();
+                        });
+                    },1500);
+
+                    setTimeout(function(){
+
+                        text.find('li').each( function(indexCount){
+
+
+                            var curItem = $(this);
+
+                            setTimeout(function(){
+
+                                curItem.animate({
+                                    opacity: 1
+                                },{
+                                    complete: function(){
+                                        self.action = false;
+
+                                    }
+                                },300)
+
+                            },++indexCount*500);
+
+                        });
+
+                    },2000)
+
+
+
+
+
+                },
+                downToPage4: function(){
+
+                    var downloadText1 = $('.download-page__text h2'),
+                        downloadText2 = $('.download-page__text p'),
+                        downloadText3 = $('.download-page__text'),
+                        squeres = $('.squeres');
+
+                    downloadText1.animate({
+                        opacity: 0
+                    },300);
+                    downloadText2.animate({
+                        opacity: 0
+                    },{
+                        complete: function(){
+                            downloadText3.animate({
+                                top: -downloadText3.height()
+                            },500);
+
+                        }
+                    },300);
+
+
+
+                    setTimeout( function(){
+                        squeres.fadeOut();
+
+                    },2000);
+
+
+                    setTimeout(function(){
+                        self.core.hidePageNext();
+
+                        self.activePage.prev({
+                            'display': 'none'
+                        })
+                        self.activePage.css({
+                            'display':'block'
+                        })
+                    },2500)
+
+                    setTimeout( function(){
+
+                        self.activePage.addClass('active-shtorka');
+
+                        downloadText1.css({
+                            display:'none',
+                            opacity: '1'
+                        })
+
+                        downloadText2.css({
+                            display:'none',
+                            opacity: '1'
+                        })
+
+                        self.action = false;
+
+
+                    },3000)
+
+                },
+                downToPage5: function(){
+
+                    var backImg = $('.contacts__back'),
+                        conatctsText = $('.contacts > div:first-child');
+
+                    self.activePage.next().css({
+                        'display':'block'
+                    });
+
+                    self.activePage.animate({
+                        bottom: self.activePage.height()
+                    },300);
+
+
+
+                    backImg.delay(1000).fadeIn(300, function(){
+
+                        conatctsText.fadeIn(300);
+                        self.core.hidePageNext();
+                        self.action = false;
+
+
+
+                    });
+
+
+
+                    $('body').mousemove(function(e){
+                            var x = e.pageX;
+
+                        backImg.css({
+
+                                'left': (x-self.windowWidth)*0.03+'px'
+
+
+                            });
+                    });
+
+
+                },
                 upToPage0: function(){
 
 
@@ -190,44 +352,50 @@ var Page = function(){
                         videoBlokc = $('.colored-video'),
                         textShow = $('.colored-text__show');
 
-                    textShow.fadeOut(300, function(){
+                    textShow.fadeOut(500);
 
-                        textBlock.animate({
+                    textBlock.animate({
 
-                            left: -self.windowWidth/2
+                        left: -self.windowWidth/2
 
-                        },500)
+                    },500)
 
-                        videoBlokc.animate({
-                            left: self.windowWidth
-                        },500)
+                    videoBlokc.animate({
+                        left: self.windowWidth
+                    },500)
 
 
-                        setTimeout( function(){
+                    setTimeout( function(){
 
-                            self.menu.animate({
-                                top:'-115px'
-                            },{
-                                complete: function(){
-                                    self.core.hidePagePrev();
+                        self.menu.animate({
+                            top:'-115px'
+                        },{
+                            complete: function(){
+                                self.core.hidePagePrev();
 
-                                    self.activePage.fadeIn();
+                                self.activePage.fadeIn();
 
-                                    self.bigLogo.animate({
+                                self.bigLogo.animate({
 
-                                        top: self.window.height()/2 - 114
+                                    top: self.window.height()/2 - 114
 
-                                    },300)
-                                    self.action = false;
-
-                                }
-                            },300)
-
-                        },500)
+                                },300);
 
 
 
-                    })
+                                self.action = false;
+
+                            },
+                            duration: 600
+                        })
+
+                    },500)
+
+
+
+
+
+
 
                 },
                 upToPage1: function(){
@@ -264,6 +432,151 @@ var Page = function(){
                     })
 
                 },
+                upToPage2: function(){
+
+
+
+                    var textBlock = $('.about-text'),
+                        prevSlideBlock = $('.site__page-crhromaWallet02'),
+                        text = $('.download-page__text'),
+                        squeres = $('.squeres'),
+                        indexCount = 1,
+                        podlozhka = $('.podlozhka'),
+                        unstructionBack = $('.instruction-back');
+
+
+                    text.find('li').each( function(indexCount){
+
+
+
+                        var curItem = $(this);
+
+                        setTimeout(function(){
+
+                            curItem.animate({
+                                opacity: 0
+                            },300)
+
+                        },++indexCount*500);
+
+
+
+
+
+
+                    });
+
+
+                    setTimeout( function(){
+                        text.fadeOut( function(){
+                            squeres.fadeOut(300,function(){
+                                self.activePage.css({
+                                    'display':'none'
+                                });
+                                self.activePage.prev().css({
+                                    'display':'block'
+                                });
+                                self.podlozhka.css({
+                                    'top':'0'
+                                })
+
+
+                                self.core.hidePagePrev();
+                            });
+                        });
+                    },5000);
+
+                    setTimeout( function(){
+
+                        textBlock.animate({
+                            top: 0
+                        },300);
+
+                        unstructionBack.animate({
+                            top: 0
+                        },{
+                            complete: function(){
+                                podlozhka.remove();
+                                self.action = false;
+
+                            }
+                        },300);
+
+                    },6000)
+
+
+
+
+
+
+                },
+                upToPage3: function(){
+
+                    self.activePage.removeClass('active-shtorka');
+
+
+                    var downloadText1 = $('.download-page__text h2'),
+                        downloadText2 = $('.download-page__text p'),
+                        downloadText3 = $('.download-page__text'),
+                        squeres = $('.squeres');
+
+                    setTimeout(function(){
+
+
+                        self.activePage.prev().css({
+                            'display': 'block'
+                        })
+                        self.activePage.css({
+                            'display':'none'
+                        })
+                        self.core.hidePagePrev();
+
+                    },1000);
+
+
+                    setTimeout( function(){
+                        squeres.fadeIn();
+
+                    },1500);
+
+
+                    downloadText3.animate({
+                        top: '50%'
+                    },2000);
+
+                    downloadText1.fadeIn();
+                    downloadText2.fadeIn();
+                    setTimeout( function(){
+
+                        self.action = false;
+
+                    },3000)
+
+
+
+
+                },
+                upToPage4:function(){
+
+
+                    var backImg = $('.contacts__back'),
+                        conatctsText = $('.contacts > div:first-child');
+
+                    conatctsText.fadeOut(300);
+                    backImg.delay(1000).fadeOut();
+
+                    self.activePage.prev().animate({
+                        bottom: 0
+                    },300);
+
+                    self.activePage.prev().css({
+                        'display':'block'
+                    });
+                    self.core.hidePagePrev();
+
+                    self.action = false;
+
+                },
                 controls: function(){
 
                     self.videoBtn.on('click', function(){
@@ -271,6 +584,14 @@ var Page = function(){
                         var curElem = $(this);
 
                         self.core.videOpen(curElem)
+
+                        return false;
+
+                    });
+
+                    self.prevPageBtn.on('click', function(){
+
+                        self.core.prevPage();
 
                         return false;
 
@@ -289,6 +610,8 @@ var Page = function(){
                         self.core.videoHide(e)
 
                     });
+
+
 
                     self.videoCloseBtn.on('click', function(){
 
@@ -397,24 +720,29 @@ var Page = function(){
 
                                 self.activeIndex++;
 
-
-
                                 if( self.activeIndex == 1 ){
-
 
                                     self.core.hidePageNext();
 
                                     self.core.downToPage1();
+
                                 } else if( self.activeIndex == 2){
-
-
-
 
                                     self.core.hidePageNext();
 
                                     self.core.downToPage2();
 
+                                } else if( self.activeIndex == 3){
+
+                                    self.core.downToPage3();
                                 }
+                                else if( self.activeIndex == 4){
+                                    self.core.downToPage4();
+                                }
+                                else if( self.activeIndex == 5){
+                                    self.core.downToPage5();
+                                }
+
                             }
                         }
 
@@ -424,6 +752,10 @@ var Page = function(){
                     },50)
                 },
                 prevPage:function(){
+
+
+
+
                     self.timer=setTimeout(function(){
 
                         if(self.windowWidth > 1000){
@@ -432,6 +764,8 @@ var Page = function(){
 
                                 self.action = true;
                                 self.activeIndex--;
+
+
 
                                 if( self.activeIndex == 0 ){
 
@@ -446,6 +780,14 @@ var Page = function(){
 
                                     self.core.upToPage2();
 
+                                }else if( self.activeIndex == 3){
+
+                                    self.core.upToPage3();
+
+                                }else if( self.activeIndex == 4){
+
+                                    self.core.upToPage4();
+
                                 }
                             }
 
@@ -457,7 +799,6 @@ var Page = function(){
                     },50)
                 },
                 hidePageNext: function(){
-
 
                     self.activePage.fadeOut();
                     self.activePage.removeClass('active');

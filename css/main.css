@@ -99,7 +99,7 @@ a:hover {
     margin-left: -36px;
     color: #929497;
     display: none;
-
+    z-index: 10;
 }
 .down-btn:before{
     background: url("../img/desktop/arrow-down.png") no-repeat;
@@ -163,12 +163,13 @@ a:hover {
 /* --------------- site__menu --------------- */
 .site__menu{
     position: fixed;
-    top:0;
+    top:-115px;
     left: 0;
     height: 115px;
     background: #fff;
     z-index: 5;
     width: 100%;
+
 }
 .site__menu__logo{
     position: absolute;
@@ -247,9 +248,7 @@ a:hover {
     transform: rotate(90deg);
 
 }
-.hide-menu{
-    display: none;
-}
+
 /* --------------- /site__menu --------------- */
 
 .videoBlock{
@@ -347,6 +346,7 @@ a:hover {
     line-height: 22px;
     margin: 0 0 11px 30px;
 }
+.site__page-crhromaWallet04 .down-btn,
 .site__page-crhromaWallet03 .down-btn,
 .site__page-crhromaWallet02 .down-btn,
 .site__page-crhromaWallet01 .down-btn{
@@ -355,6 +355,7 @@ a:hover {
     height: 37px;
     margin-left: -24px;
 }
+.site__page-crhromaWallet04 .down-btn:before,
 .site__page-crhromaWallet03 .down-btn:before,
 .site__page-crhromaWallet02 .down-btn:before,
 .site__page-crhromaWallet01 .down-btn:before{
@@ -378,6 +379,7 @@ a:hover {
     height: 100%;
     padding-top: 53px;
     display: none;
+    z-index: 10;
     background: #2d333d url("../img/desktop/instruction-back.png") no-repeat center;
 }
 .instruction-back__video{
@@ -399,6 +401,7 @@ a:hover {
     font-size: 18px;
     line-height: 25px;
     color: #fff;
+    z-index: 10;
     padding: 76px 86px 0 86px;
 }
 .about-text__wrap{
@@ -431,7 +434,15 @@ a:hover {
     text-transform: uppercase;
     margin-bottom: 35px;
 }
-
+.podlozhka{
+    background: #3b97d2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 /* --------------- /site__page-crhromaWallet02 --------------- */
 
 /* --------------- site__page-crhromaWallet03 --------------- */
@@ -442,13 +453,439 @@ a:hover {
     background: #3b97d2;
     height: 100%;
     width: 100%;
+
+    color: #fff;
 }
+.download-page__text{
+    position: absolute;
+    z-index: 10;
+    height: 319px;
+    left: 0;
+    width: 100%;
+    margin-top: -220px;
+    top: 50%;
+    display: none;
+}
+.download-page p{
+    text-align: center;
+    font-family: "sourcesanspro-regular";
+    margin-bottom: 50px;
+}
+
 .site__page.site__page-crhromaWallet03{
     top: 115px;
 }
+.squeres{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 616px;
+    width: 1176px;
+    margin: -259px 0 0 -588px;
+    z-index: 10;
+    display: none;
+    /*-webkit-perspective: 600px;*/
+    /*-moz-perspective: 600px;*/
+    /*-o-perspective: 600px;*/
+    /*perspective: 600px;*/
+}
+.squeres > div{
+    transform-style: preserve-3d;
+    -webkit-transition: all 0s ease;
+    -moz-transition: all 0s ease;
+    transition: all 0s ease;
 
+}
+.squeres > div > div{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform-origin: 50%;
+    -moz-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+    background: #328bcb;
+    width: 308px;
+    height: 308px;
+
+}
+.squers__item1{
+    width: 308px;
+    height: 308px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.squers__item2{
+    width: 308px;
+    height: 308px;
+    position: absolute;
+    top: 217px;
+    left: 217px;
+
+    opacity: 0.8;
+}
+.squers__item3{
+    width: 308px;
+    height: 308px;
+    position: absolute;
+    top: 0;
+    left: 434px;
+
+}
+.squers__item4{
+    width: 308px;
+    height: 308px;
+    position: absolute;
+    top: 217px;
+    left: 651px;
+
+}
+.squers__item5{
+    width: 308px;
+    height: 308px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.download-page h2{
+    text-align: center;
+    font-size: 46px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    font-family: "sourcesanspro-bold";
+
+}
+.download-page__text ul{
+    text-align: center;
+    position: relative;
+
+}
+.download-page__text li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 40px;
+    opacity: 0;
+
+}
+.download-page__text li a{
+    position: relative;
+    display: block;
+    width: 132px;
+    height: 132px;
+
+}
+.download-page__text li > span{
+    position: relative;
+    display: block;
+    width: 132px;
+    height: 132px;
+}
+
+.download-page__text li .disabled > span,
+.download-page__text li a > span{
+    display: table;
+    height: 132px;
+    width: 132px;
+
+}
+.download-page__text li .disabled > span > span,
+.download-page__text li a > span > span{
+    display: table-cell;
+    width: 132px;
+    height: 132px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-family: "sourcesanspro-bold";
+    text-transform: uppercase;
+    white-space: pre-line;
+    font-size: 18px;
+}
+.download-page__text li .disabled > span > span > span{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -41px;
+    font-size: 12px;
+    font-family: "sourcesanspro-regular";
+    width: 83px;
+}
+
+.download-page__text li .disabled .back-squere{
+    background: #929497;
+}
+.back-squere{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 132px;
+    height: 132px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform-origin: 50%;
+    -moz-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #005382;
+    z-index: -1;
+}
+.download-page__text li a:hover .back-squere{
+    background: #f16522;
+}
+.download-page__text li a:hover:after{
+    background: #353c4c;
+    width: 34px;
+    height: 17px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform-origin: 50%;
+    -moz-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -17px;
+    left: 41px;
+    content: "";
+}
+.download-page__text li a:hover:before{
+    background: #353c4c;
+    width: 34px;
+    height: 17px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform-origin: 50%;
+    -moz-transform-origin: 50%;
+    -o-transform-origin: 50%;
+    -ms-transform-origin: 50%;
+    transform-origin: 50%;
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: -18px;
+    left: 55px;
+    content: "";
+}
 /* --------------- /site__page-crhromaWallet03 --------------- */
 
+/* --------------- site__page-crhromaWallet04 --------------- */
+.site__page-crhromaWallet04{
+    top: 115px;
+    background: #353c4c;
+    overflow: hidden;
+    z-index: 1;
+}
+.resources{
+    color: #fff;
+    text-align: center;
+    width: 720px;
+    font-size: 18px;
+    font-family: "sourcesanspro-regular";
+    line-height: 22px;
+    position: absolute;
+    top: 50%;
+    height: 231px;
+    margin: -115px 0 0 -360px;
+    left: 50%;
+}
+
+.resources h2{
+    font-weight: normal;
+    font-family: "sourcesanspro-bold";
+    font-size: 46px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+.resources p{
+    margin-bottom: 45px;
+}
+.resources a{
+    color: #eec84c;
+
+}
+.resources a:hover{
+    text-decoration: underline;
+}
+.resources__giude{
+    background: #ff5b3b;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    width: 238px;
+    height: 63px;
+    line-height: 63px;
+    text-align: center;
+    color: #fff !important;
+    text-transform: uppercase;
+}
+.resources__giude:hover{
+    text-decoration: none !important;
+}
+.site__page-crhromaWallet04.active-shtorka .shtorka-left{
+    -moz-transform: rotate(77deg);
+    -webkit-transform: rotate(77deg);
+    transform: rotate(77deg);
+}
+.site__page-crhromaWallet04.active-shtorka .shtorka-right{
+    -moz-transform: rotate(-77deg);
+    -webkit-transform: rotate(-77deg);
+    transform: rotate(-77deg);
+}
+.shtorka-left{
+    background: #3b97d2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 200%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform-origin: top right;
+    -moz-transform-origin: top right;
+    -o-transform-origin: top right;
+    -ms-transform-origin: top right;
+    transform-origin: top right;
+}
+.shtorka-right{
+    background: #3b97d2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 200%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin:  top left;
+    -o-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+
+}
+/* --------------- /site__page-crhromaWallet04 --------------- */
+
+
+/* --------------- site__page-crhromaWallet05 --------------- */
+
+.site__page-crhromaWallet05{
+    top: 115px
+}
+.contacts{
+    background: #d05f6b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    line-height: 22px;
+    font-family: "sourcesanspro-regular";
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.contacts > div{
+    height: 233px;
+    width: 918px;
+    position: absolute;
+    top: 50%;
+    display: none;
+    z-index: 1;
+    left: 50%;
+    margin: -116px 0 0 -464px;
+}
+.up-btn{
+    background: url("../img/desktop/arrow-down2.png");
+    width: 48px;
+    height: 37px;
+    margin-left: -24px;
+    position: absolute;
+    bottom: 75px;
+    left: 50%;
+    text-indent: -5000px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.contacts h2{
+    text-align: center;
+    font-size: 46px;
+    font-weight: normal;
+    font-family: "sourcesanspro-bold";
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.contacts p{
+    margin-bottom: 30px;
+}
+.contacts a{
+    display: block;
+    margin: 0 auto;
+    width: 238px;
+    height: 63px;
+    text-align: center;
+    line-height: 63px;
+    font-size: 21px;
+    color: #fff;
+    font-family: "sourcesanspro-bold";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #2cc6c2;
+}
+.contacts > div > div{
+    text-align: justify;
+    width: 918px;
+    margin: 0 auto;
+}
+.contacts > div > div:after{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    height: 0;
+    width: 100%;
+}
+.contacts > div > div > div{
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    text-align: center;
+}
+.contacts__back{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -500px;
+    right: -500px;
+    background: url("../img/desktop/contacts-bac.jpg");
+    display: none;
+}
+
+/* --------------- /site__page-crhromaWallet05 --------------- */
 
 @-webkit-keyframes jump {
     0%   {bottom: -50px;}
@@ -488,6 +925,122 @@ a:hover {
 
 @media (max-width: 1000px) {
 
+    .videoBlock{
+        top: 0;
+    }
+    .shtorka-right{
+        -moz-transform: rotate(-77deg);
+        -webkit-transform: rotate(-77deg);
+        transform: rotate(-77deg);
+    }
+    .shtorka-left{
+        -moz-transform: rotate(77deg);
+        -webkit-transform: rotate(77deg);
+        transform: rotate(77deg);
+    }
+    .contacts{
+        background: url("../img/mobile/contacts-back.jpg");
+        position: relative;
+        padding-top: 70px;
+        padding-bottom: 166px;
+    }
+    .up-btn{
+        background: url("../img/mobile/up-btn.png");
+        width: 25px;
+        height: 18px;
+        margin-left: -12px;
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        bottom: 83px;
+    }
+    .contacts > div{
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        display: block;
+        height: auto;
+    }
+    .squeres{
+        display: block;
+    }
+    .contacts h2{
+        font-size: 24px;
+    }
+    .contacts > div > div{
+        width: 100%;
+    }
+    .contacts > div > div > div{
+        display: block;
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+    .contacts > div > div:after{
+        display: none;
+    }
+    .contacts p{
+        font-size: 13px;
+    }
+    .contacts a{
+        width: 197px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .site__page-crhromaWallet05{
+        display: block;
+        top: 0;
+        position: relative;
+    }
+    .site__page-crhromaWallet04{
+        display: block;
+        position: relative;
+        top: 0 !important;
+
+    }
+    .resources{
+        position: relative;
+        top: 0;
+        margin: 0;
+        left: 0;
+        padding: 50px 20px 40px 20px;
+        width: 100%;
+        height: auto;
+    }
+    .resources h2{
+        font-size: 24px;
+    }
+    .resources p{
+        font-size: 13px;
+    }
+    .resources__giude{
+        width: 197px;
+        line-height: 35px;
+        letter-spacing: 1px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .site__page-crhromaWallet03{
+        display: block;
+        position: relative;
+        top: 0 !important;
+
+    }
+    .download-page{
+        position: relative;
+        overflow: hidden;
+    }
+    .download-page__text{
+        position: relative;
+        top: 0;
+        margin-top: 0;
+        padding: 100px 0;
+        height: auto;
+        overflow: hidden;
+        display: block;
+    }
     .site__page-crhromaWallet02 .down-btn:before{
         display: none;
     }
@@ -510,6 +1063,7 @@ a:hover {
         position: relative;
         top: auto;
         width: 100%;
+        padding-bottom: 20px;
     }
     .about-text__wrap{
         display: block;
@@ -598,10 +1152,34 @@ a:hover {
     .site__center{
         height: auto !important;
     }
-
+    .site__page-crhromaWallet04 .down-btn:before,
+    .site__page-crhromaWallet03 .down-btn:before{
+        display: none;
+    }
 }
 
+@media (max-width: 920px) {
+    .download-page h2{
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
 
+    .download-page p{
+        font-size: 13px;
+    }
+    .download-page__text li{
+        display: block;
+        opacity: 1;
+    }
+    .download-page__text li span,
+    .download-page__text li a{
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+    .download-page__text li .disabled > span > span > span{
+        bottom: -82px;
+    }
+}
 @media (max-width: 600px) {
     .about-text h2{
         font-size: 24px;
