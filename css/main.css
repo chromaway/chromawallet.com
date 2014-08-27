@@ -197,9 +197,14 @@ a:hover {
     font-family: "sourcesanspro-bold";
     text-transform: uppercase;
     line-height: 115px;
+    letter-spacing: 1px;
 }
 .main-menu a.active{
     color: #ee4d2c;
+    cursor: default;
+}
+.main-menu a.active:hover:after{
+    display: none;
 }
 .main-menu a span{
     line-height: 115px;
@@ -326,6 +331,7 @@ a:hover {
     display: block;
     font-family: "sourcesanspro-bold";
     font-size: 21px;
+    letter-spacing: 3px;
     margin: 0 0 33px 30px;
 }
 .colored-text span{
@@ -404,11 +410,12 @@ a:hover {
     padding: 76px 86px 0 86px;
 }
 .about-text a{
-    text-decoration: underline;
+    text-decoration: none;
+
     color: #eec84c;
 }
 .about-text a:hover{
-    text-decoration: none;
+    text-decoration: underline;
 }
 .about-text dl{
     margin-bottom: 26px;
@@ -736,6 +743,8 @@ a:hover {
     text-align: center;
     color: #fff !important;
     text-transform: uppercase;
+    font-family: "sourcesanspro-bold";
+    letter-spacing: 3px;
 }
 .resources__giude:hover{
     text-decoration: none !important;
@@ -850,9 +859,16 @@ a:hover {
     color: #fff;
     font-family: "sourcesanspro-bold";
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    background: #18a2a2;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.contacts a:hover{
     background: #2cc6c2;
 }
+
 .contacts > div > div{
     text-align: justify;
     width: 918px;
