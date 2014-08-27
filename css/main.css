@@ -473,7 +473,6 @@ a:hover {
     font-family: "sourcesanspro-regular";
     margin-bottom: 42px;
 }
-
 .site__page.site__page-crhromaWallet03{
     top: 115px;
 }
@@ -485,10 +484,7 @@ a:hover {
     margin: -259px 0 0 -588px;
     z-index: 10;
     background: #3b97d2;
-    /*-webkit-perspective: 600px;*/
-    /*-moz-perspective: 600px;*/
-    /*-o-perspective: 600px;*/
-    /*perspective: 600px;*/
+    perspective: 1000px;
 }
 .squeres > div{
     transform-style: preserve-3d;
