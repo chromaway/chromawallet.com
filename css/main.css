@@ -121,20 +121,10 @@ a:hover {
 /* --------------- site --------------- */
 .site {
     min-height: 100%;
-
     overflow: hidden;
     position: relative;
     z-index: 1;
 }
-/*.site:after {*/
-    /*content: '';*/
-    /*display: block;*/
-    /*clear: both;*/
-    /*width: 100%;*/
-
-    /*height: 100px;*/
-/*}*/
-
 .site__center {
     height: 100%;
     width: 100%;
@@ -148,15 +138,23 @@ a:hover {
 }
 .site__page {
     position: fixed;
-    top: 0;
+    top: 100%;
     left: 0;
     right: 0;
     bottom: 0;
+    overflow: hidden;
+}
+.site__page.active {
+    top: 115px;
     overflow: auto;
     overflow-x: hidden;
-    display: none;
 }
-
+.site__menu + .site__page.active {
+    top: 0;
+}
+.site__content {
+    position: relative;
+}
 /* --------------- /site --------------- */
 
 
@@ -274,32 +272,27 @@ a:hover {
 }
 
 /* --------------- site__page-crhromaWallet01 --------------- */
-.site__page-crhromaWallet01{
-    display: none;
-}
 .colored-text{
     color: #fff;
     width: 50%;
     position: absolute;
-    top: 115px;
+    top: 0;
     font-size: 18px;
     left: 0;
     font-family: "sourcesanspro-regular";
-    bottom: 0;
     padding: 59px 20px 20px 2%;
     background: #18a2a2;
-
+    z-index: 2;
 }
 .colored-text__show{
-    display: none;
+   opacity: 0;
 }
 .colored-video{
     width: 50%;
     position: absolute;
-    top: 115px;
+    top: 0;
     right: 0;
-    bottom: 0;
-
+    z-index: 1;
 }
 .colored-video img{
     display: block;
@@ -373,12 +366,10 @@ a:hover {
 
 .instruction-back{
     position: absolute;
-    top: 115px;
+    top: 0;
     left: 0;
     width: 50%;
-    height: 100%;
     padding-top: 53px;
-    display: none;
     z-index: 10;
     background: #2d333d url("../img/desktop/instruction-back.png") no-repeat center;
 }
@@ -391,11 +382,9 @@ a:hover {
 }
 .about-text{
     position: absolute;
-    top: 115px;
-    left: 0;
+    top: 0;
+    right: 0;
     width: 50%;
-    /*bottom: 0;*/
-    height: 100%;
     background: #18a2a2;
     font-family: "sourcesanspro-regular";
     font-size: 18px;
@@ -403,9 +392,6 @@ a:hover {
     color: #fff;
     z-index: 10;
     padding: 76px 86px 0 86px;
-}
-.about-text__wrap{
-    display: none;
 }
 .about-text a{
     text-decoration: underline;
@@ -451,7 +437,7 @@ a:hover {
     top: 0;
     left: 0;
     background: #3b97d2;
-    height: 100%;
+    height: 659px;
     width: 100%;
 
     color: #fff;
@@ -464,12 +450,11 @@ a:hover {
     width: 100%;
     margin-top: -220px;
     top: 50%;
-    display: none;
 }
 .download-page p{
     text-align: center;
     font-family: "sourcesanspro-regular";
-    margin-bottom: 50px;
+    margin-bottom: 42px;
 }
 
 .site__page.site__page-crhromaWallet03{
@@ -479,11 +464,10 @@ a:hover {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 616px;
     width: 1176px;
     margin: -259px 0 0 -588px;
     z-index: 10;
-    display: none;
+    background: #3b97d2;
     /*-webkit-perspective: 600px;*/
     /*-moz-perspective: 600px;*/
     /*-o-perspective: 600px;*/
@@ -572,9 +556,8 @@ a:hover {
 .download-page__text li{
     display: inline-block;
     vertical-align: top;
+    position: relative;
     margin: 20px 40px;
-    opacity: 0;
-
 }
 .download-page__text li a{
     position: relative;
@@ -625,7 +608,7 @@ a:hover {
 }
 .back-squere{
     position: absolute;
-    top: 0;
+    top: 8px;
     left: 0;
     width: 132px;
     height: 132px;
@@ -704,7 +687,6 @@ a:hover {
     line-height: 22px;
     position: absolute;
     top: 50%;
-    height: 231px;
     margin: -115px 0 0 -360px;
     left: 50%;
 }
@@ -741,12 +723,12 @@ a:hover {
 .resources__giude:hover{
     text-decoration: none !important;
 }
-.site__page-crhromaWallet04.active-shtorka .shtorka-left{
+.active-shtorka .shtorka-left{
     -moz-transform: rotate(77deg);
     -webkit-transform: rotate(77deg);
     transform: rotate(77deg);
 }
-.site__page-crhromaWallet04.active-shtorka .shtorka-right{
+.active-shtorka .shtorka-right{
     -moz-transform: rotate(-77deg);
     -webkit-transform: rotate(-77deg);
     transform: rotate(-77deg);
@@ -789,16 +771,14 @@ a:hover {
 
 /* --------------- site__page-crhromaWallet05 --------------- */
 
-.site__page-crhromaWallet05{
-    top: 115px
-}
 .contacts{
     background: #d05f6b;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    min-height: 500px;
     color: #fff;
     line-height: 22px;
     font-family: "sourcesanspro-regular";
@@ -811,7 +791,6 @@ a:hover {
     width: 918px;
     position: absolute;
     top: 50%;
-    display: none;
     z-index: 1;
     left: 50%;
     margin: -116px 0 0 -464px;
@@ -882,7 +861,6 @@ a:hover {
     left: -500px;
     right: -500px;
     background: url("../img/desktop/contacts-bac.jpg");
-    display: none;
 }
 
 /* --------------- /site__page-crhromaWallet05 --------------- */
