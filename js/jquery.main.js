@@ -381,7 +381,10 @@ var Page = function(){
                             }
 
                             curContent.outerHeight(newH);
-                            curContent.css( { overflow: 'hidden' } );
+                            curContent.css( {
+                                overflow: 'hidden',
+                                position: 'relative'
+                            } );
                         } else if( i == 5 ){
                             var newH = 500;
 
