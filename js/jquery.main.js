@@ -29,6 +29,10 @@ var Page = function(){
     this.animationArrDown = [
         2100, 1100, 2800, 1400, 1100
     ];
+    this.siteMenuLogo = $( '.site__menu__logo' );
+    this.animationArrUp = [
+        1500, 1100, 800, 1600, 1100
+    ];
 
 
     this.init();
@@ -314,10 +318,23 @@ var Page = function(){
                         }
                     } );
                 },
-                moveUp: function (newIndex){},
+                moveUp: function (newIndex){
+                    var total = 0,
+                        i;
+
+                    for( i = self.activeIndex-1; i != (newIndex-1); i-- ){
+
+                        toNextPage (total);
+                        total += self.animationArrUp[ i ] + 100;
+                    }
+                    function toNextPage (duration){
+                        setTimeout( function(){
+                            self.core.prevPage();
+                        },duration );
+                    }
+                },
                 moveDown: function(newIndex){
                     var total = 0;
-                    console.log(self.activeIndex,newIndex)
 
                     for( i = self.activeIndex; i != newIndex; i++ ){
                         toNextPage (total);
@@ -326,7 +343,6 @@ var Page = function(){
 
                     function toNextPage (duration){
                         setTimeout( function(){
-                            console.log(duration)
                             self.core.nextPage();
                         },duration );
                     }
@@ -498,29 +514,6 @@ var Page = function(){
                         });
                     } );
 
-//                    $( 'body' ).css( {
-//                        background: '#2d333d'
-//                    } );
-//                    textShow.fadeTo( 300, 0, function(){
-//                        textBlock.animate( {
-//                            left: windW/2
-//                        }, {
-//                            duration: 500,
-//                            easing: 'easeInOutQuad',
-//                            complete: function(){
-//                                pageContentCur.removeClass( 'active' );
-//                                pageContentNext.addClass( 'active' );
-//
-//                                firstBlock.css( { display: 'none' } );
-//                                secondBlock.css( { display: 'none' } );
-//
-//                                firstBlock.fadeIn( 300 );
-//                                secondBlock.fadeIn( 300, function (){
-//                                    self.action = false;
-//                                } );
-//                            }
-//                        } );
-//                    } );
                 },
                 upToPage2: function(){
                     var pageContentCur = self.items.eq( 2 ),
@@ -557,8 +550,6 @@ var Page = function(){
                             }
                         } );
                     } );
-
-
 
                 },
                 upToPage3: function(){
@@ -663,15 +654,32 @@ var Page = function(){
 
                     });
 
+                    self.siteMenuLogo.on( {
+                        click: function(){
+                            self.core.moveUp( 0 );
+
+                            return false;
+                        }
+                    } );
+
                     self.menuLnk.on( {
                         'click': function(){
-                            var curItem = $( this );
+                            var curItem = $( this),
+                                newindex;
 
                             self.menuLnk.removeClass( 'active' );
 
                             curItem.addClass('active');
 
-                            self.core.moveDown( self.menuLnk.index( curItem ) + 2 );
+                            newindex = self.menuLnk.index( curItem ) + 2;
+
+                            if( newindex > self.activeIndex ){
+                                self.core.moveDown( self.menuLnk.index( curItem ) + 2 );
+                            } else if ( newindex < self.activeIndex ) {
+                                self.core.moveUp( self.menuLnk.index( curItem ) + 2 );
+                            }
+
+                            return false;
                         }
                     } );
 
