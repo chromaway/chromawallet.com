@@ -30,6 +30,7 @@ var Page = function(){
         2100, 1100, 2800, 1400, 1100
     ];
 
+
     this.init();
 };
     Page.prototype = {
@@ -770,6 +771,21 @@ var Page = function(){
                     }
 
                 },
+                menuActive: function(elem){
+
+                    if(elem == 2){
+                        self.menuLnk.removeClass('active');
+
+                    }
+                    else{
+                        self.menuLnk.removeClass('active');
+
+                        self.menuLnk.eq(elem-3).addClass('active');
+
+                    }
+
+
+                },
                 nextPage:function(){
                     self.timer=setTimeout(function(){
 
@@ -782,20 +798,30 @@ var Page = function(){
 
                                 if( self.activeIndex == 1 ){
 
+
+
                                     self.core.downToPage1();
 
                                 } else if( self.activeIndex == 2){
+                                    self.core.menuActive(3)
+
                                     self.core.downToPage2();
 
                                 } else if( self.activeIndex == 3){
 
+                                    self.core.menuActive(4)
+
                                     self.core.downToPage3();
                                 }
                                 else if( self.activeIndex == 4){
+                                    self.core.menuActive(5)
+
 
                                     self.core.downToPage4();
                                 }
                                 else if( self.activeIndex == 5){
+                                    self.core.menuActive(6)
+
                                     self.core.downToPage5();
                                 }
 
@@ -817,18 +843,24 @@ var Page = function(){
                                     self.core.upToPage0();
 
                                 } else if( self.activeIndex == 1){
+                                    self.core.menuActive(2)
 
                                     self.core.upToPage1();
 
                                 } else if( self.activeIndex == 2){
 
                                     self.core.upToPage2();
+                                    self.core.menuActive(3)
+
 
                                 }else if( self.activeIndex == 3){
+
+                                    self.core.menuActive(4)
 
                                     self.core.upToPage3();
 
                                 }else if( self.activeIndex == 4){
+                                    self.core.menuActive(5)
 
                                     self.core.upToPage4();
 
