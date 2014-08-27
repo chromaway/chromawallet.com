@@ -118,6 +118,16 @@ a:hover {
     animation: jump 3s infinite linear;
 }
 
+.down-btn.down-btn_white{
+    text-indent: -5000px;
+    width: 48px;
+    height: 37px;
+    margin-left: -24px;
+}
+.down-btn.down-btn_white:before{
+    background: url("../img/desktop/arrow-down2.png") no-repeat;
+
+}
 /* --------------- site --------------- */
 .site {
     min-height: 100%;
@@ -339,22 +349,7 @@ a:hover {
     line-height: 22px;
     margin: 0 0 11px 30px;
 }
-.site__page-crhromaWallet04 .down-btn,
-.site__page-crhromaWallet03 .down-btn,
-.site__page-crhromaWallet02 .down-btn,
-.site__page-crhromaWallet01 .down-btn{
-    text-indent: -5000px;
-    width: 48px;
-    height: 37px;
-    margin-left: -24px;
-}
-.site__page-crhromaWallet04 .down-btn:before,
-.site__page-crhromaWallet03 .down-btn:before,
-.site__page-crhromaWallet02 .down-btn:before,
-.site__page-crhromaWallet01 .down-btn:before{
-    background: url("../img/desktop/arrow-down2.png") no-repeat;
 
-}
 
 /* --------------- /site__page-crhromaWallet01 --------------- */
 
