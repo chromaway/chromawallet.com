@@ -198,6 +198,9 @@ a:hover {
     text-transform: uppercase;
     line-height: 115px;
 }
+.main-menu a.active{
+    color: #ee4d2c;
+}
 .main-menu a span{
     line-height: 115px;
     position: relative;
@@ -361,7 +364,7 @@ a:hover {
     top: 0;
     left: 0;
     width: 50%;
-    padding-top: 53px;
+
     z-index: 10;
     background: #2d333d url("../img/desktop/instruction-back.png") no-repeat center;
 }
@@ -369,9 +372,24 @@ a:hover {
     display: block;
     margin: 0 auto;
     width: 375px;
+
+}
+.instruction-back__video:first-child{
     margin-bottom: 36px;
 
 }
+.instruction-back__tabel{
+    display: table;
+    width: 100%;
+}
+.instruction-back__tabel-cell{
+    display: table-cell;
+    text-align: center;
+    width: 100%;
+
+    vertical-align: middle;
+}
+
 .about-text{
     position: absolute;
     top: 0;
@@ -485,10 +503,21 @@ a:hover {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 
-    background: #328bcb;
+
     width: 308px;
     height: 308px;
 
+}
+.squers__item5 > div,
+.squers__item1 > div{
+    background: #328bcb;
+}
+.squers__item3 > div{
+    background: #368fcd;
+}
+.squers__item2 > div,
+.squers__item4 > div{
+    background: #3287c2;
 }
 .squers__item1{
     width: 308px;
