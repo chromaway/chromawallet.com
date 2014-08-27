@@ -21,10 +21,14 @@ var Page = function(){
     this.videoContainer =  $('.videoBlock');
     this.nextPageBtn = $('.down-btn');
     this.prevPageBtn = $('.up-btn');
+    this.menuLnk = $( '.main-menu a' ),
     this.videoCloseBtn =  $('.videoBlock__close');
     this.activeIndex = 0;
     this.action = false;
     this.activePage = $('.site__page.active');
+    this.animationArrDown = [
+        2100, 1100, 2800, 1400, 1100
+    ];
 
     this.init();
 };
@@ -269,7 +273,7 @@ var Page = function(){
                 downToPage5: function(){
 
                     var pageContentCur = self.items.eq( 4 ),
-                        pageContentNext = self.items.eq( 5),
+                        pageContentNext = self.items.eq( 5 ),
                         backImg = pageContentNext.find('.contacts__back'),
                         conatctsText = pageContentNext.find('.contacts > div:first-child');
 
@@ -309,6 +313,8 @@ var Page = function(){
                         }
                     } );
                 },
+                moveUp: function (){},
+                moveDown: function(){},
                 resize: function(){
                     var curContent;
 

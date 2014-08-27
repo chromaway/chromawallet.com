@@ -449,7 +449,7 @@ a:hover {
     background: #3b97d2;
     height: 659px;
     width: 100%;
-
+    overflow: hidden;
     color: #fff;
 }
 .download-page__text{
