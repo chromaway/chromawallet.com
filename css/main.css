@@ -203,7 +203,7 @@ a:hover {
     color: #ee4d2c;
     cursor: default;
 }
-.main-menu a.active:hover:after{
+.main-menu a.active:hover span:after{
     display: none;
 }
 .main-menu a span{
