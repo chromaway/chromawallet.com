@@ -372,6 +372,7 @@ var Page = function(){
 
                             firstBlock.outerHeight(newH);
                             secondBlock.outerHeight(newH);
+                            curContent.outerHeight(newH);
                         } else if( i == 2 ){
                             var firstBlock = curContent.find( '.instruction-back' ),
                                 firstBlockTable = curContent.find( '.instruction-back__tabel'),
@@ -398,6 +399,7 @@ var Page = function(){
                             firstBlockTable.outerHeight(newH);
                             firstBlockTableCell.outerHeight(newH);
                             secondBlock.outerHeight(newH);
+                            curContent.outerHeight(newH);
                         } else if( i == 3 ){
                             var firstBlock = curContent.find( '.download-page' ),
                                 newH = 659;
@@ -409,7 +411,7 @@ var Page = function(){
                             }
 
                             firstBlock.outerHeight(newH);
-
+                            curContent.outerHeight(newH);
                         } else if( i == 4 ){
                             var firstBlock = curContent.find( '.resources' ),
                                 newH = 652;

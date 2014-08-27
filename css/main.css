@@ -162,6 +162,9 @@ a:hover {
 .site__menu + .site__page.active {
     top: 0;
 }
+.site__content {
+    position: relative;
+}
 /* --------------- /site --------------- */
 
 
