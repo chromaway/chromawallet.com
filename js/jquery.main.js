@@ -336,6 +336,8 @@ var Page = function(){
                             secondBlock.outerHeight(newH);
                         } else if( i == 2 ){
                             var firstBlock = curContent.find( '.instruction-back' ),
+                                firstBlockTable = curContent.find( '.instruction-back__tabel'),
+                                firstBlockTableCell = curContent.find( '.instruction-back__tabel-cell'),
                                 secondBlock = curContent.find( '.about-text'),
                                 newH = 0;
 
@@ -344,6 +346,8 @@ var Page = function(){
 
                             if( firstBlock.outerHeight() > secondBlock.outerHeight() ){
                                 newH = firstBlock.outerHeight();
+                                firstBlockTable.outerHeight(newH);
+                                firstBlockTableCell.outerHeight(newH);
                             } else {
                                 newH = secondBlock.outerHeight();
                             }
@@ -353,6 +357,8 @@ var Page = function(){
                             }
 
                             firstBlock.outerHeight(newH);
+                            firstBlockTable.outerHeight(newH);
+                            firstBlockTableCell.outerHeight(newH);
                             secondBlock.outerHeight(newH);
                         } else if( i == 3 ){
                             var firstBlock = curContent.find( '.download-page' ),
