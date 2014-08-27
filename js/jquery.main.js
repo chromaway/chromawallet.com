@@ -313,8 +313,23 @@ var Page = function(){
                         }
                     } );
                 },
-                moveUp: function (){},
-                moveDown: function(){},
+                moveUp: function (newIndex){},
+                moveDown: function(newIndex){
+                    var total = 0;
+                    console.log(self.activeIndex,newIndex)
+
+                    for( i = self.activeIndex; i != newIndex; i++ ){
+                        toNextPage (total);
+                        total += self.animationArrDown[ i ] + 100
+                    }
+
+                    function toNextPage (duration){
+                        setTimeout( function(){
+                            console.log(duration)
+                            self.core.nextPage();
+                        },duration );
+                    }
+                },
                 resize: function(){
                     var curContent;
 
@@ -647,6 +662,18 @@ var Page = function(){
 
                     });
 
+                    self.menuLnk.on( {
+                        'click': function(){
+                            var curItem = $( this );
+
+                            self.menuLnk.removeClass( 'active' );
+
+                            curItem.addClass('active');
+
+                            self.core.moveDown( self.menuLnk.index( curItem ) + 2 );
+                        }
+                    } );
+
                     $('body').on( {
                         keydown: function(e){
                             self.core.videoHide(e);
@@ -663,11 +690,7 @@ var Page = function(){
                                 degCos = Math.cos(deg),
                                 degSin = Math.sin(deg);
 
-                            console.log(deg)
                             $( '.squeres' ).find('>div').css({
-
-//                                'transform': 'rotateY('+ (x-self.windowWidth/2)*0.03+'deg)'
-
                                 transform: 'matrix3d(' + degCos + ', 0, ' + degSin + ', 0, 0, 1, 0, 0, ' + degSin + ', 0, ' + degCos + ', 0, 0, 0, 0, 1)'
                             });
                         }
@@ -733,7 +756,6 @@ var Page = function(){
 
                     self.items.on({
                         'scroll':function( e ){
-                            console.log(e)
                             if( self.scrollMouse ) {
                                 self.scroll = true;
                             }
