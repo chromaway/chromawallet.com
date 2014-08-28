@@ -1400,6 +1400,7 @@ a:hover {
         top: 0 !important;
 
     }
+
     .resources{
         position: relative;
         top: 0;
@@ -1437,7 +1438,7 @@ a:hover {
         position: relative;
         top: 0;
         margin-top: 0;
-        padding: 100px 0;
+        padding: 40px 0;
         height: auto;
         overflow: hidden;
         display: block;
@@ -1460,6 +1461,11 @@ a:hover {
         width: 100%;
         padding: 25px 0 9px 0;
         display: block;
+        height: auto !important;
+    }
+    .instruction-back__tabel-cell,
+    .instruction-back__tabel{
+        height: auto !important;
     }
     .instruction-back__video{
         margin-bottom: 16px;
@@ -1474,6 +1480,7 @@ a:hover {
         top: auto;
         width: 100%;
         padding-bottom: 20px;
+        height: auto !important;
     }
     .about-text__wrap{
         display: block;
@@ -1618,6 +1625,7 @@ a:hover {
     }
     .colored-text h2{
         font-size: 24px;
+        line-height: 30px;
     }
     .colored-text dl{
         margin-bottom: 23px;
@@ -1628,8 +1636,11 @@ a:hover {
     }
     .colored-text dd{
         margin-bottom: -2px;
+        margin-left: 12px;
     }
-
+    .about-text dd{
+        margin-left: 12px;
+    }
     .down-btn:before{
         background: url("../img/mobile/arrow-down.png") no-repeat;
         width: 25px;
