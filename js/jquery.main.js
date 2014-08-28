@@ -74,8 +74,15 @@ var Page = function(){
                     self.downBtn = $('.down-btn');
                     self.bigLogo = $('.logo');
 
+                    self.bigLogo.css({
+                        'display' : 'none'
+                    })
+                    self.downBtn.css({
+                        'display' : 'none'
 
-                    self.activePage.fadeIn(500, function(){
+                    })
+
+                    self.bigLogo.fadeIn(500, function(){
                         self.downBtn.fadeIn(700);
 
                     });
