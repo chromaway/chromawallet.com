@@ -71,6 +71,12 @@ a:hover {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "sourcesanspro-italic";
+    src: url("../fonts/sourcesanspro-italic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 /* --------------- /fonts --------------- */
 
 /* --------------- logo --------------- */
@@ -907,6 +913,7 @@ a:hover {
 }
 .site__menu_v2{
     top: 0 !important;
+    z-index: 20;
 }
 .user-guide{
     padding-top: 167px;
@@ -1005,7 +1012,7 @@ a:hover {
 
 }
 .installetion__text{
-    padding: 84px 88px;
+    padding: 84px 88px 61px 88px;
 }
 .installetion__text h2{
     font-weight: normal;
@@ -1023,26 +1030,247 @@ a:hover {
     background: #3b97d2;
     overflow: hidden;
     position: relative;
+    font-family: "sourcesanspro-regular";
+    font-size: 18px;
+    color: #fff;
+    line-height: 22px;
+    padding-top: 101px;
+    padding-bottom: 10px;
 }
-.managment:after{
+.managment h2{
+    font-size: 27px;
+    font-weight: bold;
+    font-family: "sourcesanspro-bold";
+    letter-spacing: 3px;
+    margin-bottom: 29px;
+}
+.managment h3{
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.managment__text dl{
+    margin-bottom: 13px;
+}
+.managment__text dt{
+    display: inline-block;
+    vertical-align: top;
+}
+.managment__text dd{
+    display: inline;
+    font-family: "sourcesanspro-italic";
+    vertical-align: top;
+}
+
+.managment:before{
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     width: 50%;
+    background: url("../img/desktop/pink-back.jpg") 0 92px;
+}
+.managment__text ol li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 14px;
+}
+.managment__text ol li{
+
+}
+.managment__text ol li > span{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .managment__video{
     width: 50%;
     float: left;
     display: block;
+    text-align: center;
+    margin-top: -9px;
 }
+.managment__video a{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.managment__video a:after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../img/desktop/play-btn.png");
+    width: 74px;
+    height: 147px;
+    content: "";
+    margin: -74px 0 0 -37px;
+}
+
 .managment__text{
     width: 50%;
     float: left;
+    padding: 0 87px 0 87px;
+}
+.managment > div{
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    margin-bottom: 56px;
+}
+.managment__text p{
+    margin-bottom: 15px;
+}
+.managment__text h4{
+    font-size: 18px;
+    font-family: "sourcesanspro-bold";
+    margin-bottom: 13px;
+    font-weight: normal;
 }
 /* --------------- /managment --------------- */
+
+/* --------------- sending --------------- */
+.sending{
+    background: #2d333d;
+    overflow: hidden;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "sourcesanspro-regular";
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 121px;
+}
+.sending:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background: url("../img/desktop/green-back.jpg");
+    content: "";
+}
+
+.sending__video{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    float: left;
+}
+.sending__video a{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.sending__video a:after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../img/desktop/play-btn.png");
+    width: 74px;
+    height: 147px;
+    content: "";
+    margin: -74px 0 0 -37px;
+}
+
+.sending__text{
+    float: left;
+    width: 50%;
+    padding: 0 81px 81px 88px;
+}
+.sending__text h2{
+    font-size: 27px;
+    font-weight: bold;
+    font-family: "sourcesanspro-bold";
+    letter-spacing: 3px;
+    margin-bottom: 29px;
+}
+.sending__text ul{
+    margin: 0 0 15px -24px;
+}
+.sending__text li{
+    background: url("../img/desktop/list-dote.png") no-repeat 0 7px;
+    padding-left: 25px;
+}
+.sending__text p{
+    margin-bottom: 15px;
+}
+/* --------------- /sending --------------- */
+
+/* --------------- trade --------------- */
+.trade{
+    background: #ef4e23;
+    overflow: hidden;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "sourcesanspro-regular";
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 138px;
+}
+.trade:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background: url("../img/desktop/blue-back.jpg");
+    content: "";
+}
+
+.trade__video{
+    width: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    float: left;
+}
+.trade__video a{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.trade__video a:after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../img/desktop/play-btn.png");
+    width: 74px;
+    height: 147px;
+    content: "";
+    margin: -74px 0 0 -37px;
+}
+
+.trade__text{
+    float: left;
+    width: 50%;
+    padding: 0 81px 81px 88px;
+}
+.trade__text h2{
+    font-size: 27px;
+    font-weight: bold;
+    font-family: "sourcesanspro-bold";
+    letter-spacing: 3px;
+    margin-bottom: 29px;
+}
+.trade__text ol li{
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 14px;
+}
+.trade__text ol li{
+
+}
+.trade__text ol li > span{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* --------------- /trade --------------- */
 
 @-webkit-keyframes jump {
     0%   {bottom: -50px;}
@@ -1264,6 +1492,7 @@ a:hover {
         position: relative;
         top: auto;
         width: 100%;
+        height: auto !important;
     }
     .show-mobile-menu{
         display: block;

@@ -25,18 +25,18 @@
         <!-- site__menu -->
         <header class="site__menu site__menu_v2">
 
-            <a href="#" class="site__menu__logo"><img src="img/desktop/menu-logo.png" width="221" height="80" alt=""></a>
+            <a href="index.html" class="site__menu__logo"><img src="img/desktop/menu-logo.png" width="221" height="80" alt=""></a>
 
             <!-- main-menu -->
             <nav class="main-menu">
                 <a href="#"><span>About</span></a>
-                <a href="#"><span>USER GUIDE</span></a>
+                <a href="#" class="active"><span>USER GUIDE</span></a>
                 <a href="#"><span>Resources</span></a>
                 <a href="#"><span>Contact</span></a>
             </nav>
             <!-- /main-menu -->
 
-            <a href="#" class="user-guide-btn">DOWNLOAD</a>
+            <a href="index.html" class="user-guide-btn">DOWNLOAD</a>
 
         </header>
         <!-- /site__menu -->
@@ -129,19 +129,19 @@
             </div>
             <!-- /installetion -->
 
-            <!-- installetion -->
+            <!-- managment -->
             <div class="managment">
 
 
                 <div>
 
-                    <!-- installetion -->
+                    <!-- managment__video -->
                     <div class="managment__video">
                         <a href="#">
                             <img src="pic/pic3.jpg" width="612" height="417" alt="">
                         </a>
                     </div>
-                    <!-- /installetion -->
+                    <!-- /managment__video -->
 
 
                     <!-- managment__text -->
@@ -177,9 +177,218 @@
                 </div>
 
 
+                <div>
+
+                    <!-- managment__video -->
+                    <div class="managment__video">
+                        <a href="#">
+                            <img src="pic/pic4.jpg" width="612" height="381" alt="">
+                        </a>
+                    </div>
+                    <!-- /managment__video -->
+
+
+                    <!-- managment__text -->
+                    <div class="managment__text">
+
+                        <h3>Publishing the Asset you Created</h3>
+
+                        <p>You need to share information about the asset you have created (asset definition) with others if you want them to be able to interact with it.</p>
+
+                        <ol>
+                            <li>
+                                <span>1</span>
+                                Go to Assets tab.
+                            </li>
+                            <li>
+                                <span>2</span>
+                                Right-click the asset you want to share and select Copy as JSON
+                            </li>
+                            <li>
+                                <span>3</span>
+                                Now you can paste this JSON asset definition into a   document, web page or forum post you will use to  announce and describe the asset.
+                            </li>
+                            <li>
+                                <span>4</span>
+                                Optional: If asset represents something of value (for example, if it is a bond, i.e. a debt you agree to repay at      some point), you should write a contract which describes   terms associated with this asset (for example, details about issuer, conditions of repayment and so on), add asset  definition to it, and sign it by some means, for example,      using PGP. Signature will be used to check the identity of      issuer. (Note: <i>We do not know anything about legality of             bonds created by this method, please consult your lawyer</i>
+
+                            </li>
+                        </ol>
+
+
+                        <p>(Alternatively you can copy individual parts of asset definition: name, color set (color identifiers), unit (number of satoshi in one unit).</p>
+
+                    </div>
+                    <!-- /managment__text -->
+
+                </div>
+
+                <div>
+
+                    <!-- managment__video -->
+                    <div class="managment__video">
+                        <a href="#">
+                            <img src="pic/pic5.jpg" width="612" height="417" alt="">
+                        </a>
+                    </div>
+                    <!-- /managment__video -->
+
+
+                    <!-- managment__text -->
+                    <div class="managment__text">
+
+                        <h3>Adding an Existing Asset</h3>
+
+                        <h4>Method One: Import Asset via JSON (Recommended)</h4>
+
+                        <p>If you have access to asset definition in JSON format (it might be obtained from asset's description, contract, or from other client running on same machine), you can:</p>
+
+                        <ol>
+                            <li>
+                                <span>1</span>
+                                Copy JSON asset definition.
+                            </li>
+                            <li>
+                                <span>2</span>
+                                In the client that you wish to contain this new asset, open    Assets tab, and then click on the Import asset from JSON button
+                            </li>
+                            <li>
+                                <span>3</span>
+                                Paste the JSON that you previously copied, and then click OK.
+                            </li>
+                            <li>
+                                <span>4</span>
+                                You will see details of the asset you're about to add. Please make sure that its name matches your expectations. You   can edit name if you wish.
+
+                            </li>
+                            <li>
+                                <span>5</span>
+                                After you click OK the assed should appear in your Assets tab and in your Overview tab.
+                            </li>
+                        </ol>
+
+
+                        <h4>Method Two: Manual entry</h4>
+
+                        <ol>
+                            <li>
+                                <span>1</span>
+                                Open Assets tab, and then click on the add existing asset button.
+                            </li>
+                            <li>
+                                <span>2</span>
+                                Enter the moniker, color description, and unit of the asset you want add.
+                            </li>
+                            <li>
+                                <span>3</span>
+                                After you click OK the asset should appear in your Assets tab and in your Overview tab.
+                            </li>
+                        </ol>
+
+                    </div>
+                    <!-- /managment__text -->
+
+                </div>
+
 
             </div>
-            <!-- /installetion -->
+            <!-- /managment -->
+
+            <!-- sending -->
+            <div class="sending">
+
+                <div>
+
+                    <!-- sending__video -->
+                    <div class="sending__video">
+
+                        <a href="#">
+                            <img src="pic/pic6.jpg" width="612" height="417" alt="">
+                        </a>
+
+                    </div>
+                    <!-- /sending__video -->
+
+                    <!-- sending__text -->
+                    <div class="sending__text">
+
+                        <h2>SENDING AND RECEIVING ASSETS</h2>
+
+                        <ul>
+                            <li>You need to make sure that asset definition is known to your wallet before you can send/receive units of that asset. If you aren't an issuer, please consult asset management section.</li>
+                            <li>The process is very similar to sending and receiving bitcoins, but special color addresses are used for that. Color address for each asset wallet is aware of is available on Overview tab. Receive tab provides a list of all addresses for each asset and gives you an ability to create new ones</li>
+                            <li>You can send a specific asset by choosing it in a drop-down  list on the Send tab.</li>
+
+
+                        </ul>
+
+                        <p>Note: <i>that you need to obtain address for this specific asset, wallet will report an error if color of an address doesn't match the asset name you have chosen in the drop-down menu.</i></p>
+
+                        <p>Note: <i>You need bitcoins to pay a transaction fee. (In case with testnet mode, You can obtain some from a faucet.)</i></p>
+
+                    </div>
+                    <!-- /sending__text -->
+
+                </div>
+
+            </div>
+            <!-- /sending -->
+
+
+            <!-- trade -->
+            <div class="trade">
+
+                <div>
+
+                    <!-- trade__video -->
+                    <div class="trade__video">
+
+                        <a href="#">
+                            <img src="pic/pic7.jpg" width="612" height="417" alt="">
+                        </a>
+
+                    </div>
+                    <!-- /trade__video -->
+
+                    <!-- trade__text -->
+                    <div class="trade__text">
+
+                        <h2>P2P TRADE</h2>
+
+                        <ol>
+                            <li>
+                                <span>1</span>
+                                Click on the P2P Trade Tab.
+                            </li>
+                            <li>
+                                <span>2</span>
+                                Select the asset you wish to buy or sell.
+                            </li>
+                            <li>
+                                <span>3</span>
+                                Enter the quantity and price of the asset you wish to buy or      sell, and then click the buy or sell button.
+                            </li>
+                            <li>
+                                <span>4</span>
+                                When matching offer will be found, a trade will occur. Note that offers need to much price and quantity exactly. (More      advanced matchmaking engine is currently under      development.)
+                            </li>
+                            <li>
+                                <span>5</span>
+                                To fill a specific offer, double-click it.
+                            </li>
+                            <li>
+                                <span>6</span>
+                                To delete your order (distinguished by dark grey in the list), double-click it.
+                            </li>
+                        </ol>
+
+                    </div>
+                    <!-- /trade__text -->
+
+                </div>
+
+            </div>
+            <!-- /trade -->
 
 
 
