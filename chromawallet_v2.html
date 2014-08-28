@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html> 
+<html lang="ru" class="site_chromewallet-v2">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 , user-scalable=no">
+
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+    <!-- site -->
+    <div class="site ">
+
+        <span class="show-mobile-menu">show-menu</span>
+
+        <!-- site__menu -->
+        <header class="site__menu site__menu_v2">
+
+            <a href="#" class="site__menu__logo"><img src="img/desktop/menu-logo.png" width="221" height="80" alt=""></a>
+
+            <!-- main-menu -->
+            <nav class="main-menu">
+                <a href="#"><span>About</span></a>
+                <a href="#"><span>USER GUIDE</span></a>
+                <a href="#"><span>Resources</span></a>
+                <a href="#"><span>Contact</span></a>
+            </nav>
+            <!-- /main-menu -->
+
+            <a href="#" class="user-guide-btn">DOWNLOAD</a>
+
+        </header>
+        <!-- /site__menu -->
+
+        <!-- site__content -->
+        <div class="site__content">
+
+            <!-- user-guide -->
+            <div class="user-guide">
+
+                <h1>
+                    CHROMAWALLET
+                    USER'S GUIDE
+                </h1>
+
+                <!-- user-guide__menu -->
+                <ul class="user-guide__menu">
+                    <li><h2>TABLE OF CONTENTS</h2></li>
+                    <li><a href="#">Installation</a> </li>
+                    <li><a href="#">Asset Management</a> </li>
+                    <li><a href="#">Sending and Receiving Assets</a> </li>
+                    <li><a href="#">P2P Trade</a> </li>
+                </ul>
+                <!-- /user-guide__menu -->
+
+            </div>
+            <!-- /user-guide -->
+
+            <!-- installetion -->
+            <div class="installetion">
+
+                <!-- installetion__table -->
+                <div class="installetion__table">
+
+                    <!-- installetion__table__cell -->
+                    <div class="installetion__table__cell black-rombs">
+
+                        <!-- installetion__img -->
+                        <div class="installetion__img">
+
+                            <img src="img/desktop/installetion-icon.png" width="362" height="203" alt="">
+
+                        </div>
+                        <!-- /installetion__img -->
+
+                    </div>
+                    <!-- /installetion__table__cell -->
+
+                    <!-- installetion__table__cell -->
+                    <div class="installetion__table__cell">
+
+                        <!-- installetion__text -->
+                        <div class="installetion__text">
+
+                            <h2>INSTALLATION</h2>
+
+                            <p>ownload the latest version of ChromaWallet from <a href="#">here</a>,extract it to a location of your choosing. In the unpacked directory you can find two programs: </p>
+                            <ul>
+                                <li><a href="#">chromawallet</a> is graphical user interface</li>
+                                <li><a href="#">cw-cli </a> provides command-line interface</li>
+                            </ul>
+                            <p>Most actions can be performed through either of interfaces, but command-line application also provides low-level functions. You can find a list of commands which are accepted by cw-cli by running cw-cli --help</p>
+                            <p>You can use <a href="#">--testnet</a> command-line switch to run client in testnet mode, in that case a separate testnet wallet will be used. E.g.:</p>
+                            <ul>
+                                <li><a href="#">chromawallet</a> will use <a href="#">mainnet.wallet</a> (in the current   directory)</li>
+                                <li><a href="#">chromawallet --testnet</a> will use <a href="#">testnet.wallet</a> </li>
+                            </ul>
+
+                            <h3>Running Multiple Clients on One Machine</h3>
+
+                            <ol>
+                                <li>
+                                    <span>1</span>
+                                    <p>You can run as many clients as you want, to do this you will  simply need to copy the chromawallet directory, delete the   *.wallet in the copied directory, and then run chromawallet       from the new directory. A new wallet will be created. </p>
+                                </li>
+                                <li>
+                                    <span>2</span>
+                                    <p>You can now send bitcoins and assets between the two wallets.</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <!-- /installetion__text -->
+
+                    </div>
+                    <!-- /installetion__table__cell -->
+
+                </div>
+                <!-- /installetion__table -->
+
+            </div>
+            <!-- /installetion -->
+
+            <!-- installetion -->
+            <div class="managment">
+
+
+                <div>
+
+                    <!-- installetion -->
+                    <div class="managment__video">
+                        <a href="#">
+                            <img src="pic/pic3.jpg" width="612" height="417" alt="">
+                        </a>
+                    </div>
+                    <!-- /installetion -->
+
+
+                    <!-- managment__text -->
+                    <div class="managment__text">
+
+                        <h2>ASSET MANAGEMENT</h2>
+
+                        <h3>Issuing an Asset</h3>
+
+                        <dl>
+                            <dt>Note:</dt>
+                            <dd>you need bitcoins in your wallet to be able to issue an asset. If you just want to try it out, you can run wallet in testnet mode and obtain testnet bitcoins from a faucet. </dd>
+                        </dl>
+
+                        <ol>
+                            <li>
+                                <span>1</span>
+                                Click on the Assets tab, and then click on the issue new asset button.
+                            </li>
+                            <li>
+                                <span>2</span>
+                                Enter a moniker (name of the asset) of your choosing, select  a color scheme (epobc is the recommened one), quantity, and number of atoms in one unit (1 if unit is undivisible, 100   if unit is divisible down to 0.01, etc.) and then click OK.
+                            </li>
+                            <li>
+                                <span>3</span>
+                                The asset should appear in your asset tab. If you go to the overview tab, your asset should be listed along with its   balance and address.
+                            </li>
+                        </ol>
+
+                    </div>
+                    <!-- /managment__text -->
+
+                </div>
+
+
+
+            </div>
+            <!-- /installetion -->
+
+
+
+        </div>
+        <!-- /site__content -->
+
+
+
+
+
+    </div>
+    <!-- /site -->
+
+    <!-- loader -->
+    <div class="loader">
+
+    </div>
+    <!-- /loader -->
+
+    <!-- video -->
+    <div class="videoBlock">
+        <span class="videoBlock__close">close</span>
+        <iframe width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- /video -->
+
+</body>
+</html>
