@@ -244,7 +244,7 @@ a:hover {
 }
 .show-mobile-menu{
     position: fixed;
-    z-index: 20;
+    z-index: 55;
     background: url("../img/mobile/show-menu.png") no-repeat;
     width: 21px;
     height: 18px;
@@ -939,6 +939,21 @@ a:hover {
 
 @media (max-width: 1000px) {
 
+    .site__page{
+        position: relative;
+    }
+    .site__content{
+        height: auto !important;
+    }
+    .colored-text__show{
+        opacity: 1;
+    }
+    .down-btn.down-btn_white{
+        display: none !important;
+    }
+    .download-page{
+        height: auto !important;
+    }
     .videoBlock{
         top: 0;
     }
@@ -1022,6 +1037,7 @@ a:hover {
         padding: 50px 20px 40px 20px;
         width: 100%;
         height: auto;
+        background: #2d333d;
     }
     .resources h2{
         font-size: 24px;
@@ -1071,6 +1087,7 @@ a:hover {
         position: relative;
         top: auto;
         width: 100%;
+        padding: 20px 0;
         display: block;
     }
     .about-text{
@@ -1117,6 +1134,7 @@ a:hover {
     }
     .site__menu.show{
         width: 100%;
+        z-index: 50;
     }
     .main-menu{
         left: 0;

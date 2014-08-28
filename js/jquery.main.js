@@ -774,6 +774,8 @@ var Page = function(){
                             clearTimeout(self.timer2);
                         }
                     });
+
+
                 },
                 videOpen: function(curElem){
 
@@ -928,6 +930,8 @@ var Page = function(){
 var MenuShow = function(menuBtn, menu){
     this.btn = menuBtn;
     this.menu = menu;
+    this.menuItem = menu.find('a');
+    this.windowWidth = $(window).width();
 
 
     this.init();
@@ -957,6 +961,29 @@ MenuShow.prototype = {
 
                     return false;
                 });
+
+
+                if (self.windowWidth < 1000){
+
+                    self.menuItem.on('click', function(e){
+
+
+
+                        self.core.activeAdd(self.btn);
+                        self.core.menuShow(self.btn);
+
+                        var anchor = $(this);
+                        $('html, body').stop().animate({
+                            scrollTop: $(anchor.attr('href')).offset().top
+                        }, 1000);
+                        e.preventDefault();
+
+
+                        return false;
+
+                    });
+
+                }
 
             },
             activeAdd: function(e){
