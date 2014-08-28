@@ -1087,9 +1087,17 @@ a:hover {
         position: relative;
         top: auto;
         width: 100%;
-        padding: 20px 0;
+        padding: 25px 0 9px 0;
         display: block;
     }
+    .instruction-back__video{
+        margin-bottom: 16px;
+    }
+    .instruction-back__video img{
+        width: 175px !important;
+        height: 120px !important;
+    }
+
     .about-text{
         position: relative;
         top: auto;
