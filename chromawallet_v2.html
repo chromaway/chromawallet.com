@@ -10,6 +10,7 @@
 
     <script src="js/modernizr-2.6.2.min.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery.inner.js"></script>
 
 
 </head>
@@ -55,10 +56,10 @@
                 <!-- user-guide__menu -->
                 <ul class="user-guide__menu">
                     <li><h2>TABLE OF CONTENTS</h2></li>
-                    <li><a href="#">Installation</a> </li>
-                    <li><a href="#">Asset Management</a> </li>
-                    <li><a href="#">Sending and Receiving Assets</a> </li>
-                    <li><a href="#">P2P Trade</a> </li>
+                    <li><a href="installetion">Installation</a> </li>
+                    <li><a href="managment">Asset Management</a> </li>
+                    <li><a href="sending">Sending and Receiving Assets</a> </li>
+                    <li><a href="trade">P2P Trade</a> </li>
                 </ul>
                 <!-- /user-guide__menu -->
 
@@ -93,27 +94,37 @@
 
                             <h2>INSTALLATION</h2>
 
-                            <p>ownload the latest version of ChromaWallet from <a href="#">here</a>,extract it to a location of your choosing. In the unpacked directory you can find two programs: </p>
+                            <p>Download the latest version of ChromaWallet from <a href="#">here</a>, extract it to a
+                                location of your choosing. In the unpacked directory you can find two programs:</p>
                             <ul>
-                                <li><a href="#">chromawallet</a> is graphical user interface</li>
-                                <li><a href="#">cw-cli </a> provides command-line interface</li>
+                                <li><a href="#">chromawallet</a>&nbsp;&nbsp;&nbsp; is graphical user interface</li>
+                                <li><a href="#">cw-cli </a>&nbsp;&nbsp;&nbsp; provides command-line interface</li>
                             </ul>
-                            <p>Most actions can be performed through either of interfaces, but command-line application also provides low-level functions. You can find a list of commands which are accepted by cw-cli by running cw-cli --help</p>
-                            <p>You can use <a href="#">--testnet</a> command-line switch to run client in testnet mode, in that case a separate testnet wallet will be used. E.g.:</p>
+                            <p>Most actions can be performed through either of interfaces, but command-line application
+                                also provides low-level functions. You can find a list of commands which are accepted by
+                                cw-cli by running cw-cli --help.</p>
+                            <p>You can use &nbsp;&nbsp;&nbsp;<a href="#">--testnet</a>&nbsp;&nbsp;&nbsp; command-line
+                                switch to run client in testnet mode,
+                                in that case a separate testnet wallet will be used. E.g.:</p>
                             <ul>
-                                <li><a href="#">chromawallet</a> will use <a href="#">mainnet.wallet</a> (in the current   directory)</li>
-                                <li><a href="#">chromawallet --testnet</a> will use <a href="#">testnet.wallet</a> </li>
+                                <li><a href="#">chromawallet</a>&nbsp;&nbsp;&nbsp; will use
+                                    &nbsp;&nbsp;&nbsp;<a href="#">mainnet.wallet</a>&nbsp;&nbsp;&nbsp; (in the current
+                                    directory)</li>
+                                <li><a href="#">chromawallet --testnet</a>&nbsp;&nbsp;&nbsp; will use
+                                    <a href="#">testnet.wallet</a></li>
                             </ul>
 
                             <h3>Running Multiple Clients on One Machine</h3>
 
                             <ol>
                                 <li>
-                                    <span>1</span>
-                                    <p>You can run as many clients as you want, to do this you will  simply need to copy the chromawallet directory, delete the   *.wallet in the copied directory, and then run chromawallet       from the new directory. A new wallet will be created. </p>
+                                    <span>1.</span>
+                                    <p>You can run as many clients as you want, to do this you will  simply need to copy
+                                        the chromawallet directory, delete the *.wallet in the copied directory, and
+                                        then run chromawallet from the new directory. A new wallet will be created.</p>
                                 </li>
                                 <li>
-                                    <span>2</span>
+                                    <span>2.</span>
                                     <p>You can now send bitcoins and assets between the two wallets.</p>
                                 </li>
                             </ol>
@@ -137,9 +148,7 @@
 
                     <!-- managment__video -->
                     <div class="managment__video">
-                        <a href="#">
-                            <img src="pic/pic3.jpg" width="612" height="417" alt="">
-                        </a>
+                        <span class="post-load" data-pic="pic/issuing_an_asset.gif" style="width: 612px; height: 411px"></span>
                     </div>
                     <!-- /managment__video -->
 
@@ -153,21 +162,25 @@
 
                         <dl>
                             <dt>Note:</dt>
-                            <dd>you need bitcoins in your wallet to be able to issue an asset. If you just want to try it out, you can run wallet in testnet mode and obtain testnet bitcoins from a faucet. </dd>
+                            <dd>you need bitcoins in your wallet to be able to issue an asset. If you just want to try
+                                it out, you can run wallet in testnet mode and obtain testnet bitcoins from a faucet.</dd>
                         </dl>
 
                         <ol>
                             <li>
-                                <span>1</span>
+                                <span>1.</span>
                                 Click on the Assets tab, and then click on the issue new asset button.
                             </li>
                             <li>
-                                <span>2</span>
-                                Enter a moniker (name of the asset) of your choosing, select  a color scheme (epobc is the recommened one), quantity, and number of atoms in one unit (1 if unit is undivisible, 100   if unit is divisible down to 0.01, etc.) and then click OK.
+                                <span>2.</span>
+                                Enter a moniker (name of the asset) of your choosing, select  a color scheme (epobc is
+                                the recommended  one), quantity, and number of atoms in one unit (1 if unit is
+                                undivisible, 100   if unit is divisible down to 0.01, etc.) and then click OK.
                             </li>
                             <li>
-                                <span>3</span>
-                                The asset should appear in your asset tab. If you go to the overview tab, your asset should be listed along with its   balance and address.
+                                <span>3.</span>
+                                The asset should appear in your asset tab. If you go to the overview tab, your asset
+                                should be listed along with its   balance and address.
                             </li>
                         </ol>
 
@@ -181,9 +194,7 @@
 
                     <!-- managment__video -->
                     <div class="managment__video">
-                        <a href="#">
-                            <img src="pic/pic4.jpg" width="612" height="381" alt="">
-                        </a>
+                        <span class="post-load" data-pic="pic/pub.gif" style="width: 612px; height: 411px"></span>
                     </div>
                     <!-- /managment__video -->
 
@@ -193,30 +204,39 @@
 
                         <h3>Publishing the Asset you Created</h3>
 
-                        <p>You need to share information about the asset you have created (asset definition) with others if you want them to be able to interact with it.</p>
+                        <p>You need to share information about the asset you have created (asset definition) with others
+                            if you want them to be able to interact with it.</p>
 
                         <ol>
                             <li>
-                                <span>1</span>
+                                <span>1.</span>
                                 Go to Assets tab.
                             </li>
                             <li>
-                                <span>2</span>
-                                Right-click the asset you want to share and select Copy as JSON
+                                <span>2.</span>
+                                Right-click the asset you want to share and select Copy as JSON.
                             </li>
                             <li>
-                                <span>3</span>
-                                Now you can paste this JSON asset definition into a   document, web page or forum post you will use to  announce and describe the asset.
+                                <span>3.</span>
+                                Now you can paste this JSON asset definition into a document, web page or forum post
+                                you will use to  announce and describe the asset.
                             </li>
                             <li>
-                                <span>4</span>
-                                Optional: If asset represents something of value (for example, if it is a bond, i.e. a debt you agree to repay at      some point), you should write a contract which describes   terms associated with this asset (for example, details about issuer, conditions of repayment and so on), add asset  definition to it, and sign it by some means, for example,      using PGP. Signature will be used to check the identity of      issuer. (Note: <i>We do not know anything about legality of             bonds created by this method, please consult your lawyer</i>
+                                <span>4.</span>
+                                Optional: If asset represents something of value (for example, if it is a bond, i.e. a
+                                debt you agree to repay at some point), you should write a contract which describes
+                                terms associated with this asset (for example, details about issuer, conditions of
+                                repayment and so on), add asset  definition to it, and sign it by some means, for
+                                example, using PGP. Signature will be used to check the identity of issuer. (Note:
+                                <i>We do not know anything about legality of bonds created by this method, please
+                                    consult your lawyer</i>.
 
                             </li>
                         </ol>
 
 
-                        <p>(Alternatively you can copy individual parts of asset definition: name, color set (color identifiers), unit (number of satoshi in one unit).</p>
+                        <p>(Alternatively you can copy individual parts of asset definition: name, color set (color
+                            identifiers), unit (number of satoshi in one unit).</p>
 
                     </div>
                     <!-- /managment__text -->
@@ -227,9 +247,7 @@
 
                     <!-- managment__video -->
                     <div class="managment__video">
-                        <a href="#">
-                            <img src="pic/pic5.jpg" width="612" height="417" alt="">
-                        </a>
+                        <span class="post-load" data-pic="pic/adding_an_existing_asset.gif" style="width: 612px; height: 411px"></span>
                     </div>
                     <!-- /managment__video -->
 
@@ -241,28 +259,31 @@
 
                         <h4>Method One: Import Asset via JSON (Recommended)</h4>
 
-                        <p>If you have access to asset definition in JSON format (it might be obtained from asset's description, contract, or from other client running on same machine), you can:</p>
+                        <p>If you have access to asset definition in JSON format (it might be obtained from asset's
+                            description, contract, or from other client running on same machine), you can:</p>
 
                         <ol>
                             <li>
-                                <span>1</span>
+                                <span>1.</span>
                                 Copy JSON asset definition.
                             </li>
                             <li>
-                                <span>2</span>
-                                In the client that you wish to contain this new asset, open    Assets tab, and then click on the Import asset from JSON button
+                                <span>2.</span>
+                                In the client that you wish to contain this new asset, open    Assets tab, and then
+                                click on the Import asset from JSON button.
                             </li>
                             <li>
-                                <span>3</span>
+                                <span>3.</span>
                                 Paste the JSON that you previously copied, and then click OK.
                             </li>
                             <li>
-                                <span>4</span>
-                                You will see details of the asset you're about to add. Please make sure that its name matches your expectations. You   can edit name if you wish.
+                                <span>4.</span>
+                                You will see details of the asset you're about to add. Please make sure that its name
+                                matches your expectations. You   can edit name if you wish.
 
                             </li>
                             <li>
-                                <span>5</span>
+                                <span>5.</span>
                                 After you click OK the assed should appear in your Assets tab and in your Overview tab.
                             </li>
                         </ol>
@@ -272,15 +293,15 @@
 
                         <ol>
                             <li>
-                                <span>1</span>
+                                <span>1.</span>
                                 Open Assets tab, and then click on the add existing asset button.
                             </li>
                             <li>
-                                <span>2</span>
+                                <span>2.</span>
                                 Enter the moniker, color description, and unit of the asset you want add.
                             </li>
                             <li>
-                                <span>3</span>
+                                <span>3.</span>
                                 After you click OK the asset should appear in your Assets tab and in your Overview tab.
                             </li>
                         </ol>
@@ -301,11 +322,7 @@
 
                     <!-- sending__video -->
                     <div class="sending__video">
-
-                        <a href="#">
-                            <img src="pic/pic6.jpg" width="612" height="417" alt="">
-                        </a>
-
+                        <span class="post-load" data-pic="pic/sending.gif" style="width: 612px; height: 411px"></span>
                     </div>
                     <!-- /sending__video -->
 
@@ -315,16 +332,23 @@
                         <h2>SENDING AND RECEIVING ASSETS</h2>
 
                         <ul>
-                            <li>You need to make sure that asset definition is known to your wallet before you can send/receive units of that asset. If you aren't an issuer, please consult asset management section.</li>
-                            <li>The process is very similar to sending and receiving bitcoins, but special color addresses are used for that. Color address for each asset wallet is aware of is available on Overview tab. Receive tab provides a list of all addresses for each asset and gives you an ability to create new ones</li>
+                            <li>You need to make sure that asset definition is known to your wallet before you can
+                                send/receive units of that asset. If you aren't an issuer, please consult asset
+                                management section.</li>
+                            <li>The process is very similar to sending and receiving bitcoins, but special color
+                                addresses are used for that. Color address for each asset wallet is aware of is
+                                available on Overview tab. Receive tab provides a list of all addresses for each asset
+                                and gives you an ability to create new ones.</li>
                             <li>You can send a specific asset by choosing it in a drop-down  list on the Send tab.</li>
 
 
                         </ul>
 
-                        <p>Note: <i>that you need to obtain address for this specific asset, wallet will report an error if color of an address doesn't match the asset name you have chosen in the drop-down menu.</i></p>
+                        <p>Note: <i>that you need to obtain address for this specific asset, wallet will report an error
+                            if color of an address doesn't match the asset name you have chosen in the drop-down menu.</i></p>
 
-                        <p>Note: <i>You need bitcoins to pay a transaction fee. (In case with testnet mode, You can obtain some from a faucet.)</i></p>
+                        <p>Note: <i>You need bitcoins to pay a transaction fee. (In case with testnet mode, You can
+                            obtain some from a faucet)</i>.</p>
 
                     </div>
                     <!-- /sending__text -->
@@ -342,11 +366,7 @@
 
                     <!-- trade__video -->
                     <div class="trade__video">
-
-                        <a href="#">
-                            <img src="pic/pic7.jpg" width="612" height="417" alt="">
-                        </a>
-
+                        <span class="post-load" data-pic="pic/p2p.gif" style="width: 612px; height: 411px"></span>
                     </div>
                     <!-- /trade__video -->
 
@@ -357,27 +377,30 @@
 
                         <ol>
                             <li>
-                                <span>1</span>
+                                <span>1.</span>
                                 Click on the P2P Trade Tab.
                             </li>
                             <li>
-                                <span>2</span>
+                                <span>2.</span>
                                 Select the asset you wish to buy or sell.
                             </li>
                             <li>
-                                <span>3</span>
-                                Enter the quantity and price of the asset you wish to buy or      sell, and then click the buy or sell button.
+                                <span>3.</span>
+                                Enter the quantity and price of the asset you wish to buy or sell, and then click the
+                                buy or sell button.
                             </li>
                             <li>
-                                <span>4</span>
-                                When matching offer will be found, a trade will occur. Note that offers need to much price and quantity exactly. (More      advanced matchmaking engine is currently under      development.)
+                                <span>4.</span>
+                                When matching offer will be found, a trade will occur. Note that offers need to much
+                                price and quantity exactly. (More advanced matchmaking engine is currently under
+                                development).
                             </li>
                             <li>
-                                <span>5</span>
+                                <span>5.</span>
                                 To fill a specific offer, double-click it.
                             </li>
                             <li>
-                                <span>6</span>
+                                <span>6.</span>
                                 To delete your order (distinguished by dark grey in the list), double-click it.
                             </li>
                         </ol>

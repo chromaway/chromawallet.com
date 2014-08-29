@@ -1,10 +1,9 @@
-$(function(){
-
+$(window).on({load:function(){
     var menuBtn = $('.show-mobile-menu'),
         menu = $('.site__menu'),
         page = new Page(),
         menuShow = new MenuShow(menuBtn,menu);
-} );
+} });
 var Page = function(){
     this.items = $('.site__page');
     this.window = $(window);
@@ -74,17 +73,8 @@ var Page = function(){
                     self.downBtn = $('.down-btn');
                     self.bigLogo = $('.logo');
 
-                    self.bigLogo.css({
-                        'display' : 'none'
-                    })
-                    self.downBtn.css({
-                        'display' : 'none'
-
-                    })
-
-                    self.bigLogo.fadeIn(500, function(){
-                        self.downBtn.fadeIn(700);
-
+                   self.bigLogo.fadeIn(1000, function(){
+                        self.downBtn.fadeIn(1000);
                     });
 
                 },
@@ -367,10 +357,10 @@ var Page = function(){
                             firstBlock.height( 'auto' );
                             secondBlock.height( 'auto' );
 
-                            if( firstBlock.outerHeight() > secondBlock.outerHeight() ){
+                            if( firstBlock.outerHeight() > 463 ){
                                 newH = firstBlock.outerHeight();
                             } else {
-                                newH = secondBlock.outerHeight();
+                                newH = 463;
                             }
 
                             if( newH <  ( self.window.height() - 115 ) ) {
@@ -398,7 +388,7 @@ var Page = function(){
                                 newH = secondBlock.outerHeight();
                             }
 
-                            if( newH <  ( self.window.height() - 115 ) ) {
+                            if( newH < ( self.window.height() - 115 ) ) {
                                 newH = ( self.window.height() - 115 );
                             }
 
@@ -421,7 +411,7 @@ var Page = function(){
                             curContent.outerHeight(newH);
                         } else if( i == 4 ){
                             var firstBlock = curContent.find( '.resources' ),
-                                newH = 652;
+                                newH = 506;
 
                             if( newH <  ( self.window.height() - 115 ) ) {
                                 newH = ( self.window.height() - 115 );
