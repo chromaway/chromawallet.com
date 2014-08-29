@@ -260,8 +260,10 @@ var Page = function(){
                                 pageContentCur.removeAttr( 'style' );
                                 pageContentNext.addClass( 'active' );
 
+                                setTimeout( function(){
+                                    pageContentNext.addClass( 'active-shtorka' );
+                                },50 );
 
-                                pageContentNext.addClass( 'active-shtorka' );
 
                                 setTimeout( function(){
                                     pageContentCur.scrollTop(0);

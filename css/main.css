@@ -1274,6 +1274,7 @@ a:hover {
     position: relative;
     display: inline-block;
     vertical-align: top;
+    top: 9px;
 }
 .post-load img {
     opacity: 0;
