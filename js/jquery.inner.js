@@ -16,6 +16,10 @@ $( function(){
     $( '.post-load').each( function(){
         new PostLoad( $( this ) );
     } );
+
+    var menuBtn = $('.show-mobile-menu'),
+        menu = $('.site__menu'),
+        menuShow = new MenuShow(menuBtn,menu);
 } );
 
 var PostLoad = function(obj){
@@ -81,6 +85,101 @@ PostLoad.prototype = {
                         self.core.check();
                     }
                 } );
+            }
+        };
+    }
+};
+
+var MenuShow = function(menuBtn, menu){
+    this.btn = menuBtn;
+    this.menu = menu;
+    this.menuItem = menu.find('a');
+    this.windowWidth = $(window).width();
+
+
+    this.init();
+};
+MenuShow.prototype = {
+    init: function(){
+        var self = this;
+
+        self.core = self.core();
+        self.core.build();
+    },
+    core: function(){
+        var self = this;
+
+        return {
+            build: function(){
+                self.core.controls();
+            },
+            controls: function(){
+
+                self.btn.on('click', function(){
+
+                    var curElem = $(this);
+
+                    self.core.activeAdd(curElem);
+                    self.core.menuShow(curElem);
+
+                    return false;
+                });
+
+
+                if (self.windowWidth < 1000){
+
+                    self.menuItem.on('click', function(e){
+
+
+
+                        self.core.activeAdd(self.btn);
+                        self.core.menuShow(self.btn);
+
+                        var anchor = $(this);
+                        $('html, body').stop().animate({
+                            scrollTop: $(anchor.attr('href')).offset().top
+                        }, 1000);
+                        e.preventDefault();
+
+
+                        return false;
+
+                    });
+
+                }
+
+            },
+            activeAdd: function(e){
+
+                if(e.hasClass('active')){
+
+                    e.removeClass('active');
+
+                }
+                else{
+
+                    e.addClass('active');
+
+                }
+            },
+            menuShow: function(e){
+
+                if(e.hasClass('active')){
+
+                    self.menu.addClass('show');
+
+
+                }
+                else{
+
+                    self.menu.removeClass('show');
+
+
+                }
+
+
+
+
             }
         };
     }

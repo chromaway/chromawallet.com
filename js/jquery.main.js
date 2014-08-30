@@ -978,7 +978,7 @@ MenuShow.prototype = {
                         e.preventDefault();
 
 
-                        return false;
+//                        return false;
 
                     });
 

@@ -1366,6 +1366,109 @@ a:hover {
 
 @media (max-width: 1000px) {
 
+    .user-guide h1{
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .installetion__table{
+        display: block;
+    }
+    .installetion__table__cell{
+        display: block;
+        width: 100%;
+    }
+    .user-guide__menu h2{
+        font-size: 20px;
+    }
+    .installetion__img{
+        padding: 100px 0;
+    }
+    .installetion__text{
+        padding: 40px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .installetion__text ul{
+        margin-left: 10px;
+    }
+    .installetion__table__cell a{
+        background: #098a86;
+        border-radius: 10px;
+        padding: 0 5px;
+    }
+    .trade:after,
+    .sending:after,
+    .managment:before{
+        width: 100%;
+        height: 230px;
+    }
+    .trade,
+    .sending,
+    .managment{
+        padding-top: 49px;
+    }
+    .trade__video span,
+    .sending__video span,
+    .managment__video span{
+        width: 200px !important;
+        height: 134px !important;
+    }
+    .trade__text h2,
+    .managment__text h2,
+    .installetion__text h3{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .trade__video,
+    .sending__video,
+    .managment__video{
+        width: 100%;
+        margin-bottom: 51px;
+    }
+    .trade__video, .sending__video{
+        padding-top: 21px;
+    }
+    .post-load img{
+        width: 200px !important;
+        height: auto !important;
+    }
+    .trade h3,
+    .sending h3,
+    .managment h3{
+        font-size: 18px;
+    }
+    .trade__text,
+    .sending__text,
+    .managment__text{
+        width: 100%;
+        padding: 40px;
+        padding-bottom: 0;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .trade__text h4,
+    .sending__text h4,
+    .managment__text h4{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .trade__text h2,
+    .sending__text h2,
+    .installetion__text h2{
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .trade,
+    .sending{
+        padding: 20px;
+    }
+    .installetion__img img{
+        display: block;
+        margin: 0 auto;
+        width: 200px !important;
+        height: auto !important;
+    }
     .site__page{
         position: relative;
     }
