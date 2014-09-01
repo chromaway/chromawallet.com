@@ -199,7 +199,7 @@ a:hover {
 .main-menu a{
     display: inline-block;
     vertical-align: top;
-    padding: 0 30px;
+    padding: 0 27px;
     color: #353c4c;
     font-size: 16px;
     height: 115px;
@@ -479,6 +479,7 @@ a:hover {
     width: 100%;
     margin-top: -220px;
     top: 50%;
+    -webkit-transform: translateZ(0);
 }
 .download-page p{
     text-align: center;
@@ -681,8 +682,8 @@ a:hover {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     position: absolute;
-    bottom: -17px;
-    left: 41px;
+    bottom: -26px;
+    left: 43px;
     content: "";
 }
 .download-page__text li a:hover:before{
@@ -701,8 +702,8 @@ a:hover {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     position: absolute;
-    bottom: -18px;
-    left: 55px;
+    bottom: -25px;
+    left: 56px;
     content: "";
 }
 /* --------------- /site__page-crhromaWallet03 --------------- */
@@ -725,6 +726,7 @@ a:hover {
     top: 50%;
     margin: -115px 0 0 -360px;
     left: 50%;
+
 }
 
 .resources h2{

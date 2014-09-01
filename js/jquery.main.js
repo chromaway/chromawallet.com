@@ -1,9 +1,28 @@
-$(window).on({load:function(){
-    var menuBtn = $('.show-mobile-menu'),
-        menu = $('.site__menu'),
-        page = new Page(),
-        menuShow = new MenuShow(menuBtn,menu);
-} });
+$(window).on({
+
+    load:function(){
+        var menuBtn = $('.show-mobile-menu'),
+            menu = $('.site__menu'),
+            page = new Page(),
+            menuShow = new MenuShow(menuBtn,menu);
+
+
+
+    },
+    ready: function(){
+        var iOS = ( navigator.userAgent.match(/(iPad)/g) ? true : false );
+        if(!iOS){
+
+            $("meta[name='viewport']").attr('content','width=device-width, initial-scale=1.0, maximum-scale=1.0 , user-scalable=no');
+
+        }else{
+            document.ontouchstart = function(e){
+                e.preventDefault();
+            }
+        }
+    }
+
+});
 var Page = function(){
     this.items = $('.site__page');
     this.window = $(window);
@@ -64,6 +83,8 @@ var Page = function(){
                         if ( newH < self.minHeight ){
                             newH=self.minHeight;
                         }
+
+
 
                         curItem.height( newH );
                     })
@@ -238,13 +259,18 @@ var Page = function(){
                     }
                 },
                 downToPage4: function(){
+                    console.log(1)
 
                     var pageContentCur = self.items.eq( 3 ),
                         pageContentNext = self.items.eq( 4 ),
                         squeres = pageContentCur.find('.squeres'),
+                        text = $('.resources'),
                         pageText = pageContentCur.find('.download-page__text h2,.download-page__text p'),
                         items = pageContentCur.find('.download-page__text');
 
+                    text.css({
+                        'display':'none'
+                    })
                     $( 'body' ).css( { background: '#353c4c' } );
                     pageContentNext.css( { background: '#353c4c' } );
 
@@ -267,6 +293,7 @@ var Page = function(){
 
                                 setTimeout( function(){
                                     pageContentCur.scrollTop(0);
+                                    text.fadeIn();
                                     self.action = false;
                                 }, 600 );
                             }
@@ -401,7 +428,7 @@ var Page = function(){
                             curContent.outerHeight(newH);
                         } else if( i == 3 ){
                             var firstBlock = curContent.find( '.download-page' ),
-                                newH = 659;
+                                newH = 600;
 
                             firstBlock.height( newH );
 
@@ -638,6 +665,53 @@ var Page = function(){
                         return false;
 
                     });
+
+                    var iOS = ( navigator.userAgent.match(/(iPad)/g) ? true : false );
+                    if(iOS){
+
+
+
+
+                        $$('body').swipeDown(function(){
+
+                            self.core.prevPage();
+
+
+                        });
+
+                        $$('body').swipeUp(function(){
+                            self.core.nextPage();
+                        });
+
+                        self.menuLnk.bind('touchstart', function(e){
+
+                            var curItem = $( this),
+                                newindex;
+
+                            self.menuLnk.removeClass( 'active' );
+
+                            curItem.addClass('active');
+
+                            newindex = self.menuLnk.index( curItem ) + 2;
+
+                            if( newindex > self.activeIndex ){
+                                self.core.moveDown( self.menuLnk.index( curItem ) + 2 );
+                            } else if ( newindex < self.activeIndex ) {
+                                self.core.moveUp( self.menuLnk.index( curItem ) + 2 );
+                            }
+
+                            return false;
+
+
+
+                        });
+
+
+
+                    };
+
+
+
 
                     self.prevPageBtn.on('click', function(){
 
@@ -978,7 +1052,7 @@ MenuShow.prototype = {
                         e.preventDefault();
 
 
-//                        return false;
+                        return false;
 
                     });
 
