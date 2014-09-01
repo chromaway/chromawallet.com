@@ -18,6 +18,9 @@
 */
 
 /* --------------- Style to null --------------- */
+html{
+    touch-action: none;
+}
 input[type="text"], input[type="password"], textarea, input[type="email"], input[type="phone"], input[type="number"] {
     font: 12px Arial, Helvetica, sans-serif;
 }

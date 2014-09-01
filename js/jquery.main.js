@@ -270,7 +270,7 @@ var Page = function(){
 
                     text.css({
                         'display':'none'
-                    })
+                    });
                     $( 'body' ).css( { background: '#353c4c' } );
                     pageContentNext.css( { background: '#353c4c' } );
 
@@ -940,7 +940,7 @@ var Page = function(){
                     self.timer=setTimeout(function(){
 
                         if(self.windowWidth > 1000){
-                            if(!self.action && self.activeIndex>=0){
+                            if(!self.action && self.activeIndex>=1){
 
                                 self.action = true;
                                 self.activeIndex--;
