@@ -19,7 +19,7 @@
 
 /* --------------- Style to null --------------- */
 html{
-    touch-action: none;
+    /*touch-action: none;*/
 }
 input[type="text"], input[type="password"], textarea, input[type="email"], input[type="phone"], input[type="number"] {
     font: 12px Arial, Helvetica, sans-serif;
@@ -307,18 +307,26 @@ a:hover {
     font-size: 18px;
     left: 0;
     font-family: "sourcesanspro-regular";
-    padding: 59px 20px 20px 2%;
+    padding: 0 20px 0 2%;
     background: #18a2a2;
     z-index: 2;
+    display: table;
+}
+.cell {
+    display: table-cell;
+    vertical-align: middle;
 }
 .colored-text__show{
    opacity: 0;
+    display: inline-block;
 }
 .colored-video{
     width: 50%;
     position: absolute;
     top: 0;
     right: 0;
+    background: url("../pic/video.jpg") center no-repeat;
+    background-size: cover;
     z-index: 1;
 }
 .colored-video img{
@@ -407,7 +415,6 @@ a:hover {
     display: table-cell;
     text-align: center;
     width: 100%;
-
     vertical-align: middle;
 }
 
@@ -422,7 +429,12 @@ a:hover {
     line-height: 25px;
     color: #fff;
     z-index: 10;
-    padding: 76px 86px 0 86px;
+    padding: 0 86px 0 86px;
+    display: table;
+}
+.about-text__wrap {
+    display: table-cell;
+    vertical-align: middle;
 }
 .about-text a{
     text-decoration: none;
@@ -1766,7 +1778,7 @@ a:hover {
         font-size: 38px;
     }
     .about-text {
-        padding: 30px 50px 0;
+        padding: 0 50px 0;
     }
     .colored-text__show,
     .about-text__wrap {
