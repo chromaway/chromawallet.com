@@ -5,9 +5,6 @@ $(window).on({
             menu = $('.site__menu'),
             page = new Page(),
             menuShow = new MenuShow(menuBtn,menu);
-
-
-
     }
 
 });
@@ -740,9 +737,6 @@ Page.prototype = {
 
                 };
 
-
-
-
                 self.prevPageBtn.on('click', function(){
 
                     self.core.prevPage();
@@ -793,19 +787,28 @@ Page.prototype = {
                         self.core.videoHide(e);
                     },
                     mousemove : function(e){
-                        var x = e.pageX;
+                        var x = e.pageX,
+                            y = e.pageY;
 
                         $( '.contacts__back' ).css({
                             'left': -500 - ( (x-self.windowWidth)*0.03 )
                         });
 
                         var curW = self.window.width(),
-                            deg = (( ( ( x - curW / 2 ) / ( curW / 2 ) ) * 30 ) * Math.PI)/180,
-                            degCos = Math.cos(deg),
-                            degSin = Math.sin(deg);
+                            curH = self.window.height(),
+                            degY = (( ( ( x - curW / 2 ) / ( curW / 2 ) ) * 30 ) * Math.PI)/180,
+                            degX = (( ( ( y - curH / 2 ) / ( curH / 2 ) ) * 30 ) * Math.PI)/180;
+
+                        var xMatrix = mat4.create(),
+                            yMatrix = mat4.create(),
+                            rezultMatrix = mat4.create();
+
+                        mat4.rotateY(yMatrix, yMatrix, degY);
+                        mat4.rotateX(xMatrix, xMatrix, degX);
+                        mat4.multiply(rezultMatrix, xMatrix, yMatrix);
 
                         $( '.squeres' ).find('>div').css({
-                            transform: 'matrix3d(' + degCos + ', 0, ' + degSin + ', 0, 0, 1, 0, 0, ' + degSin + ', 0, ' + degCos + ', 0, 0, 0, 0, 1)'
+                            transform: 'matrix3d' + mat4.str(rezultMatrix).replace( 'mat4', '' ) + ''
                         });
                     }
                 } );
@@ -877,7 +880,6 @@ Page.prototype = {
                         clearTimeout(self.timer2);
                     }
                 });
-
 
             },
             videOpen: function(curElem){
