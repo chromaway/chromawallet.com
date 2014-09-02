@@ -36,6 +36,7 @@ var Page = function(){
     this.scrollMouse = false;
     this.menu = $('.site__menu');
     this.windowWidth = $(window).width();
+    this.windowHeight = $(window).height();
     this.videoBtn =  $('.video-call');
     this.pageContents =  $('.site__content');
     this.videoContainer =  $('.videoBlock');
@@ -793,10 +794,12 @@ Page.prototype = {
                         self.core.videoHide(e);
                     },
                     mousemove : function(e){
-                        var x = e.pageX;
+                        var x = e.pageX,
+                            y = e.pageY;
 
                         $( '.contacts__back' ).css({
-                            'left': -500 - ( (x-self.windowWidth)*0.03 )
+                            'left': -500 - ( (x-self.windowWidth)*0.03 ),
+                            'top':  -500 - ( (y-self.windowHeight)*0.03 )
                         });
 
                         var curW = self.window.width(),
