@@ -25,6 +25,20 @@ $(window).on({
 
         });
 
+
+        var iOS = ( navigator.userAgent.match(/(iPad)/g) ? true : false );
+
+        if(iOS){
+            $('.videoBlock iframe').css({
+                'width':'80%',
+                'margin': '0 auto',
+                'display':'block'
+            })
+            $('.videoBlock').css({
+                'background':'#000'
+            })
+        }
+
     }
 
 
@@ -732,7 +746,19 @@ Page.prototype = {
 
                         var curElem = $(this);
 
-                        self.core.videoHide(curElem)
+                        self.core.videoHide(curElem);
+
+                        return false;
+
+
+                    });
+
+
+                    self.videoBtn.bind('touchstart', function(e){
+
+                        var curElem = $(this);
+
+                        self.core.videOpen(curElem);
 
                         return false;
 
@@ -763,7 +789,18 @@ Page.prototype = {
 
                         var curElem = $(this);
 
-                        self.core.videoHide(curElem)
+                        self.core.videoHide(curElem);
+
+                        return false;
+
+
+                    });
+
+
+                    self.videoBtn.bind('touchstart', function(e){
+
+                        var curElem = $(this);
+                        self.core.videOpen(curElem);
 
                         return false;
 
@@ -844,7 +881,13 @@ Page.prototype = {
 
                 $('body').on( {
                     keydown: function(e){
-                        self.core.videoHide(e);
+
+
+                        if(e.which == 27){
+
+                            self.core.videoHide();
+
+                        }
                     },
                     mousemove : function(e){
                         var x = e.pageX,
@@ -946,7 +989,7 @@ Page.prototype = {
             videOpen: function(curElem){
 
 
-                self.videoContainer.children().attr('src', curElem.attr('href'));
+                self.videoContainer.find('iframe').attr('src', curElem.attr('href')+"?wmode=transparent");
 
                 setTimeout(function(){
 
@@ -957,18 +1000,10 @@ Page.prototype = {
 
 
             },
-            videoHide: function(e){
-
-                if(e.which == 27){
+            videoHide: function(){
 
                     self.videoContainer.fadeOut(300);
-                    self.videoContainer.children().attr('src','');
-
-                }
-                else{
-                    self.videoContainer.fadeOut(300);
-                    self.videoContainer.children().attr('src','');
-                }
+                    self.videoContainer.find('iframe').attr('src','');
 
             },
             menuActive: function(elem){

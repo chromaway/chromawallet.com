@@ -286,6 +286,10 @@ a:hover {
     z-index: 10;
     display: none;
 }
+.videoBlock>iframe{
+    position: relative;
+    z-index: 5;
+}
 .videoBlock__close{
     position: absolute;
     top: 27px;
