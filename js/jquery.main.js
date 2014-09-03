@@ -275,7 +275,7 @@ Page.prototype = {
                 }
             },
             downToPage4: function(){
-                console.log(1)
+
 
                 var pageContentCur = self.items.eq( 3 ),
                     pageContentNext = self.items.eq( 4 ),
@@ -697,6 +697,20 @@ Page.prototype = {
 
                 });
 
+                var iOSPh = ( navigator.userAgent.match(/(iPhone)/g) ? true : false );
+                if(iOSPh){
+
+                   $('.down-btn').bind('touchstart', function(){
+
+                       self.core.nextPage();
+
+                       return false;
+
+                   });
+
+
+                };
+
                 var iOS = ( navigator.userAgent.match(/(iPad)/g) ? true : false );
                 if(device.tablet()){
 
@@ -740,7 +754,6 @@ Page.prototype = {
 
 
                 };
-
 
 
 

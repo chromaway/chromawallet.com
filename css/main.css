@@ -1515,10 +1515,13 @@ a:hover {
         transform: rotate(77deg);
     }
     .contacts{
-        background: url("../img/mobile/contacts-back.jpg");
+        background: url("../img/mobile/pink-romb.jpg") center bottom;
         position: relative;
         padding-top: 70px;
         padding-bottom: 166px;
+    }
+    .contacts__back{
+        display: none;
     }
     .up-btn{
         background: url("../img/mobile/up-btn.png");
@@ -1614,7 +1617,7 @@ a:hover {
         position: relative;
         top: 0;
         margin-top: 0;
-        padding: 40px 0;
+        padding: 40px 40px;
         height: auto;
         overflow: hidden;
         display: block;
@@ -1809,6 +1812,7 @@ a:hover {
 
     .download-page p{
         font-size: 13px;
+        white-space: pre-line;
     }
     .download-page__text li{
         display: block;
