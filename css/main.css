@@ -1647,6 +1647,9 @@ a:hover {
     .instruction-back__tabel{
         height: auto !important;
     }
+    .instruction-back__video{
+        width: auto;
+    }
     .instruction-back__video:first-child,
     .instruction-back__video{
         margin-bottom: 16px;
