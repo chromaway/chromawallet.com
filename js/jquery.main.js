@@ -5,7 +5,28 @@ $(window).on({
             menu = $('.site__menu'),
             page = new Page(),
             menuShow = new MenuShow(menuBtn,menu);
+
+
+
+        var heshPage = window.location.hash.replace("#","");
+
+
+        $('.main-menu a ').each( function(){
+
+            var curLink = $(this);
+
+            if( curLink.text() == heshPage){
+
+                curLink.trigger('click');
+
+                window.location.hash="";
+
+            }
+
+        });
+
     }
+
 
 });
 $( function(){
@@ -45,7 +66,7 @@ var Page = function(){
     this.action = false;
     this.activePage = $('.site__page.active');
     this.animationArrDown = [
-        2100, 1100, 2800, 1400, 1100
+      4200, 1100, 2800, 1400, 1100
     ];
     this.siteMenuLogo = $( '.site__menu__logo' );
     this.animationArrUp = [
@@ -376,12 +397,14 @@ Page.prototype = {
                 var total = 0;
 
                 for( i = self.activeIndex; i != newIndex; i++ ){
+
                     toNextPage (total);
                     total += self.animationArrDown[ i ] + 100
                 }
 
                 function toNextPage (duration){
                     setTimeout( function(){
+
                         self.core.nextPage();
                     },duration );
                 }
@@ -705,6 +728,17 @@ Page.prototype = {
 
                    });
 
+                    self.videoBtn.bind('touchstart', function(e){
+
+                        var curElem = $(this);
+
+                        self.core.videOpen(curElem)
+
+                        return false;
+
+
+                    });
+
 
                 };
 
@@ -723,6 +757,17 @@ Page.prototype = {
 
                     $$('body').swipeUp(function(){
                         self.core.nextPage();
+                    });
+
+                    self.videoBtn.bind('touchstart', function(e){
+
+                        var curElem = $(this);
+
+                        self.core.videOpen(curElem)
+
+                        return false;
+
+
                     });
 
                     self.menuLnk.bind('touchstart', function(e){
@@ -1090,8 +1135,8 @@ MenuShow.prototype = {
 
 
 
-                        self.core.activeAdd(self.btn);
-                        self.core.menuShow(self.btn);
+                        self.btn.removeClass('active');
+                        self.menu.removeClass('show');
 
                         var anchor = $(this);
                         $('html, body').stop().animate({

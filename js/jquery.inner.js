@@ -142,7 +142,7 @@ MenuShow.prototype = {
                         e.preventDefault();
 
 
-                        return false;
+
 
                     });
 
