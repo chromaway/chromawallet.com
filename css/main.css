@@ -1641,11 +1641,13 @@ a:hover {
         padding: 25px 0 9px 0;
         display: block;
         height: auto !important;
+        background: #2d333d url("../img/mobile/bac-w.png") no-repeat center 102px;
     }
     .instruction-back__tabel-cell,
     .instruction-back__tabel{
         height: auto !important;
     }
+    .instruction-back__video:first-child,
     .instruction-back__video{
         margin-bottom: 16px;
     }
@@ -1802,6 +1804,7 @@ a:hover {
     }
     .colored-text{
         padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 @media (max-width: 920px) {
