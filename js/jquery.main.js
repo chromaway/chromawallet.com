@@ -990,6 +990,7 @@ Page.prototype = {
 
 
                 self.videoContainer.find('iframe').attr('src', curElem.attr('href')+"?wmode=transparent");
+                self.action = true;
 
                 setTimeout(function(){
 
@@ -1002,8 +1003,9 @@ Page.prototype = {
             },
             videoHide: function(){
 
-                    self.videoContainer.fadeOut(300);
-                    self.videoContainer.find('iframe').attr('src','');
+                self.videoContainer.fadeOut(300);
+                self.videoContainer.find('iframe').attr('src','');
+                self.action = false;
 
             },
             menuActive: function(elem){
