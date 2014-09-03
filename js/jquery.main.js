@@ -728,11 +728,11 @@ Page.prototype = {
 
                    });
 
-                    self.videoBtn.bind('touchstart', function(e){
+                    self.videoCloseBtn.bind('touchstart', function(e){
 
                         var curElem = $(this);
 
-                        self.core.videOpen(curElem)
+                        self.core.videoHide(curElem)
 
                         return false;
 
@@ -759,11 +759,11 @@ Page.prototype = {
                         self.core.nextPage();
                     });
 
-                    self.videoBtn.bind('touchstart', function(e){
+                    self.videoCloseBtn.bind('touchstart', function(e){
 
                         var curElem = $(this);
 
-                        self.core.videOpen(curElem)
+                        self.core.videoHide(curElem)
 
                         return false;
 
