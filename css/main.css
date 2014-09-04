@@ -357,7 +357,14 @@ a:hover {
     font-size: 21px;
     letter-spacing: 3px;
     margin: 0 0 33px 30px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
+.colored-download:hover{
+    background: #ff7a5a;
+}
+
 .colored-text span{
     font-family: "sourcesanspro-lightitalic";
     font-size: 15px;
@@ -778,9 +785,13 @@ a:hover {
     text-transform: uppercase;
     font-family: "sourcesanspro-bold";
     letter-spacing: 3px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .resources__giude:hover{
     text-decoration: none !important;
+    background: #ff7a5a;
 }
 .active-shtorka .shtorka-left{
     -moz-transform: rotate(77deg);
