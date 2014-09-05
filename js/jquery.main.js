@@ -749,15 +749,7 @@ Page.prototype = {
 
                    });
 
-                    var move = false;
 
-
-                    self.videoBtn.on('touchmove', function(){
-
-                        move = true;
-                        console.log(move);
-
-                    });
 
                     self.videoCloseBtn.bind('touchend', function(e){
 
@@ -766,6 +758,15 @@ Page.prototype = {
                         self.core.videoHide(curElem);
 
                         return false;
+
+                    });
+
+                    var move = false;
+
+
+                    self.videoBtn.on('touchmove', function(){
+
+                        move = true;
 
                     });
 
@@ -824,11 +825,11 @@ Page.prototype = {
 
                         self.core.prevPage();
 
-
                     });
 
                     $$('body').swipeUp(function(){
                         self.core.nextPage();
+
                     });
 
                     self.videoCloseBtn.bind('touchstart', function(e){
@@ -843,15 +844,17 @@ Page.prototype = {
                     });
 
 
-                    self.videoBtn.bind('touchstart', function(e){
+                    $$('.video-call').tap( function(e){
+
 
                         var curElem = $(this);
+
                         self.core.videOpen(curElem);
 
                         return false;
 
-
                     });
+
 
                     self.menuLnk.bind('touchstart', function(e){
 
