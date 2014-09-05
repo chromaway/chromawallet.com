@@ -1398,7 +1398,11 @@ a:hover {
     75%  {bottom: -40px;}
     100% {bottom: -50px;}
 }
-
+@media (max-width: 1200px){
+    .post-load{
+        width: 90% !important;
+    }
+}
 @media (max-width: 1000px) {
 
     .user-guide h1{
@@ -1788,7 +1792,7 @@ a:hover {
     .about-text__wrap h2 {
         font-size: 42px;
     }
-    .colored-text span, {
+    .colored-text span{
         font-size: 13px;
     }
     .instruction-back__video img {
