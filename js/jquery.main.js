@@ -105,6 +105,7 @@ Page.prototype = {
                 self.core.setSize();
                 self.core.controls();
                 self.core.startPage();
+                self.core.mobilileHeight();
                 self.core.resize();
             },
             setSize: function (){
@@ -123,6 +124,25 @@ Page.prototype = {
 
                     curItem.height( newH );
                 })
+            },
+            mobilileHeight:function(){
+
+                if($(window).width()<1000){
+
+                    $('header.site__page.active').height($(window).height());
+
+                    $('header.site__page.active .site__center').css({
+                        'height': $(window).height(),
+                        'min-height':  $(window).height()
+                    });
+
+                    $('header.site__page.active .site__content').eq(0).css({
+                        'height': $(window).height()
+                    });
+
+
+                }
+
             },
             startPage: function(){
 

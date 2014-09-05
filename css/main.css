@@ -1507,7 +1507,7 @@ a:hover {
     .site__page{
         position: relative;
     }
-    .site__content{
+    .site__page + .site__page .site__content{
         height: auto !important;
     }
     .colored-text__show{
@@ -1755,12 +1755,13 @@ a:hover {
 
     header.site__page{
         position: relative;
-        height: 568px;
+        /*height: 568px;*/
 
 
     }
     .site__center{
-        min-height: 568px;
+        /*min-height: 568px;*/
+        display: block;
     }
     .site__page-crhromaWallet01{
         display: block;
@@ -1769,9 +1770,6 @@ a:hover {
     }
     .site__page-crhromaWallet01 .down-btn:before{
         display: none;
-    }
-    .site__center{
-        height: auto !important;
     }
     .site__page-crhromaWallet04 .down-btn:before,
     .site__page-crhromaWallet03 .down-btn:before{
