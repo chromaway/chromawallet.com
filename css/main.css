@@ -265,12 +265,15 @@ a:hover {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
-}
-.show-mobile-menu.active{
-
     -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+.show-mobile-menu.active{
+
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
 
 }
 
@@ -362,7 +365,7 @@ a:hover {
     transition: all 0.3s ease;
 }
 .colored-download:hover{
-    background: #ff7a5a;
+    background: #ef5d36;
 }
 
 .colored-text span{
@@ -791,7 +794,7 @@ a:hover {
 }
 .resources__giude:hover{
     text-decoration: none !important;
-    background: #ff7a5a;
+    background: #ef5d36;
 }
 .active-shtorka .shtorka-left{
     -moz-transform: rotate(77deg);
