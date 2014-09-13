@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cb562b37-6dac-4fe3-bae5-3377fc01967b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
+    <list id="b42009eb-27d1-4889-b084-1e9839978a84" name="unchenge" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/chromawallet.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
+    <ignored path="chromawallet.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="false" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="chromawallet" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="4" selection-start="1596" selection-end="1596" vertical-scroll-proportion="2.0430906" vertical-offset="0" max-vertical-offset="10300">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="12" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="48825">
+              <folding>
+                <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="678" column="0" selection-start="25514" selection-end="25514" vertical-scroll-proportion="0.0" vertical-offset="16950" max-vertical-offset="32450">
+              <folding>
+                <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/css/reset.css" />
+        <option value="$PROJECT_DIR$/js/jquery.inner.js" />
+        <option value="$PROJECT_DIR$/chromawallet_v2.html" />
+        <option value="$PROJECT_DIR$/js/jquery.main.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromawallet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromawallet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromawallet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromawallet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromawallet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromawallet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chromawallet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb562b37-6dac-4fe3-bae5-3377fc01967b" name="Default" comment="" />
+      <changelist id="b42009eb-27d1-4889-b084-1e9839978a84" name="unchenge" comment="" />
+      <created>1408442517779</created>
+      <updated>1408442517779</updated>
+    </task>
+    <task id="LOCAL-00001" summary="start">
+      <created>1408442906402</created>
+      <updated>1408442906403</updated>
+    </task>
+    <task id="LOCAL-00002" summary="start&#10;">
+      <created>1408517936199</created>
+      <updated>1408517936199</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chenge animation&#10;">
+      <created>1409132280490</created>
+      <updated>1409132280490</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chenge animation&#10;">
+      <created>1409133051260</created>
+      <updated>1409133051260</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chenge animation&#10;">
+      <created>1409136003492</created>
+      <updated>1409136003492</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chenge animation&#10;">
+      <created>1409136710348</created>
+      <updated>1409136710348</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chenge animation&#10;">
+      <created>1409138428588</created>
+      <updated>1409138428588</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chenge animation&#10;">
+      <created>1409138456189</created>
+      <updated>1409138456189</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chenge animation&#10;">
+      <created>1409140239585</created>
+      <updated>1409140239585</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chenge animation&#10;">
+      <created>1409141816595</created>
+      <updated>1409141816595</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chenge animation&#10;">
+      <created>1409142816171</created>
+      <updated>1409142816171</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chenge animation&#10;">
+      <created>1409318001865</created>
+      <updated>1409318001865</updated>
+    </task>
+    <task id="LOCAL-00013" summary="chenge animation&#10;">
+      <created>1409325515156</created>
+      <updated>1409325515156</updated>
+    </task>
+    <task id="LOCAL-00014" summary="chenge animation&#10;">
+      <created>1409581454536</created>
+      <updated>1409581454537</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chenge animation&#10;">
+      <created>1409651116207</created>
+      <updated>1409651116207</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275401" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32220796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.315508" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="start" />
+    <MESSAGE value="start&#10;" />
+    <MESSAGE value="chenge animation&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="chenge animation&#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="36" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="21" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="800" max-vertical-offset="47850">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="609" column="14" selection-start="22926" selection-end="22926" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3375">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="36" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="21" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="47850">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="14" selection-start="3096" selection-end="3096" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3375">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1634" column="21" selection-start="33655" selection-end="33655" vertical-scroll-proportion="0.0" vertical-offset="40850" max-vertical-offset="44475">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="413" column="42" selection-start="17754" selection-end="17754" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2850">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.inner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="15" selection-start="2098" selection-end="2101" vertical-scroll-proportion="0.0" vertical-offset="1925" max-vertical-offset="2300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1497" selection-end="1498" vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="10225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1306" column="17" selection-start="26828" selection-end="26844" vertical-scroll-proportion="0.0" vertical-offset="32650" max-vertical-offset="43200">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="948" column="29" selection-start="37097" selection-end="37100" vertical-scroll-proportion="0.0" vertical-offset="23700" max-vertical-offset="25600">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.inner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="15" selection-start="2098" selection-end="2101" vertical-scroll-proportion="0.0" vertical-offset="1925" max-vertical-offset="2300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="1497" selection-end="1498" vertical-scroll-proportion="0.0" vertical-offset="1025" max-vertical-offset="10225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1082" column="29" selection-start="22262" selection-end="22291" vertical-scroll-proportion="0.0" vertical-offset="26818" max-vertical-offset="41900">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="927" column="0" selection-start="36651" selection-end="38505" vertical-scroll-proportion="0.0" vertical-offset="23175" max-vertical-offset="25600">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.inner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1175" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0" vertical-offset="1475" max-vertical-offset="10275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="14" selection-start="2246" selection-end="2246" vertical-scroll-proportion="0.0" vertical-offset="2114" max-vertical-offset="41900">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="504" column="54" selection-start="21673" selection-end="21686" vertical-scroll-proportion="0.0" vertical-offset="12600" max-vertical-offset="25600">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.inner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="398" selection-end="398" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="1806" selection-end="1806" vertical-scroll-proportion="0.0" vertical-offset="1475" max-vertical-offset="10275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="171" column="23" selection-start="3587" selection-end="3587" vertical-scroll-proportion="0.0" vertical-offset="4275" max-vertical-offset="41900">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="890" column="2" selection-start="35609" selection-end="35609" vertical-scroll-proportion="0.0" vertical-offset="22250" max-vertical-offset="25825">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0" vertical-offset="1475" max-vertical-offset="10275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="23" selection-start="3415" selection-end="3415" vertical-scroll-proportion="0.0" vertical-offset="4125" max-vertical-offset="35900">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="883" column="2" selection-start="35401" selection-end="35401" vertical-scroll-proportion="0.0" vertical-offset="22075" max-vertical-offset="25650">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="23" selection-start="3415" selection-end="3415" vertical-scroll-proportion="0.0" vertical-offset="4125" max-vertical-offset="31675">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="368" column="17" selection-start="15245" selection-end="15245" vertical-scroll-proportion="0.0" vertical-offset="4525" max-vertical-offset="4525">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="47" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="293" column="11" selection-start="5907" selection-end="5907" vertical-scroll-proportion="0.0" vertical-offset="7325" max-vertical-offset="31200">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="801" column="63" selection-start="26941" selection-end="26941" vertical-scroll-proportion="0.0" vertical-offset="6950" max-vertical-offset="6950">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="29" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0" vertical-offset="1628" max-vertical-offset="5425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="20" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="3550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="605" column="19" selection-start="12211" selection-end="12211" vertical-scroll-proportion="0.0" vertical-offset="14681" max-vertical-offset="15375">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="326" column="19" selection-start="9265" selection-end="9265" vertical-scroll-proportion="0.0" vertical-offset="8150" max-vertical-offset="9050">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="71" selection-start="856" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="428" max-vertical-offset="1525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="23" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="3625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="19" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0" vertical-offset="1806" max-vertical-offset="2500">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="28" selection-start="5018" selection-end="5018" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1775">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="71" selection-start="856" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="428" max-vertical-offset="1525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="23" selection-start="1522" selection-end="1522" vertical-scroll-proportion="0.0" vertical-offset="1500" max-vertical-offset="3625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="19" selection-start="1580" selection-end="1580" vertical-scroll-proportion="0.0" vertical-offset="1806" max-vertical-offset="2500">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="0" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1775">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="20" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="3550" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.inner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="0" selection-start="4235" selection-end="4235" vertical-scroll-proportion="0.0" vertical-offset="4375" max-vertical-offset="4775" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/device.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="709" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="12" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="48825">
+          <folding>
+            <marker date="1409926114778" expanded="true" signature="5227:5614" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="678" column="0" selection-start="25514" selection-end="25514" vertical-scroll-proportion="0.0" vertical-offset="16950" max-vertical-offset="32450">
+          <folding>
+            <marker date="1409920777871" expanded="false" signature="41869:41871" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="4" selection-start="1596" selection-end="1596" vertical-scroll-proportion="2.0430906" vertical-offset="0" max-vertical-offset="10300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
