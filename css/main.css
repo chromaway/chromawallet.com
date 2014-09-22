@@ -390,6 +390,24 @@ a:hover {
     margin: 0 0 11px 30px;
 }
 
+.colored-text dd a{
+    text-decoration: none;
+
+    color: #eec84c;
+}
+.colored-text dd a:hover{
+    text-decoration: underline;
+}
+
+.colored-text dl a{
+    text-decoration: none;
+
+    color: #eec84c;
+}
+.colored-text dl a:hover{
+    text-decoration: underline;
+}
+
 
 /* --------------- /site__page-crhromaWallet01 --------------- */
 
@@ -625,14 +643,14 @@ a:hover {
     position: relative;
     margin: 20px 40px;
 }
-.download-page__text li a{
+.download-page__text li .download-btn{
     position: relative;
     display: block;
     width: 132px;
     height: 132px;
 
 }
-.download-page__text li > span{
+.download-page__text li > .download-btn_disable{
     position: relative;
     display: block;
     width: 132px;
@@ -640,14 +658,24 @@ a:hover {
 }
 
 .download-page__text li .disabled > span,
-.download-page__text li a > span{
+.download-page__text li .download-btn > span{
     display: table;
     height: 132px;
     width: 132px;
 
 }
+.download-page__text li .download-btn a{
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.download-page__text li .download-btn a:hover{
+    opacity: 0.8;
+}
+
 .download-page__text li .disabled > span > span,
-.download-page__text li a > span > span{
+.download-page__text li .download-btn > span > span{
     display: table-cell;
     width: 132px;
     height: 132px;
@@ -692,10 +720,10 @@ a:hover {
     background: #005382;
     z-index: -1;
 }
-.download-page__text li a:hover .back-squere{
+.download-page__text li .download-btn__hover .back-squere{
     background: #f16522;
 }
-.download-page__text li a:hover:after{
+.download-page__text li .download-btn__hover:hover:after{
     background: #353c4c;
     width: 34px;
     height: 17px;
@@ -715,7 +743,7 @@ a:hover {
     left: 43px;
     content: "";
 }
-.download-page__text li a:hover:before{
+.download-page__text li .download-btn__hover:hover:before{
     background: #353c4c;
     width: 34px;
     height: 17px;
@@ -1860,7 +1888,6 @@ a:hover {
 }
 @media (max-width: 600px) {
 
-
     .trade:after,
     .sending:after,
     .managment:before{
@@ -1869,7 +1896,6 @@ a:hover {
     .trade__video span,
     .sending__video span,
     .managment__video span{
-
         width: 200px !important;
         height: 134px !important;
     }

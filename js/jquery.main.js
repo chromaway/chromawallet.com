@@ -56,6 +56,19 @@ $( function(){
             e.preventDefault();
         }
     }
+
+    $('.download-btn a').on('mouseover', function(){
+
+        $(this).parents('.download-btn ').addClass('download-btn__hover');
+
+    });
+
+    $('.download-btn a').on('mouseout', function(){
+
+        $(this).parents('.download-btn ').removeClass('download-btn__hover');
+
+    });
+
 } );
 var Page = function(){
     this.items = $('.site__page');
@@ -748,6 +761,13 @@ Page.prototype = {
             },
             controls: function(){
 
+                $('.colored-download').on('click', function(){
+
+                    $('.main-menu a').eq(1).trigger('click');
+                    return false;
+
+                });
+
                 self.videoBtn.on('click', function(){
 
                     var curElem = $(this);
@@ -1058,7 +1078,7 @@ Page.prototype = {
             videOpen: function(curElem){
 
 
-                self.videoContainer.find('iframe').attr('src', curElem.attr('href')+"?wmode=transparent");
+                self.videoContainer.find('iframe').attr('src', curElem.attr('href')+"?wmode=transparent&autoplay=1");
                 self.action = true;
 
                 setTimeout(function(){
