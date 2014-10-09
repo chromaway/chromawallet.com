@@ -53,7 +53,9 @@ $( function(){
 
         var curWidth = $(window).width();
         
-        if (curWidth != windowLoadWidth) { //http://stackoverflow.com/questions/9361968/javascript-resize-event-on-scroll-mobile
+        //if (curWidth != windowLoadWidth) { //http://stackoverflow.com/questions/9361968/javascript-resize-event-on-scroll-mobile
+
+           if(!(device.mobile() || device.tablet())) { // Infinite reloads
 
             if( ( windowLoadWidth > 1000  && curWidth < 1000) || (windowLoadWidth < 1000 && curWidth > 1000 ) ){
                 location.reload();
