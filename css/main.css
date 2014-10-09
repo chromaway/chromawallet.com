@@ -49,41 +49,10 @@ a:hover {
 }
 /* --------------- /Style to null --------------- */
 
-/* --------------- fonts --------------- */
-@font-face {
-    font-family: "sourcesanspro-extralight";
-    src: url("../fonts/sourcesanspro-extralight.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "sourcesanspro-bold";
-    src: url("../fonts/sourcesanspro-bold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "sourcesanspro-lightitalic";
-    src: url("../fonts/sourcesanspro-lightitalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "sourcesanspro-regular";
-    src: url("../fonts/sourcesanspro-regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "sourcesanspro-italic";
-    src: url("../fonts/sourcesanspro-italic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-/* --------------- /fonts --------------- */
 
 /* --------------- logo --------------- */
-.logo{
+
+.logo {
     display: none;
     background: url("../img/desktop/logo.png") no-repeat;
     width: 473px;
@@ -100,7 +69,9 @@ a:hover {
 
 /* --------------- down-btn --------------- */
 .down-btn{
-    font-family: "sourcesanspro-extralight";
+    font-family: "Source Sans Pro";
+    font-weight: 200;
+
     font-size: 21px;
     position: absolute;
     bottom: 75px;
@@ -217,7 +188,8 @@ a:hover {
     color: #353c4c;
     font-size: 16px;
     height: 115px;
-    font-family: "sourcesanspro-bold";
+    font-family: "Source Sans Pro";
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 115px;
     letter-spacing: 1px;
@@ -256,7 +228,8 @@ a:hover {
     width: 250px;
     background: #353c4c url("../img/desktop/guide-btn.png") no-repeat bottom right;
     color: #fff;
-    font-family: "sourcesanspro-bold";
+    font-family: "Source Sans Pro";
+    font-weight: 700;
     text-align: center;
     line-height: 115px;
     letter-spacing: 2px;
@@ -324,7 +297,10 @@ a:hover {
     top: 0;
     font-size: 18px;
     left: 0;
-    font-family: "sourcesanspro-regular";
+
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+
     padding: 0 20px 0 2%;
     background: #18a2a2;
     z-index: 2;
@@ -353,7 +329,10 @@ a:hover {
 .colored-text h2{
     font-weight: normal;
     font-size: 46px;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     text-transform: uppercase;
     margin-bottom: 20px;
     line-height: 58px;
@@ -367,7 +346,10 @@ a:hover {
     line-height: 63px;
     text-align: center;
     display: block;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     font-size: 21px;
     letter-spacing: 3px;
     margin: 0 0 33px 30px;
@@ -380,7 +362,11 @@ a:hover {
 }
 
 .colored-text span{
-    font-family: "sourcesanspro-lightitalic";
+
+    font-family: "Source Sans Pro";
+    font-weight: 300;
+    font-style: italic;
+
     font-size: 15px;
     padding-left: 30px;
     display: block;
@@ -467,7 +453,7 @@ a:hover {
     right: 0;
     width: 50%;
     background: #18a2a2;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     font-size: 18px;
     line-height: 25px;
     color: #fff;
@@ -503,7 +489,10 @@ a:hover {
 .about-text h2{
     font-size: 46px;
     font-weight: normal;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     text-transform: uppercase;
     margin-bottom: 35px;
 }
@@ -541,7 +530,7 @@ a:hover {
 }
 .download-page p{
     text-align: center;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     margin-bottom: 42px;
 }
 .site__page.site__page-crhromaWallet03{
@@ -637,11 +626,10 @@ a:hover {
 .download-page h2{
     text-align: center;
     font-size: 46px;
-    font-weight: normal;
     text-transform: uppercase;
     margin-bottom: 35px;
-    font-family: "sourcesanspro-bold";
-
+    font-family: "Source Sans Pro";
+    font-weight: 700;
 }
 .download-page__text ul{
     text-align: center;
@@ -693,7 +681,9 @@ a:hover {
     text-align: center;
     vertical-align: middle;
     color: #fff;
-    font-family: "sourcesanspro-bold";
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     text-transform: uppercase;
     white-space: pre-line;
     font-size: 18px;
@@ -704,7 +694,7 @@ a:hover {
     left: 50%;
     margin-left: -41px;
     font-size: 12px;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     width: 83px;
 }
 
@@ -788,7 +778,7 @@ a:hover {
     text-align: center;
     width: 720px;
     font-size: 18px;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     line-height: 22px;
     position: absolute;
     top: 50%;
@@ -798,8 +788,10 @@ a:hover {
 }
 
 .resources h2{
-    font-weight: normal;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     font-size: 46px;
     text-transform: uppercase;
     margin-bottom: 35px;
@@ -825,7 +817,10 @@ a:hover {
     text-align: center;
     color: #fff !important;
     text-transform: uppercase;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     letter-spacing: 3px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -893,7 +888,7 @@ a:hover {
     min-height: 500px;
     color: #fff;
     line-height: 22px;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     font-size: 18px;
     overflow: hidden;
 }
@@ -926,8 +921,10 @@ a:hover {
 .contacts h2{
     text-align: center;
     font-size: 46px;
-    font-weight: normal;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     margin-bottom: 30px;
     text-transform: uppercase;
 }
@@ -943,7 +940,10 @@ a:hover {
     line-height: 63px;
     font-size: 21px;
     color: #fff;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     text-transform: uppercase;
     letter-spacing: 3px;
     background: #18a2a2;
@@ -998,7 +998,10 @@ a:hover {
 .user-guide h1{
     white-space: pre-line;
     font-weight: normal;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     font-size: 46px;
     color: #2d333d;
     letter-spacing: 3px;
@@ -1020,15 +1023,17 @@ a:hover {
     color: #18a2a2;
     text-transform: uppercase;
     font-size: 29px;
-    font-weight: normal;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     letter-spacing: 3px;
 }
 .user-guide__menu a{
     color: #18a2a2;
     font-size: 18px;
     border-bottom: 1px dashed #18a2a2;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
 
 }
 .user-guide__menu a:hover{
@@ -1043,7 +1048,7 @@ a:hover {
     background: #18a2a2;
     display: table-cell;
     color: #fff;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     font-size: 18px;
     line-height: 22px;
 }
@@ -1069,8 +1074,10 @@ a:hover {
 }
 .installetion__text h3{
     font-size: 24px;
-    font-weight: normal;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     letter-spacing: 1px;
     margin-bottom: 26px;
 }
@@ -1094,7 +1101,10 @@ a:hover {
 .installetion__text h2{
     font-weight: normal;
     font-size: 32px;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     margin-bottom: 29px;
     letter-spacing: 3px;
 
@@ -1107,7 +1117,7 @@ a:hover {
     background: #3b97d2;
     overflow: hidden;
     position: relative;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     font-size: 18px;
     color: #fff;
     line-height: 22px;
@@ -1116,8 +1126,10 @@ a:hover {
 }
 .managment h2{
     font-size: 27px;
-    font-weight: bold;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     letter-spacing: 3px;
     margin-bottom: 29px;
 }
@@ -1136,7 +1148,11 @@ a:hover {
 }
 .managment__text dd{
     display: inline;
-    font-family: "sourcesanspro-italic";
+
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-style: italic;
+
     vertical-align: top;
 }
 .managment:before{
@@ -1199,9 +1215,12 @@ a:hover {
 }
 .managment__text h4{
     font-size: 18px;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     margin-bottom: 13px;
-    font-weight: normal;
+
 }
 /* --------------- /managment --------------- */
 
@@ -1212,7 +1231,7 @@ a:hover {
     color: #fff;
     font-size: 18px;
     line-height: 22px;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     position: relative;
     padding-top: 72px;
     padding-bottom: 121px;
@@ -1257,8 +1276,10 @@ a:hover {
 }
 .sending__text h2{
     font-size: 27px;
-    font-weight: bold;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     letter-spacing: 3px;
     margin-bottom: 29px;
 }
@@ -1281,7 +1302,7 @@ a:hover {
     color: #fff;
     font-size: 18px;
     line-height: 22px;
-    font-family: "sourcesanspro-regular";
+    font-family: "Source Sans Pro";
     position: relative;
     padding-top: 72px;
     padding-bottom: 138px;
@@ -1324,8 +1345,10 @@ a:hover {
 }
 .trade__text h2{
     font-size: 27px;
-    font-weight: bold;
-    font-family: "sourcesanspro-bold";
+
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+
     letter-spacing: 3px;
     margin-bottom: 29px;
 }
