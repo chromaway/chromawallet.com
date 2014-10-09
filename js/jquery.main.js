@@ -52,11 +52,15 @@ $( function(){
     $(window).on('resize', function(){
 
         var curWidth = $(window).width();
+        
+        if (curWidth != windowLoadWidth) { //http://stackoverflow.com/questions/9361968/javascript-resize-event-on-scroll-mobile
 
-        if( (1000 < windowLoadWidth && curWidth < 1000) || (windowLoadWidth < 1000 && curWidth > 1000 ) ){
-            location.reload();
+            if( ( windowLoadWidth > 1000  && curWidth < 1000) || (windowLoadWidth < 1000 && curWidth > 1000 ) ){
+                location.reload();
+            }
+            windowLoadWidth = curWidth;
+            
         }
-        windowLoadWidth = curWidth;
 
     });
 
