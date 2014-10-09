@@ -1,3 +1,5 @@
+var windowLoadWidth;
+
 $(window).on({
 
     load:function(){
@@ -44,6 +46,20 @@ $(window).on({
 
 });
 $( function(){
+
+    windowLoadWidth = $(window).width();
+
+    $(window).on('resize', function(){
+
+        var curWidth = $(window).width();
+
+        if( (1000 < windowLoadWidth && curWidth < 1000) || (windowLoadWidth < 1000 && curWidth > 1000 ) ){
+            location.reload();
+        }
+        windowLoadWidth = curWidth;
+
+    });
+
     var iOS = ( navigator.userAgent.match(/(iPad)/g) ? true : false );
 
     if(!device.tablet()){
@@ -828,6 +844,7 @@ Page.prototype = {
 
                 };
 
+
                 var iOS = ( navigator.userAgent.match(/(iPad)/g) ? true : false );
 
                 if(device.mobile()){
@@ -837,6 +854,29 @@ Page.prototype = {
 
                         $('body').animate({
                             scrollTop: 0
+                        });
+
+
+                        return false;
+                    });
+
+                    $('.down-btn').on('click', function(){
+
+
+                        $('body').animate({
+                            scrollTop: $('.colored-video').offset().top
+                        });
+
+
+                        return false;
+                    });
+
+
+                    $('.down-btn').on('touchstart', function(){
+
+
+                        $('body').animate({
+                            scrollTop: $('.colored-video').offset().top
                         });
 
 

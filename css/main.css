@@ -105,12 +105,24 @@ a:hover {
     position: absolute;
     bottom: 75px;
     left: 50%;
-    margin-left: -36px;
+    margin-left: -40px;
     color: #929497;
     display: none;
     z-index: 10;
+    overflow: hidden;
+    height: 87px;
+    width: 80px;
 }
-.down-btn:before{
+.down-btn span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.down-btn span:before{
     background: url("../img/desktop/arrow-down.png") no-repeat;
     width: 49px;
     height: 37px;
@@ -119,7 +131,6 @@ a:hover {
     bottom: -50px;
     left: 50%;
     margin-left: -23px;
-
     -webkit-animation: jump 3s infinite linear;
     -moz-animation: jump 3s infinite linear;
     -ms-animation: jump 3s infinite linear;
@@ -130,10 +141,10 @@ a:hover {
 .down-btn.down-btn_white{
     text-indent: -5000px;
     width: 48px;
-    height: 37px;
+    height: 87px;
     margin-left: -24px;
 }
-.down-btn.down-btn_white:before{
+.down-btn.down-btn_white span:before{
     background: url("../img/desktop/arrow-down2.png") no-repeat;
 
 }
@@ -1392,39 +1403,39 @@ a:hover {
 
 
 @-webkit-keyframes jump {
-    0%   {bottom: -50px;}
-    25%  {bottom: -35px;}
-    50%  {bottom: -50px;}
-    75%  {bottom: -40px;}
-    100% {bottom: -50px;}
+    0%   {top: 50px;}
+    25%  {top: 35px;}
+    50%  {top: 50px;}
+    75%  {top: 40px;}
+    100% {top: 50px;}
 }
 @-moz-keyframes jump {
-    0%   {bottom: -50px;}
-    25%  {bottom: -35px;}
-    50%  {bottom: -50px;}
-    75%  {bottom: -40px;}
-    100% {bottom: -50px;}
+    0%   {top: 50px;}
+    25%  {top: 35px;}
+    50%  {top: 50px;}
+    75%  {top: 40px;}
+    100% {top: 50px;}
 }
 @-ms-keyframes jump {
-    0%   {bottom: -50px;}
-    25%  {bottom: -35px;}
-    50%  {bottom: -50px;}
-    75%  {bottom: -40px;}
-    100% {bottom: -50px;}
+    0%   {top: 50px;}
+    25%  {top: 35px;}
+    50%  {top: 50px;}
+    75%  {top: 40px;}
+    100% {top: 50px;}
 }
 @-o-keyframes jump {
-    0%   {bottom: -50px;}
-    25%  {bottom: -35px;}
-    50%  {bottom: -50px;}
-    75%  {bottom: -40px;}
-    100% {bottom: -50px;}
+    0%   {top: 50px;}
+    25%  {top: 35px;}
+    50%  {top: 50px;}
+    75%  {top: 40px;}
+    100% {top: 50px;}
 }
 @keyframes jump {
-    0%   {bottom: -50px;}
-    25%  {bottom: -35px;}
-    50%  {bottom: -50px;}
-    75%  {bottom: -40px;}
-    100% {bottom: -50px;}
+    0%   {top: 50px;}
+    25%  {top: 35px;}
+    50%  {top: 50px;}
+    75%  {top: 40px;}
+    100% {top: 50px;}
 }
 @media (max-width: 1200px){
     .post-load{
