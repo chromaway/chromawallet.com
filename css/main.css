@@ -1954,7 +1954,8 @@ a:hover {
     }
     .down-btn{
         font-size: 11px;
-        margin-left: -16px;
+        margin-left: -40px;
+        bottom: 17px;
     }
     .colored-text{
         font-size: 12px;
